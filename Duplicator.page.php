@@ -94,7 +94,7 @@ class SpecialDuplicator extends SpecialPage {
 
 		# Check there aren't a hideous number of revisions
 		$dbr = wfGetDB( DB_SLAVE );
-		$num = $dbr->selectField( 'revision', 'COUNT(*)',array( 'rev_page' => $this->sourceTitle->getArticleId() ), __METHOD__ );
+		$num = $dbr->selectField( 'revision', 'COUNT(*)',array( 'rev_page' => $this->sourceTitle->getArticleID() ), __METHOD__ );
 		if( $num <= $wgDuplicatorRevisionLimit ) {
 			# Attempt to perform the main duplicate op. first
 			if( $this->duplicate( $this->sourceTitle, $this->destTitle ) ) {
@@ -205,7 +205,7 @@ class SpecialDuplicator extends SpecialPage {
 			return false; # Source doesn't exist, or destination does
 		$dbw = wfGetDB( DB_MASTER );
 		$dbw->begin();
-		$sid = $source->getArticleId();
+		$sid = $source->getArticleID();
 		# Create an article representing the destination page and save it
 		$destArticle = new Article( $dest );
 		$aid = $destArticle->insertOn( $dbw );
