@@ -1260,15 +1260,16 @@ De huidige limiet is $3.',
  * @author Gunnernett
  * @author Harald Khan
  * @author Jon Harald Søby
+ * @author Njardarlogar
  */
 $messages['nn'] = array(
-	'duplicator' => 'Kopier ei sida',
+	'duplicator' => 'Kopier ei side',
 	'duplicator-desc' => 'Opprett sjølvstendige [[Special:Duplicate|kopiar av sider]] med full endringshistorikk',
 	'duplicator-toolbox' => 'Kopier denne sida',
 	'duplicator-header' => 'Denne sida mogleggjer fullstendig kopiering av ei sida, med sjølvstendige kopiar av all historikk. 
 Dette er nyttig for oppdeling av sider, etc.',
 	'duplicator-options' => 'Val',
-	'duplicator-source' => 'Kjelda:',
+	'duplicator-source' => 'Kjelde:',
 	'duplicator-dest' => 'Mål:',
 	'duplicator-dotalk' => 'Kopier diskusjonssida (om mogleg)',
 	'duplicator-submit' => 'Kopier',
