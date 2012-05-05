@@ -945,6 +945,7 @@ $messages['it'] = array(
  * @author Fievarsty
  * @author Fryed-peach
  * @author JtFuruhata
+ * @author Shirayuki
  */
 $messages['ja'] = array(
 	'duplicator' => 'ページの複製',
@@ -967,7 +968,7 @@ $messages['ja'] = array(
 	'duplicator-dest-invalid' => '複製先に有効なタイトルを指定してください。',
 	'duplicator-dest-exists' => '[[$1]] は既に存在しています。複製先には存在しないページを指定してください。',
 	'duplicator-toomanyrevisions' => '[[$1]] は版が多すぎるため($2個)複製できません。現在の上限は$3個までです。',
-	'right-duplicate' => 'ページを複製する',
+	'right-duplicate' => 'ページを複製',
 );
 
 /** Javanese (Basa Jawa)
