@@ -1722,7 +1722,7 @@ $messages['tg-cyrl'] = array(
 Маҳдудияти кунунӣ $3 аст.',
 );
 
-/** Tajik (Latin script) (tojikī)
+/** Tajik (Latin script) (Tojikī)
  * @author Liangent
  */
 $messages['tg-latn'] = array(
@@ -1822,7 +1822,7 @@ $messages['uk'] = array(
 	'duplicator-source' => 'Джерело:',
 );
 
-/** Veps (Vepsan kel')
+/** Veps (Vepsän kel’)
  * @author Игорь Бродский
  */
 $messages['vep'] = array(
