@@ -949,7 +949,7 @@ $messages['it'] = array(
  */
 $messages['ja'] = array(
 	'duplicator' => 'ページの複製',
-	'duplicator-desc' => '全編集履歴をもつ[[Special:Duplicate|ページの複製]]を作成する',
+	'duplicator-desc' => '全編集履歴を持つ[[Special:Duplicate|ページの複製]]を作成する',
 	'duplicator-toolbox' => 'このページを複製',
 	'duplicator-header' => 'ここではページを複製することができます。履歴を含む同じ内容の複製が新たに作成されます。記事の分割などに利用してください。',
 	'duplicator-options' => '設定',
@@ -1043,6 +1043,7 @@ künne mer em Momang nit koppeere.',
  * @author George Animal
  */
 $messages['ku-latn'] = array(
+	'duplicator-options' => 'Vebijêrk',
 	'duplicator-source' => 'Çavkanî:',
 	'duplicator-summary' => 'Ji [[$1]] hate kopîkirin',
 );
