@@ -165,7 +165,7 @@ $messages['arz'] = array(
 الحد الحالى هو $3.',
 );
 
-/** Azerbaijani (Azərbaycanca)
+/** Azerbaijani (azərbaycanca)
  * @author Cekli829
  * @author Vago
  */
@@ -217,7 +217,7 @@ $messages['be-tarask'] = array(
 	'right-duplicate' => 'капіяваньне старонак',
 );
 
-/** Bulgarian (Български)
+/** Bulgarian (български)
  * @author DCLXVI
  * @author Spiritia
  */
@@ -256,7 +256,7 @@ $messages['bn'] = array(
 	'right-duplicate' => 'প্রতিলিপিকৃত পাতাসমূহ',
 );
 
-/** Breton (Brezhoneg)
+/** Breton (brezhoneg)
  * @author Fulup
  */
 $messages['br'] = array(
@@ -283,7 +283,7 @@ $messages['br'] = array(
 	'right-duplicate' => 'Eilañ pajennoù',
 );
 
-/** Bosnian (Bosanski)
+/** Bosnian (bosanski)
  * @author CERminator
  */
 $messages['bs'] = array(
@@ -313,7 +313,7 @@ Trenutno ograničenje je $3.',
 	'right-duplicate' => 'Dupliciranje stranica',
 );
 
-/** Catalan (Català)
+/** Catalan (català)
  * @author McDutchie
  * @author SMP
  * @author Solde
@@ -343,7 +343,7 @@ $messages['ca'] = array(
 	'right-duplicate' => 'Duplicar pàgines',
 );
 
-/** Czech (Česky)
+/** Czech (česky)
  * @author Jkjk
  * @author Mormegil
  */
@@ -372,7 +372,7 @@ Současný limit je $3.',
 	'right-duplicate' => 'Duplikování stránek',
 );
 
-/** Danish (Dansk)
+/** Danish (dansk)
  * @author Jon Harald Søby
  */
 $messages['da'] = array(
@@ -496,7 +496,7 @@ Estus utila por disigo de artikoloj, ktp.',
 	'right-duplicate' => 'Duplikataj paĝoj',
 );
 
-/** Spanish (Español)
+/** Spanish (español)
  * @author Crazymadlover
  * @author Imre
  * @author Sanbec
@@ -527,7 +527,7 @@ El límite actual es $3.',
 	'right-duplicate' => 'Duplicar páginas',
 );
 
-/** Estonian (Eesti)
+/** Estonian (eesti)
  * @author Avjoska
  * @author Pikne
  */
@@ -538,7 +538,7 @@ $messages['et'] = array(
 	'right-duplicate' => 'Dubleerida lehekülgi',
 );
 
-/** Basque (Euskara)
+/** Basque (euskara)
  * @author An13sa
  * @author Kobazulo
  */
@@ -564,14 +564,14 @@ Errore ezezagun bat jazo da.',
 	'duplicator-toomanyrevisions' => '[[$1]] orrialdeak ($2) berrikuspen gehiegi ditu eta ezin izan da kopiatu. Egungo berrikuspenen muga $3 da.',
 );
 
-/** Extremaduran (Estremeñu)
+/** Extremaduran (estremeñu)
  * @author Better
  */
 $messages['ext'] = array(
 	'duplicator-options' => 'Ocionis',
 );
 
-/** Finnish (Suomi)
+/** Finnish (suomi)
  * @author Mobe
  * @author Niklas Laxström
  * @author Str4nd
@@ -600,7 +600,7 @@ $messages['fi'] = array(
 	'right-duplicate' => 'Kahdentaa sivuja',
 );
 
-/** French (Français)
+/** French (français)
  * @author Crochet.david
  * @author Grondin
  * @author IAlex
@@ -629,7 +629,7 @@ $messages['fr'] = array(
 	'right-duplicate' => 'dupliquer des pages',
 );
 
-/** Franco-Provençal (Arpetan)
+/** Franco-Provençal (arpetan)
  * @author ChrisPtDe
  */
 $messages['frp'] = array(
@@ -823,7 +823,7 @@ $messages['hsb'] = array(
 	'right-duplicate' => 'Dwójne strony',
 );
 
-/** Hungarian (Magyar)
+/** Hungarian (magyar)
  * @author Dani
  * @author Glanthor Reviol
  */
@@ -851,7 +851,7 @@ $messages['hu'] = array(
 	'right-duplicate' => 'lapok megkettőzése',
 );
 
-/** Interlingua (Interlingua)
+/** Interlingua (interlingua)
  * @author McDutchie
  */
 $messages['ia'] = array(
@@ -912,7 +912,7 @@ Telah terjadi suatu kesalahan yang tak dikenal.',
 	'right-duplicate' => 'Salinan halaman',
 );
 
-/** Italian (Italiano)
+/** Italian (italiano)
  * @author Broken Arrow
  * @author Darth Kule
  */
@@ -1075,7 +1075,7 @@ $messages['lb'] = array(
 	'right-duplicate' => 'Säite verduebelen',
 );
 
-/** Macedonian (Македонски)
+/** Macedonian (македонски)
  * @author Bjankuloski06
  */
 $messages['mk'] = array(
@@ -1132,7 +1132,7 @@ $messages['ml'] = array(
 	'duplicator-toomanyrevisions' => '[[$1]]നു വളരെയധികം($2) പതിപ്പുകൾ ഉണ്ട്; അതിനാൽ പകർത്താൻ സാദ്ധ്യമല്ല. നിലവിലുള്ള പരിധി $3 ആണ്‌.',
 );
 
-/** Mongolian (Монгол)
+/** Mongolian (монгол)
  * @author Chinneeb
  */
 $messages['mn'] = array(
@@ -1258,7 +1258,7 @@ De huidige limiet is $3.',
 	'right-duplicate' => "Pagina's kopiëren",
 );
 
-/** Norwegian Nynorsk (‪Norsk (nynorsk)‬)
+/** Norwegian Nynorsk (‪norsk (nynorsk)‬)
  * @author Gunnernett
  * @author Harald Khan
  * @author Jon Harald Søby
@@ -1300,7 +1300,7 @@ $messages['nso'] = array(
 	'duplicator-submit' => 'Pedifatša',
 );
 
-/** Occitan (Occitan)
+/** Occitan (occitan)
  * @author Cedric31
  */
 $messages['oc'] = array(
@@ -1327,7 +1327,7 @@ $messages['oc'] = array(
 	'right-duplicate' => 'duplicar de paginas',
 );
 
-/** Polish (Polski)
+/** Polish (polski)
  * @author Derbeth
  * @author Maikking
  * @author Sp5uhe
@@ -1401,7 +1401,7 @@ $messages['ps'] = array(
 	'duplicator-source' => 'سرچينه:',
 );
 
-/** Portuguese (Português)
+/** Portuguese (português)
  * @author 555
  * @author Hamilton Abreu
  * @author Lijealso
@@ -1432,7 +1432,7 @@ Ocorreu um erro desconhecido.',
 	'right-duplicate' => 'Duplicar páginas',
 );
 
-/** Brazilian Portuguese (Português do Brasil)
+/** Brazilian Portuguese (português do Brasil)
  * @author Eduardo.mps
  */
 $messages['pt-br'] = array(
@@ -1459,7 +1459,7 @@ $messages['pt-br'] = array(
 	'right-duplicate' => 'Duplicar páginas',
 );
 
-/** Romanian (Română)
+/** Romanian (română)
  * @author KlaudiuMihaila
  * @author Stelistcristi
  */
@@ -1480,7 +1480,7 @@ A apărut o eroare necunoscută.',
 	'right-duplicate' => 'Duplică pagini',
 );
 
-/** Tarandíne (Tarandíne)
+/** tarandíne (tarandíne)
  * @author Joetaras
  */
 $messages['roa-tara'] = array(
@@ -1488,7 +1488,7 @@ $messages['roa-tara'] = array(
 	'duplicator-dest' => 'Destinazione:',
 );
 
-/** Russian (Русский)
+/** Russian (русский)
  * @author Ferrer
  * @author Kaganer
  * @author Александр Сигачёв
@@ -1517,14 +1517,14 @@ $messages['ru'] = array(
 	'right-duplicate' => 'копирование страниц',
 );
 
-/** Sicilian (Sicilianu)
+/** Sicilian (sicilianu)
  * @author Aushulz
  */
 $messages['scn'] = array(
 	'duplicator-options' => 'Oppizioni',
 );
 
-/** Slovak (Slovenčina)
+/** Slovak (slovenčina)
  * @author Helix84
  */
 $messages['sk'] = array(
@@ -1551,7 +1551,7 @@ $messages['sk'] = array(
 	'right-duplicate' => 'Duplicitné stránky',
 );
 
-/** Serbian (Cyrillic script) (‪Српски (ћирилица)‬)
+/** Serbian (Cyrillic script) (‪српски (ћирилица)‬)
  * @author Rancher
  * @author Михајло Анђелковић
  */
@@ -1582,7 +1582,7 @@ $messages['sr-ec'] = array(
 	'right-duplicate' => 'Дуплиране стране',
 );
 
-/** Serbian (Latin script) (‪Srpski (latinica)‬)
+/** Serbian (Latin script) (‪srpski (latinica)‬)
  * @author Michaello
  */
 $messages['sr-el'] = array(
@@ -1637,7 +1637,7 @@ $messages['stq'] = array(
 	'duplicator-toomanyrevisions' => 'Ju Siede [[$1]] häd $2 Versione, un kon deeruum nit duplizierd wäide. Der konnen bloot Sieden mäd maximoal $3 Versione duplizierd wäide.',
 );
 
-/** Swedish (Svenska)
+/** Swedish (svenska)
  * @author Lejonel
  * @author M.M.S.
  * @author Najami
@@ -1695,7 +1695,7 @@ $messages['te'] = array(
 	'duplicator-toomanyrevisions' => '[[$1]]కి చాలా ($2) కూర్పులున్నాయి కనుక దాన్ని కాపీ చేయలేము. ప్రస్తుత పరిమితి $3.',
 );
 
-/** Tajik (Cyrillic script) (Тоҷикӣ)
+/** Tajik (Cyrillic script) (тоҷикӣ)
  * @author Ibrahim
  */
 $messages['tg-cyrl'] = array(
@@ -1723,7 +1723,7 @@ $messages['tg-cyrl'] = array(
 Маҳдудияти кунунӣ $3 аст.',
 );
 
-/** Tajik (Latin script) (Tojikī)
+/** Tajik (Latin script) (tojikī)
  * @author Liangent
  */
 $messages['tg-latn'] = array(
@@ -1816,7 +1816,7 @@ Mevcut sınır $3 olarak belirlenmiştir.',
 	'right-duplicate' => 'Sayfaları kopyalar',
 );
 
-/** Ukrainian (Українська)
+/** Ukrainian (українська)
  * @author Prima klasy4na
  */
 $messages['uk'] = array(
@@ -1919,7 +1919,7 @@ $messages['yue'] = array(
 	'duplicator-toomanyrevisions' => '[[$1]]有太多 ($2次) 修訂，唔能夠複製。現時嘅上限係有$3次。',
 );
 
-/** Simplified Chinese (‪中文(简体)‬)
+/** Simplified Chinese (‪中文（简体）‬)
  * @author Gzdavidwong
  * @author Shinjiman
  * @author Vina
@@ -1948,7 +1948,7 @@ $messages['zh-hans'] = array(
 	'right-duplicate' => '复制文章',
 );
 
-/** Traditional Chinese (‪中文(繁體)‬)
+/** Traditional Chinese (‪中文（繁體）‬)
  * @author Mark85296341
  * @author Shinjiman
  * @author Wrightbus
