@@ -1168,12 +1168,31 @@ $messages['mr'] = array(
 
 /** Malay (Bahasa Melayu)
  * @author Anakmalaysia
+ * @author Tedbundyjr
  */
 $messages['ms'] = array(
+	'duplicator' => 'Salin laman',
+	'duplicator-desc' => 'Cipta [[Special:Duplicate|salinan laman]] tersendiri bersama sejarah pengeditan penuh.',
+	'duplicator-toolbox' => 'Salin laman ini',
+	'duplicator-header' => 'Halaman ini menyediakan kemudahan untuk membuat salinan lengkap suatu artikel, membuat salinan tersendiri bersama semua sejarah suntingan. Hal ini berguna untuk mencabangkan artikel, dll.',
 	'duplicator-options' => 'Pilihan',
 	'duplicator-source' => 'Sumber:',
+	'duplicator-dest' => 'Destinasi',
+	'duplicator-dotalk' => 'Salin halaman pembicaraan (jika tersedia)',
+	'duplicator-submit' => 'Salin',
 	'duplicator-summary' => 'Disalin dari [[$1]]',
 	'duplicator-success' => "<big>'''[[$1]] disalin kepada [[$2]].'''</big>",
+	'duplicator-success-revisions' => '$1 {{PLURAL:$1|kemaskinian|kemaskinian}} telah disalin.',
+	'duplicator-success-talkcopied' => 'Laman perbincangan juga telah disalin.',
+	'duplicator-success-talknotcopied' => 'Laman perbincangan tidak dapat disalin.',
+	'duplicator-failed' => 'Halaman tidak dapat disalin. 
+Telah terjadi suatu kesalahan yang tidak dikenalpasti.',
+	'duplicator-source-invalid' => 'Sila masukkan judul sumber yang sah.',
+	'duplicator-source-notexist' => '[[$1]] tidak dijumpai. Sila berikan judul sumber yang lamannya sedia wujud.',
+	'duplicator-dest-invalid' => 'Harap masukkan judul destinasi yang sah.',
+	'duplicator-dest-exists' => '[[$1]] telah wujud. Harap berikan judul destinasi yang lamannya belum wujud.',
+	'duplicator-toomanyrevisions' => '[[$1]] memiliki terlalu banyak ($2) kemaskinian dan tidak dapat disalin. Limit ketika ini adalah $3.',
+	'right-duplicate' => 'Salinan laman',
 );
 
 /** Erzya (Эрзянь)
