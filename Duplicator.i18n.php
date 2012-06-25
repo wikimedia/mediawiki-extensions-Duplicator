@@ -422,6 +422,13 @@ $messages['de-formal'] = array(
 	'duplicator-dest-exists' => 'Die Seite [[$1]] ist bereits vorhanden. Bitte geben Sie eine Zielseite an, die nicht vorhanden ist.',
 );
 
+/** Zazaki (Zazaki)
+ * @author Mirzali
+ */
+$messages['diq'] = array(
+	'duplicator-source' => 'Çıme:',
+);
+
 /** Lower Sorbian (Dolnoserbski)
  * @author Michawiki
  */
