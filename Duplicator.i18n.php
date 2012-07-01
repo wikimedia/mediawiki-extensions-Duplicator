@@ -185,7 +185,7 @@ $messages['bcl'] = array(
 	'duplicator-summary' => 'Kinopya sa [[$1]]',
 );
 
-/** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
+/** Belarusian (Taraškievica orthography) (‪беларуская (тарашкевіца)‬)
  * @author EugeneZelenko
  * @author Jim-by
  * @author Zedlik
@@ -429,7 +429,7 @@ $messages['diq'] = array(
 	'duplicator-source' => 'Çıme:',
 );
 
-/** Lower Sorbian (Dolnoserbski)
+/** Lower Sorbian (dolnoserbski)
  * @author Michawiki
  */
 $messages['dsb'] = array(
@@ -660,7 +660,7 @@ $messages['fy'] = array(
 	'duplicator-source' => 'Boarne:',
 );
 
-/** Galician (Galego)
+/** Galician (galego)
  * @author Alma
  * @author Toliño
  * @author Xosé
@@ -803,7 +803,7 @@ $messages['hi'] = array(
 	'duplicator-toomanyrevisions' => '[[$1]] को बहुत सारे ($2) अवतरण हैं और उसकी कापी नहीं कर सकतें। अभीकी मर्यादा $3 इतनी हैं।',
 );
 
-/** Upper Sorbian (Hornjoserbsce)
+/** Upper Sorbian (hornjoserbsce)
  * @author Michawiki
  */
 $messages['hsb'] = array(
