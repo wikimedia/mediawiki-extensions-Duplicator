@@ -1012,6 +1012,13 @@ $messages['km'] = array(
 លីមីត​បច្ចុប្បន្ន​គឺ $3 ។',
 );
 
+/** Korean (한국어)
+ * @author 아라
+ */
+$messages['ko'] = array(
+	'duplicator-source' => '출처:',
+);
+
 /** Colognian (Ripoarisch)
  * @author Purodha
  */
