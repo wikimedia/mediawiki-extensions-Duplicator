@@ -1089,6 +1089,14 @@ $messages['lb'] = array(
 	'right-duplicate' => 'Säite verduebelen',
 );
 
+/** Lithuanian (lietuvių)
+ * @author Eitvys200
+ */
+$messages['lt'] = array(
+	'duplicator-options' => 'Parinktys',
+	'duplicator-source' => 'Šaltinis:',
+);
+
 /** Macedonian (македонски)
  * @author Bjankuloski06
  */
