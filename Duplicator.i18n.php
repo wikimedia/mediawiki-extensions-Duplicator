@@ -1217,7 +1217,7 @@ Telah terjadi suatu kesalahan yang tidak dikenalpasti.',
 	'right-duplicate' => 'Salinan laman',
 );
 
-/** Erzya (Эрзянь)
+/** Erzya (эрзянь)
  * @author Botuzhaleny-sodamo
  */
 $messages['myv'] = array(
@@ -1231,8 +1231,7 @@ $messages['nah'] = array(
 	'duplicator-source' => 'Īhuīcpa:',
 );
 
-/** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
- * @author Jon Harald Søby
+/** Norwegian Bokmål (‪norsk (bokmål)‬)
  * @author Nghtwlkr
  */
 $messages['nb'] = array(
@@ -1864,7 +1863,7 @@ $messages['uk'] = array(
 	'duplicator-source' => 'Джерело:',
 );
 
-/** Veps (Vepsän kel’)
+/** Veps (vepsän kel’)
  * @author Игорь Бродский
  */
 $messages['vep'] = array(
