@@ -423,9 +423,11 @@ $messages['de-formal'] = array(
 );
 
 /** Zazaki (Zazaki)
+ * @author Erdemaslancan
  * @author Mirzali
  */
 $messages['diq'] = array(
+	'duplicator-options' => 'Weçinegi',
 	'duplicator-source' => 'Çıme:',
 );
 
@@ -1823,6 +1825,13 @@ Naganap ang isang hindi mapag-alamang kamalian.',
 	'duplicator-toomanyrevisions' => 'Ang [[$1]] ay may napakaraming ($2) mga pagbabago at hindi masisipi.
 Ang kasalukuyang hangganan ay $3.',
 	'right-duplicate' => 'Gayahin ang mga pahina',
+);
+
+/** толышә зывон (толышә зывон)
+ * @author Erdemaslancan
+ */
+$messages['tly'] = array(
+	'duplicator-options' => 'Кукон',
 );
 
 /** Turkish (Türkçe)
