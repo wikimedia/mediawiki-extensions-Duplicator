@@ -1566,6 +1566,15 @@ $messages['scn'] = array(
 	'duplicator-options' => 'Oppizioni',
 );
 
+/** Sinhala (සිංහල)
+ * @author පසිඳු කාවින්ද
+ */
+$messages['si'] = array(
+	'duplicator-options' => 'විකල්ප',
+	'duplicator-source' => 'මූලාශ්‍රය:',
+	'duplicator-dest' => 'ගමනාන්තය:',
+);
+
 /** Slovak (slovenčina)
  * @author Helix84
  */
