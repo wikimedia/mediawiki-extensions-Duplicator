@@ -991,6 +991,15 @@ $messages['jv'] = array(
 	'duplicator-summary' => 'Ditulad saka [[$1]]',
 );
 
+/** Georgian (ქართული)
+ * @author David1010
+ */
+$messages['ka'] = array(
+	'duplicator-options' => 'პარამეტრები',
+	'duplicator-source' => 'წყარო:',
+	'duplicator-dest' => 'დანიშნულება:',
+);
+
 /** Khmer (ភាសាខ្មែរ)
  * @author Chhorran
  * @author Lovekhmer
