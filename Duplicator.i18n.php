@@ -1579,9 +1579,13 @@ $messages['scn'] = array(
  * @author පසිඳු කාවින්ද
  */
 $messages['si'] = array(
+	'duplicator' => 'පිටුවක් පිටපත් කරන්න',
+	'duplicator-toolbox' => 'මෙම පිටුව පිටපත් කරන්න',
 	'duplicator-options' => 'විකල්ප',
 	'duplicator-source' => 'මූලාශ්‍රය:',
 	'duplicator-dest' => 'ගමනාන්තය:',
+	'duplicator-submit' => 'පිටපත් කරන්න',
+	'right-duplicate' => 'පිටු පිටපත් කරන්න',
 );
 
 /** Slovak (slovenčina)
@@ -1727,6 +1731,7 @@ $messages['sv'] = array(
 );
 
 /** Tamil (தமிழ்)
+ * @author Karthi.dr
  * @author TRYPPN
  */
 $messages['ta'] = array(
@@ -1734,6 +1739,8 @@ $messages['ta'] = array(
 	'duplicator-source' => 'மூலம்:',
 	'duplicator-dest' => 'சேருமிடம்:',
 	'duplicator-submit' => 'ஒரே மாதிரியுள்ள (நகல் எடு)',
+	'duplicator-success-talkcopied' => 'பேச்சுப் பக்கமும் நகலெடுக்கப்பட்டது.',
+	'duplicator-success-talknotcopied' => 'பேச்சுப் பக்கத்தை நகலெடுக்க முடியவில்லை.',
 );
 
 /** Telugu (తెలుగు)
