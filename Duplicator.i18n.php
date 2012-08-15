@@ -662,6 +662,14 @@ $messages['fy'] = array(
 	'duplicator-source' => 'Boarne:',
 );
 
+/** Irish (Gaeilge)
+ * @author පසිඳු කාවින්ද
+ */
+$messages['ga'] = array(
+	'duplicator-options' => 'Roghanna',
+	'duplicator-source' => 'Foinse:',
+);
+
 /** Galician (galego)
  * @author Alma
  * @author Toliño
