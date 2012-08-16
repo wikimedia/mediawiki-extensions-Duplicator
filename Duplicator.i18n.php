@@ -1971,8 +1971,10 @@ Pöl nesevädik ejenon.',
 
 /** Yiddish (ייִדיש)
  * @author פוילישער
+ * @author පසිඳු කාවින්ද
  */
 $messages['yi'] = array(
+	'duplicator-options' => 'ברירות',
 	'duplicator-source' => 'מקור:',
 );
 
