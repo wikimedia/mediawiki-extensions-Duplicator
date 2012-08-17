@@ -1905,6 +1905,17 @@ $messages['uk'] = array(
 	'duplicator-source' => 'Джерело:',
 );
 
+/** Urdu (اردو)
+ * @author පසිඳු කාවින්ද
+ */
+$messages['ur'] = array(
+	'duplicator-options' => 'اختیارات',
+	'duplicator-source' => 'ماخذ:',
+	'duplicator-dest' => 'منزل مقصود:',
+	'duplicator-submit' => 'ڈپلیکیٹ',
+	'right-duplicate' => 'نقلی صفحات',
+);
+
 /** Veps (vepsän kel’)
  * @author Игорь Бродский
  */
