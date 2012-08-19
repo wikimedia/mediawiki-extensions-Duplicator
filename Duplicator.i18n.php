@@ -427,8 +427,13 @@ $messages['de-formal'] = array(
  * @author Mirzali
  */
 $messages['diq'] = array(
+	'duplicator' => 'Yew pela kopya ke',
 	'duplicator-options' => 'Weçinegi',
 	'duplicator-source' => 'Çıme:',
+	'duplicator-dest' => 'Hedef:',
+	'duplicator-submit' => 'Kopya',
+	'duplicator-summary' => '[[$1]] ra kopya ke',
+	'right-duplicate' => 'Pela keno kopya',
 );
 
 /** Lower Sorbian (dolnoserbski)
@@ -2018,6 +2023,7 @@ $messages['yue'] = array(
  * @author Gzdavidwong
  * @author Shinjiman
  * @author Vina
+ * @author Xiaomingyan
  */
 $messages['zh-hans'] = array(
 	'duplicator' => '复制一篇文章',
@@ -2025,7 +2031,7 @@ $messages['zh-hans'] = array(
 	'duplicator-toolbox' => '复制这篇文章',
 	'duplicator-header' => '这一版可以完全复制一篇文章，建立一个完整的修订历史。这对于文章分叉等的动作是很有用的。',
 	'duplicator-options' => '选项',
-	'duplicator-source' => '来源:',
+	'duplicator-source' => '来源：',
 	'duplicator-dest' => '目标:',
 	'duplicator-dotalk' => '复制讨论页 （如可用的话）',
 	'duplicator-submit' => '复制',
