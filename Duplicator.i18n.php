@@ -1040,7 +1040,30 @@ $messages['km'] = array(
  * @author 아라
  */
 $messages['ko'] = array(
+	'duplicator' => '문서 복제',
+	'duplicator-desc' => '전체 편집 역사로 독립적인 [[Special:Duplicate|문서 복사본]]을 만듦',
+	'duplicator-toolbox' => '이 문서 복제',
+	'duplicator-header' => '이 문서는 모든 역사의 독립적인 복사본을 만들어 문서 전체를 복제할 수 있습니다.
+문서 나누기 등에 유용합니다.',
+	'duplicator-options' => '설정',
 	'duplicator-source' => '출처:',
+	'duplicator-dest' => '대상:',
+	'duplicator-dotalk' => '(가능한 경우) 토론 문서 복제',
+	'duplicator-submit' => '복제',
+	'duplicator-summary' => '[[$1]]에서 복사함',
+	'duplicator-success' => "<big>'''[[$1]] 문서를 [[$2]] 문서로 복사했습니다.'''</big>",
+	'duplicator-success-revisions' => '$1 {{PLURAL:$1|판}}을 복사했습니다.',
+	'duplicator-success-talkcopied' => '토론 문서도 복사했습니다.',
+	'duplicator-success-talknotcopied' => '토론 문서를 복사할 수 없습니다.',
+	'duplicator-failed' => '문서를 복제할 수 없습니다.
+알 수 없는 오류가 발생했습니다.',
+	'duplicator-source-invalid' => '올바른 원본 제목을 제공하세요.',
+	'duplicator-source-notexist' => '[[$1]] 문서가 존재하지 않습니다. 존재하는 문서 제목을 제공하세요.',
+	'duplicator-dest-invalid' => '올바른 대상 제목을 제공하세요.',
+	'duplicator-dest-exists' => '[[$1]] 문서가 이미 존재합니다. 존재하지 않는 대상 문서를 제공하세요.',
+	'duplicator-toomanyrevisions' => '[[$1]] 문서의 ($2)판이 너무 많아 복사할 수 없습니다.
+현재 제한은 $3입니다.',
+	'right-duplicate' => '문서 복제',
 );
 
 /** Colognian (Ripoarisch)
