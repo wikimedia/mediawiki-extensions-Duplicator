@@ -185,7 +185,7 @@ $messages['bcl'] = array(
 	'duplicator-summary' => 'Kinopya sa [[$1]]',
 );
 
-/** Belarusian (Taraškievica orthography) (‪беларуская (тарашкевіца)‬)
+/** Belarusian (Taraškievica orthography) (беларуская (тарашкевіца)‎)
  * @author EugeneZelenko
  * @author Jim-by
  * @author Zedlik
@@ -411,7 +411,7 @@ $messages['de'] = array(
 	'right-duplicate' => 'Seiten duplizieren',
 );
 
-/** German (formal address) (‪Deutsch (Sie-Form)‬)
+/** German (formal address) (Deutsch (Sie-Form)‎)
  * @author Imre
  * @author Kghbln
  */
@@ -1100,7 +1100,7 @@ künne mer em Momang nit koppeere.',
 	'right-duplicate' => 'Sigge verdubbelle',
 );
 
-/** Kurdish (Latin script) (‪Kurdî (latînî)‬)
+/** Kurdish (Latin script) (Kurdî (latînî)‎)
  * @author George Animal
  */
 $messages['ku-latn'] = array(
@@ -1278,7 +1278,7 @@ $messages['nah'] = array(
 	'duplicator-source' => 'Īhuīcpa:',
 );
 
-/** Norwegian Bokmål (‪norsk (bokmål)‬)
+/** Norwegian Bokmål (norsk (bokmål)‎)
  * @author Nghtwlkr
  */
 $messages['nb'] = array(
@@ -1345,7 +1345,7 @@ De huidige limiet is $3.',
 	'right-duplicate' => "Pagina's kopiëren",
 );
 
-/** Norwegian Nynorsk (‪norsk (nynorsk)‬)
+/** Norwegian Nynorsk (norsk (nynorsk)‎)
  * @author Gunnernett
  * @author Harald Khan
  * @author Jon Harald Søby
@@ -1651,7 +1651,7 @@ $messages['sk'] = array(
 	'right-duplicate' => 'Duplicitné stránky',
 );
 
-/** Serbian (Cyrillic script) (‪српски (ћирилица)‬)
+/** Serbian (Cyrillic script) (српски (ћирилица)‎)
  * @author Rancher
  * @author Михајло Анђелковић
  */
@@ -1682,7 +1682,7 @@ $messages['sr-ec'] = array(
 	'right-duplicate' => 'Дуплиране стране',
 );
 
-/** Serbian (Latin script) (‪srpski (latinica)‬)
+/** Serbian (Latin script) (srpski (latinica)‎)
  * @author Michaello
  */
 $messages['sr-el'] = array(
@@ -2042,7 +2042,7 @@ $messages['yue'] = array(
 	'duplicator-toomanyrevisions' => '[[$1]]有太多 ($2次) 修訂，唔能夠複製。現時嘅上限係有$3次。',
 );
 
-/** Simplified Chinese (‪中文（简体）‬)
+/** Simplified Chinese (中文（简体）‎)
  * @author Gzdavidwong
  * @author Shinjiman
  * @author Vina
@@ -2072,7 +2072,7 @@ $messages['zh-hans'] = array(
 	'right-duplicate' => '复制文章',
 );
 
-/** Traditional Chinese (‪中文（繁體）‬)
+/** Traditional Chinese (中文（繁體）‎)
  * @author Mark85296341
  * @author Shinjiman
  * @author Wrightbus
