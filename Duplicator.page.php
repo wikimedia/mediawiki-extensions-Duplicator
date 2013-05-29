@@ -23,9 +23,10 @@ class SpecialDuplicator extends SpecialPage {
 	protected $destTitle = null;
 
 	/**
-	 * Whether or not we're duplicating the talk page
+	 * Whether or not we're duplicating the talk page and the history
 	 */
 	protected $talk = true;
+	protected $history = true;
 
 	/**
 	 * Constructor
@@ -97,12 +98,12 @@ class SpecialDuplicator extends SpecialPage {
 		$num = $dbr->selectField( 'revision', 'COUNT(*)',array( 'rev_page' => $this->sourceTitle->getArticleID() ), __METHOD__ );
 		if( $num <= $wgDuplicatorRevisionLimit ) {
 			# Attempt to perform the main duplicate op. first
-			if( $this->duplicate( $this->sourceTitle, $this->destTitle ) ) {
+			if( $this->duplicate( $this->sourceTitle, $this->destTitle, $this->history ) ) {
 				$success  = wfMsgNoTrans( 'duplicator-success', $this->sourceTitle->getPrefixedText(), $this->destTitle->getPrefixedText() ) . "\n\n";
 				$success .= '* ' . wfMsgNoTrans( 'duplicator-success-revisions', $wgLang->formatNum( $num ) ) . "\n";
 				# If there is a talk page and we've been asked to duplicate it, do so
 				if( $this->dealWithTalk() && $this->talk ) {
-					if( $this->duplicate( $this->sourceTitle->getTalkPage(), $this->destTitle->getTalkPage() ) ) {
+					if( $this->duplicate( $this->sourceTitle->getTalkPage(), $this->destTitle->getTalkPage(), $this->history ) ) {
 						$success .= '* ' . wfMsgNoTrans( 'duplicator-success-talkcopied' ) . "\n";
 					} else {
 						$success .= '* ' . wfMsgNoTrans( 'duplicator-success-talknotcopied' ) . "\n";
@@ -138,6 +139,7 @@ class SpecialDuplicator extends SpecialPage {
 		$this->dest = $request->getText( 'dest', '' );
 		$this->destTitle = Title::newFromText( $this->dest );
 		$this->talk = $request->getCheck( 'talk' );
+		$this->history = $request->getCheck( 'history' );
 	}
 
 	/**
@@ -183,6 +185,9 @@ class SpecialDuplicator extends SpecialPage {
 		$form .= '<td>' . Xml::checkLabel( wfMsg( 'duplicator-dotalk' ), 'talk', 'talk', $this->talk ) . '</td>';
 		$form .= '</tr><tr>';
 		$form .= '<td>&#160;</td>';
+		$form .= '<td>' . Xml::checkLabel( wfMsg( 'duplicator-dohistory' ), 'history', 'history', $this->history ) . '</td>';
+		$form .= '</tr><tr>';
+		$form .= '<td>&#160;</td>';
 		$form .= '<td>' . Xml::submitButton( wfMsg( 'duplicator-submit' ) ) . '</td>';
 		$form .= '</tr>';
 		$form .= '</table>';
@@ -197,9 +202,10 @@ class SpecialDuplicator extends SpecialPage {
 	 *
 	 * @param $source Title to duplicate
 	 * @param $dest Title to save to
+	 * @param $includeHistory Whether to copy full article history
 	 * @return bool
 	 */
-	protected function duplicate( &$source, &$dest ) {
+	protected function duplicate( &$source, &$dest, $includeHistory = false ) {
 		global $wgUser, $wgBot;
 		if( !$source->exists() || $dest->exists() ) {
 			return false; # Source doesn't exist, or destination does
@@ -207,17 +213,19 @@ class SpecialDuplicator extends SpecialPage {
 		$dbw = wfGetDB( DB_MASTER );
 		$dbw->begin();
 		$sid = $source->getArticleID();
+		$comment = wfMsgForContent( 'duplicator-summary', $source->getPrefixedText() );
 		# Create an article representing the destination page and save it
 		$destArticle = new Article( $dest );
 		$aid = $destArticle->insertOn( $dbw );
 		# Perform the revision duplication
 		# An INSERT...SELECT here seems to fuck things up
-		$res = $dbw->select( 'revision', '*', array( 'rev_page' => $sid ), __METHOD__ );
+		$res = $dbw->select( 'revision', '*', array( 'rev_page' => $sid ), __METHOD__,
+			$includeHistory ? NULL : array( 'ORDER BY' => 'rev_timestamp DESC', 'LIMIT' => 1 ) );
 		if( $res && $dbw->numRows( $res ) > 0 ) {
 			while( $row = $dbw->fetchObject( $res ) ) {
 				$values['rev_page'] = $aid;
 				$values['rev_text_id'] = $row->rev_text_id;
-				$values['rev_comment'] = $row->rev_comment;
+				$values['rev_comment'] = $includeHistory ? $row->rev_comment : $comment;
 				$values['rev_user'] = $row->rev_user;
 				$values['rev_user_text'] = $row->rev_user_text;
 				$values['rev_timestamp'] = $row->rev_timestamp;
@@ -229,17 +237,15 @@ class SpecialDuplicator extends SpecialPage {
 		}
 		# Update page record
 		$latest = $dbw->selectField( 'revision', 'MAX(rev_id)', array( 'rev_page' => $aid ), __METHOD__ );
-		$rev = Revision::newFromId( $latest );
-		$destArticle->updateRevisionOn( $dbw, $rev );
-		# Commit transaction
-		$dbw->commit();
-		# Create a null revision with an explanation; do cache clearances, etc.
-		$dbw->begin();
-		$comment = wfMsgForContent( 'duplicator-summary', $source->getPrefixedText() );
-		$nr = Revision::newNullRevision( $dbw, $aid, $comment, true );
-		$nid = $nr->insertOn( $dbw );
+		$nr = Revision::newFromId( $latest );
+		if ( $includeHistory ) {
+			# Create a null revision with an explanation; do cache clearances, etc.
+			$destArticle->updateRevisionOn( $dbw, $nr );
+			$nr = Revision::newNullRevision( $dbw, $aid, $comment, true );
+			$nid = $nr->insertOn( $dbw );
+		}
 		$destArticle->updateRevisionOn( $dbw, $nr );
-		$destArticle->createUpdates( $nr );
+		$destArticle->doEditUpdates( $nr, $wgUser, array( 'created' => true ) );
 		Article::onArticleCreate( $dest );
 		$bot = $wgUser->isAllowed( 'bot' );
 		RecentChange::notifyNew( $nr->getTimestamp(), $dest, true, $wgUser, $comment, $bot );
