@@ -13,19 +13,19 @@ class SpecialDuplicator extends SpecialPage {
 	/**
 	 * Title of the page we are duplicating
 	 */
-	private $source = '';
-	private $sourceTitle = null;
+	protected $source = '';
+	protected $sourceTitle = null;
 
 	/**
 	 * Title of the page we are saving to
 	 */
-	private $dest = '';
-	private $destTitle = null;
+	protected $dest = '';
+	protected $destTitle = null;
 
 	/**
 	 * Whether or not we're duplicating the talk page
 	 */
-	private $talk = true;
+	protected $talk = true;
 
 	/**
 	 * Constructor
@@ -131,12 +131,12 @@ class SpecialDuplicator extends SpecialPage {
 	 * @param $request WebRequest we're running off
 	 * @param $title Title passed to the page
 	 */
-	private function setOptions( &$request, $title ) {
+	protected function setOptions( &$request, $title ) {
 		$source = $request->getText( 'source' );
 		$this->source = $source ? $source : ( $title ? $title : '' );
-		$this->sourceTitle = Title::newFromURL( $this->source );
+		$this->sourceTitle = Title::newFromText( $this->source );
 		$this->dest = $request->getText( 'dest', '' );
-		$this->destTitle = Title::newFromURL( $this->dest );
+		$this->destTitle = Title::newFromText( $this->dest );
 		$this->talk = $request->getCheck( 'talk' );
 	}
 
@@ -146,7 +146,7 @@ class SpecialDuplicator extends SpecialPage {
 	 *
 	 * @return bool
 	 */
-	private function dealWithTalk() {
+	protected function dealWithTalk() {
 		if( is_object( $this->sourceTitle ) ) {
 			if( $this->sourceTitle->isTalkPage() )
 				return false;
@@ -164,7 +164,7 @@ class SpecialDuplicator extends SpecialPage {
 	 *
 	 * @return string
 	 */
-	private function buildForm() {
+	protected function buildForm() {
 		global $wgUser;
 		$self = SpecialPage::getTitleFor( 'Duplicator' );
 		$source = is_object( $this->sourceTitle ) ? $this->sourceTitle->getPrefixedText() : $this->source;
@@ -199,10 +199,11 @@ class SpecialDuplicator extends SpecialPage {
 	 * @param $dest Title to save to
 	 * @return bool
 	 */
-	private function duplicate( &$source, &$dest ) {
+	protected function duplicate( &$source, &$dest ) {
 		global $wgUser, $wgBot;
-		if( !$source->exists() || $dest->exists() )
+		if( !$source->exists() || $dest->exists() ) {
 			return false; # Source doesn't exist, or destination does
+		}
 		$dbw = wfGetDB( DB_MASTER );
 		$dbw->begin();
 		$sid = $source->getArticleID();
