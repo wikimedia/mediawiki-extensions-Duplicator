@@ -23,9 +23,10 @@ class SpecialDuplicator extends SpecialPage {
 	protected $destTitle = null;
 
 	/**
-	 * Whether or not we're duplicating the talk page and the history
+	 * Whether or not we're duplicating the talk page, subpages, and the history
 	 */
 	protected $talk = true;
+	protected $subpages = true;
 	protected $history = true;
 
 	/**
@@ -98,6 +99,10 @@ class SpecialDuplicator extends SpecialPage {
 		if( $num ) {
 			$success = '* ' . wfMsgNoTrans( 'duplicator-success', $this->sourceTitle->getPrefixedText(), $this->destTitle->getPrefixedText() );
 			$success .= ' ' . wfMsgNoTrans( 'duplicator-success-revisions', $wgLang->formatNum( $num ) ) . "\n";
+			# If there are subpages and we've been asked to duplicate them, do so
+			if ( $this->subpages ) {
+				$success .= $this->duplicateSubpages( $this->sourceTitle, $this->destTitle, $this->history );
+			}
 			# If there is a talk page and we've been asked to duplicate it, do so
 			if( $this->talk && $this->dealWithTalk() ) {
 				$st = $this->sourceTitle->getTalkPage();
@@ -106,6 +111,9 @@ class SpecialDuplicator extends SpecialPage {
 				if ( $num ) {
 					$success .= '* ' . wfMsgNoTrans( 'duplicator-success', $st->getPrefixedText(), $dt->getPrefixedText() );
 					$success .= ' ' . wfMsgNoTrans( 'duplicator-success-revisions', $wgLang->formatNum( $num ) ) . "\n";
+					if ( $this->subpages ) {
+						$success .= $this->duplicateSubpages( $st, $dt, $this->history );
+					}
 				} else {
 					$success .= '* ' . wfMsgNoTrans( 'duplicator-success-talknotcopied' ) . "\n";
 				}
@@ -133,6 +141,7 @@ class SpecialDuplicator extends SpecialPage {
 		$this->dest = $request->getText( 'dest', '' );
 		$this->destTitle = Title::newFromText( $this->dest );
 		$this->talk = $request->getCheck( 'talk' );
+		$this->subpages = $request->getCheck( 'subpages' );
 		$this->history = $request->getCheck( 'history' );
 	}
 
@@ -179,6 +188,9 @@ class SpecialDuplicator extends SpecialPage {
 		$form .= '<td>' . Xml::checkLabel( wfMsg( 'duplicator-dotalk' ), 'talk', 'talk', $this->talk ) . '</td>';
 		$form .= '</tr><tr>';
 		$form .= '<td>&#160;</td>';
+		$form .= '<td>' . Xml::checkLabel( wfMsg( 'duplicator-dosubpages' ), 'subpages', 'subpages', $this->subpages ) . '</td>';
+		$form .= '</tr><tr>';
+		$form .= '<td>&#160;</td>';
 		$form .= '<td>' . Xml::checkLabel( wfMsg( 'duplicator-dohistory' ), 'history', 'history', $this->history ) . '</td>';
 		$form .= '</tr><tr>';
 		$form .= '<td>&#160;</td>';
@@ -188,6 +200,38 @@ class SpecialDuplicator extends SpecialPage {
 		$form .= Html::Hidden( 'token', $wgUser->editToken( 'duplicator' ) );
 		$form .= '</fieldset></form>';
 		return $form;
+	}
+
+	/**
+	 * Duplicate subpages of $source to $dest
+	 *
+	 * @param $source Title to duplicate subpages for
+	 * @param $dest Title to save subpages to
+	 * @return bool
+	 */
+	protected function duplicateSubpages( $source, $dest, $includeHistory ) {
+		global $wgLang;
+		$subpages = $source->getSubpages();
+		$len = strlen( $source->getText() );
+		$ns = $dest->getNamespace();
+		$dest = $dest->getText();
+		$success = '';
+		foreach ( $subpages as $sub ) {
+			$destSub = Title::makeTitleSafe( $ns, $dest . substr( $sub->getText(), $len ) );
+			if ( $destSub ) {
+				if ( $destSub->exists() ) {
+					$success .= '* ' . wfMsgNoTrans( 'duplicator-failed-dest-exists', $sub->getPrefixedText(), $destSub->getPrefixedText() ) . "\n";
+				} else {
+					$num = $this->duplicate( $sub, $destSub, $this->history );
+					$success .= '* ' . wfMsgNoTrans( 'duplicator-success', $sub->getPrefixedText(), $destSub->getPrefixedText() );
+					$success .= ' ' . wfMsgNoTrans( 'duplicator-success-revisions', $wgLang->formatNum( $num ) ) . "\n";
+				}
+			} else {
+				# Bad title error can only occur here because of the destination title being too long
+				$success .= '* ' . wfMsgNoTrans( 'duplicator-failed-toolong', $sub->getPrefixedText() ) . "\n";
+			}
+		}
+		return $success;
 	}
 
 	/**
