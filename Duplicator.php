@@ -34,7 +34,7 @@ $wgGroupPermissions['user']['duplicate'] = true;
 $wgAvailableRights[] = 'duplicate';
 
 /**
- * Pages with more than this number of revisions can't be duplicated
+ * At most this number of recent revisions will be duplicated
  */
 $wgDuplicatorRevisionLimit = 250;
 

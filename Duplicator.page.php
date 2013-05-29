@@ -93,35 +93,29 @@ class SpecialDuplicator extends SpecialPage {
 			return;
 		}
 
-		# Check there aren't a hideous number of revisions
-		$dbr = wfGetDB( DB_SLAVE );
-		$num = $dbr->selectField( 'revision', 'COUNT(*)',array( 'rev_page' => $this->sourceTitle->getArticleID() ), __METHOD__ );
-		if( $num <= $wgDuplicatorRevisionLimit ) {
-			# Attempt to perform the main duplicate op. first
-			if( $this->duplicate( $this->sourceTitle, $this->destTitle, $this->history ) ) {
-				$success  = wfMsgNoTrans( 'duplicator-success', $this->sourceTitle->getPrefixedText(), $this->destTitle->getPrefixedText() ) . "\n\n";
-				$success .= '* ' . wfMsgNoTrans( 'duplicator-success-revisions', $wgLang->formatNum( $num ) ) . "\n";
-				# If there is a talk page and we've been asked to duplicate it, do so
-				if( $this->dealWithTalk() && $this->talk ) {
-					if( $this->duplicate( $this->sourceTitle->getTalkPage(), $this->destTitle->getTalkPage(), $this->history ) ) {
-						$success .= '* ' . wfMsgNoTrans( 'duplicator-success-talkcopied' ) . "\n";
-					} else {
-						$success .= '* ' . wfMsgNoTrans( 'duplicator-success-talknotcopied' ) . "\n";
-					}
+		# Attempt to perform the main duplicate op. first
+		$num = $this->duplicate( $this->sourceTitle, $this->destTitle, $this->history );
+		if( $num ) {
+			$success = '* ' . wfMsgNoTrans( 'duplicator-success', $this->sourceTitle->getPrefixedText(), $this->destTitle->getPrefixedText() );
+			$success .= ' ' . wfMsgNoTrans( 'duplicator-success-revisions', $wgLang->formatNum( $num ) ) . "\n";
+			# If there is a talk page and we've been asked to duplicate it, do so
+			if( $this->talk && $this->dealWithTalk() ) {
+				$st = $this->sourceTitle->getTalkPage();
+				$dt = $this->destTitle->getTalkPage();
+				$num = $this->duplicate( $st, $dt, $this->history );
+				if ( $num ) {
+					$success .= '* ' . wfMsgNoTrans( 'duplicator-success', $st->getPrefixedText(), $dt->getPrefixedText() );
+					$success .= ' ' . wfMsgNoTrans( 'duplicator-success-revisions', $wgLang->formatNum( $num ) ) . "\n";
+				} else {
+					$success .= '* ' . wfMsgNoTrans( 'duplicator-success-talknotcopied' ) . "\n";
 				}
-				# Report success to the user
-				$parsed = $wgOut->parse( $success, /*linestart*/true, /*uilang*/true );
-				$wgOut->addHTML( $parsed );
-			} else {
-				# Something went wrong, abort the entire operation
-				$wgOut->addWikiMsg( 'duplicator-failed' );
 			}
+			# Report success to the user
+			$parsed = $wgOut->parse( $success, /*linestart*/true, /*uilang*/true );
+			$wgOut->addHTML( $parsed );
 		} else {
-			# Revision count exceeds limit
-			$limit = $wgLang->formatNum( $wgDuplicatorRevisionLimit );
-			$actual = $wgLang->formatNum( $num );
-			$stitle = $this->sourceTitle->getPrefixedText();
-			$wgOut->addWikiMsg( 'duplicator-toomanyrevisions', $stitle, $actual, $limit );
+			# Something went wrong, abort the entire operation
+			$wgOut->addWikiMsg( 'duplicator-failed' );
 		}
 
 	}
@@ -205,24 +199,30 @@ class SpecialDuplicator extends SpecialPage {
 	 * @param $includeHistory Whether to copy full article history
 	 * @return bool
 	 */
-	protected function duplicate( &$source, &$dest, $includeHistory = false ) {
+	protected function duplicate( $source, $dest, $includeHistory ) {
 		global $wgUser, $wgBot;
+		global $wgDuplicatorRevisionLimit;
 		if( !$source->exists() || $dest->exists() ) {
-			return false; # Source doesn't exist, or destination does
+			return 0; # Source doesn't exist, or destination does
 		}
 		$dbw = wfGetDB( DB_MASTER );
 		$dbw->begin();
 		$sid = $source->getArticleID();
-		$comment = wfMsgForContent( 'duplicator-summary', $source->getPrefixedText() );
 		# Create an article representing the destination page and save it
 		$destArticle = new Article( $dest );
 		$aid = $destArticle->insertOn( $dbw );
 		# Perform the revision duplication
 		# An INSERT...SELECT here seems to fuck things up
 		$res = $dbw->select( 'revision', '*', array( 'rev_page' => $sid ), __METHOD__,
-			$includeHistory ? NULL : array( 'ORDER BY' => 'rev_timestamp DESC', 'LIMIT' => 1 ) );
-		if( $res && $dbw->numRows( $res ) > 0 ) {
+			array( 'ORDER BY' => 'rev_timestamp DESC',
+				'LIMIT' => $includeHistory ? $wgDuplicatorRevisionLimit : 1 )
+		);
+		$comment = '';
+		if( $res && ( $count = $dbw->numRows( $res ) ) > 0 ) {
 			while( $row = $dbw->fetchObject( $res ) ) {
+				if( !$comment ) {
+					$comment = wfMsgForContent( 'duplicator-summary', $source->getPrefixedText(), $row->rev_id );
+				}
 				$values['rev_page'] = $aid;
 				$values['rev_text_id'] = $row->rev_text_id;
 				$values['rev_comment'] = $includeHistory ? $row->rev_comment : $comment;
@@ -251,6 +251,6 @@ class SpecialDuplicator extends SpecialPage {
 		RecentChange::notifyNew( $nr->getTimestamp(), $dest, true, $wgUser, $comment, $bot );
 		$dest->invalidateCache();
 		$dbw->commit();
-		return true;
+		return $count;
 	}
 }
