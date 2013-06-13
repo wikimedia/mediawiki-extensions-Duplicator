@@ -9,9 +9,6 @@
 
 $messages = array();
 
-/* English
- * @author Rob Church
- */
 $messages['en'] = array(
 	'duplicator'                       => 'Duplicate a page',
 	'duplicator-desc'                  => 'Create independent [[Special:Duplicate|copies of pages]] with full edit histories',
@@ -1571,8 +1568,14 @@ A apărut o eroare necunoscută.',
  * @author Joetaras
  */
 $messages['roa-tara'] = array(
+	'duplicator' => "Dupliche 'na pàgene",
+	'duplicator-toolbox' => 'Dupleche sta pàgene',
+	'duplicator-options' => 'Opziune',
 	'duplicator-source' => 'Sorgende:',
 	'duplicator-dest' => 'Destinazione:',
+	'duplicator-submit' => 'Dupliche',
+	'duplicator-summary' => 'Copiate da [[$1]]',
+	'duplicator-success' => "<big>'''[[$1]] ha state copiate sus a [[$2]].'''</big>",
 );
 
 /** Russian (русский)
@@ -2100,4 +2103,3 @@ $messages['zh-hant'] = array(
 	'duplicator-toomanyrevisions' => '[[$1]]有太多（$2次）修訂，不能夠複製。目前的上限有$3次。',
 	'right-duplicate' => '複製文章',
 );
-
