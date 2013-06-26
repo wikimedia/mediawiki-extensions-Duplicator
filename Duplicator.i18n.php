@@ -1569,6 +1569,7 @@ A apărut o eroare necunoscută.',
  */
 $messages['roa-tara'] = array(
 	'duplicator' => "Dupliche 'na pàgene",
+	'duplicator-desc' => "Ccreje 'na [[Special:Duplicate|copie de le pàggene]] indipendende cu tutte 'u cunde de le cangiaminde",
 	'duplicator-toolbox' => 'Dupleche sta pàgene',
 	'duplicator-options' => 'Opziune',
 	'duplicator-source' => 'Sorgende:',
@@ -1576,6 +1577,7 @@ $messages['roa-tara'] = array(
 	'duplicator-submit' => 'Dupliche',
 	'duplicator-summary' => 'Copiate da [[$1]]',
 	'duplicator-success' => "<big>'''[[$1]] ha state copiate sus a [[$2]].'''</big>",
+	'right-duplicate' => 'Dupliche le pàggene',
 );
 
 /** Russian (русский)
