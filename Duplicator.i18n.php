@@ -162,6 +162,34 @@ $messages['arz'] = array(
 الحد الحالى هو $3.',
 );
 
+/** Asturian (asturianu)
+ * @author Xuacu
+ */
+$messages['ast'] = array(
+	'duplicator' => 'Duplicar una páxina',
+	'duplicator-desc' => "Crear [[Special:Duplicate|copies independientes de les páxines]] colos historiales d'edición completos",
+	'duplicator-toolbox' => 'Duplicar esta páxina',
+	'duplicator-header' => "Esta páxina permite la duplicación completa d'una páxina creando copies independientes de tolos historiales. Ye afayadizo pa subdividir páxines, etc.",
+	'duplicator-options' => 'Opciones',
+	'duplicator-source' => 'Fonte:',
+	'duplicator-dest' => 'Destín:',
+	'duplicator-dotalk' => "Duplicar la páxina d'alderique (si ye aplicable)",
+	'duplicator-submit' => 'Duplicar',
+	'duplicator-summary' => 'Copiao de [[$1]]',
+	'duplicator-success' => "<big>'''[[$1]] copióse a [[$2]].'''</big>",
+	'duplicator-success-revisions' => 'Se {{PLURAL:$1|copió|copiaron}} $1 {{PLURAL:$1|revisión|revisiones}}.',
+	'duplicator-success-talkcopied' => "Tamién se copió la páxina d'alderique.",
+	'duplicator-success-talknotcopied' => "Nun pudo copiase la páxina d'alderique.",
+	'duplicator-failed' => 'Nun pudo duplicase la páxina. Asocedió un error desconocíu.',
+	'duplicator-source-invalid' => "Por favor proporcione un títulu d'orixe válidu.",
+	'duplicator-source-notexist' => "[[$1]] nun esiste. Proporcione un títulu de páxina qu'esista.",
+	'duplicator-dest-invalid' => 'Proporcione un títulu de destín válidu.',
+	'duplicator-dest-exists' => '[[$1]] yá esiste. Proporcione un títulu de destín que nun esista.',
+	'duplicator-toomanyrevisions' => '[[$1]] tien demasiaes revisiones ($2) y nun pue copiase.
+La llende actual ye de $3.',
+	'right-duplicate' => 'Duplicar páxines',
+);
+
 /** Azerbaijani (azərbaycanca)
  * @author Cekli829
  * @author Vago
