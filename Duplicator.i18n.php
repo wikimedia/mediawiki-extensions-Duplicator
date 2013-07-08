@@ -1599,12 +1599,26 @@ $messages['roa-tara'] = array(
 	'duplicator' => "Dupliche 'na pàgene",
 	'duplicator-desc' => "Ccreje 'na [[Special:Duplicate|copie de le pàggene]] indipendende cu tutte 'u cunde de le cangiaminde",
 	'duplicator-toolbox' => 'Dupleche sta pàgene',
+	'duplicator-header' => "Sta pàgene permette 'a duplicazione comblete d'a pàgene, ccrejanne copie indipendende de tutte le cunde.
+Quiste jè utile pa separazione de le pàggene, ecc.",
 	'duplicator-options' => 'Opziune',
 	'duplicator-source' => 'Sorgende:',
 	'duplicator-dest' => 'Destinazione:',
+	'duplicator-dotalk' => "Dupliche 'a pàgene de le 'ngazzaminde (ce applicabbile)",
 	'duplicator-submit' => 'Dupliche',
 	'duplicator-summary' => 'Copiate da [[$1]]',
 	'duplicator-success' => "<big>'''[[$1]] ha state copiate sus a [[$2]].'''</big>",
+	'duplicator-success-revisions' => '$1 {{PLURAL:$1|revisione ha state|revisiune onne state}} copiate.',
+	'duplicator-success-talkcopied' => "'A pàgene de le 'ngazzaminde ha state pure copiate.",
+	'duplicator-success-talknotcopied' => "'A pàgene de le 'ngazzaminde non g'ha state copiate.",
+	'duplicator-failed' => "'A pàgene non ge pò essere duplicate.
+'N'errore scanusciute ha assute.",
+	'duplicator-source-invalid' => "Pe piacere dèje 'nu titole de origgene valide.",
+	'duplicator-source-notexist' => "[[$1]] non g'esiste. Pe piacere dà 'u titole de 'na pàgene ca esiste.",
+	'duplicator-dest-invalid' => "Pe piacere dà 'nu titole de destinazione valide.",
+	'duplicator-dest-exists' => "[[$1]] ggià esiste. Pe piacere dà 'nu titole de destinazione ca non g'esiste.",
+	'duplicator-toomanyrevisions' => "[[$1]] ave troppe ($2) revisiune e non ge pò essere copiate.
+'U limite de mò jè $3.",
 	'right-duplicate' => 'Dupliche le pàggene',
 );
 
