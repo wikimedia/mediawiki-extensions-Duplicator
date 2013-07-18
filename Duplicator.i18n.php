@@ -610,6 +610,18 @@ $messages['ext'] = array(
 	'duplicator-options' => 'Ocionis',
 );
 
+/** Persian (فارسی)
+ * @author Alireza
+ */
+$messages['fa'] = array(
+	'duplicator-options' => 'تنظیمات',
+	'duplicator-source' => 'منبع:',
+	'duplicator-dest' => 'مقصد:',
+	'duplicator-submit' => 'تکراری',
+	'duplicator-success' => "<big>'''[[$1]] کپی شده در [[$2]].'''</big>",
+	'right-duplicate' => 'صفحات تکراری',
+);
+
 /** Finnish (suomi)
  * @author Mobe
  * @author Niklas Laxström
