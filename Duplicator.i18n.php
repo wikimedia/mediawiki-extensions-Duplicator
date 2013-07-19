@@ -1179,6 +1179,10 @@ $messages['lb'] = array(
 $messages['lt'] = array(
 	'duplicator-options' => 'Parinktys',
 	'duplicator-source' => 'Šaltinis:',
+	'duplicator-success-talkcopied' => 'Aptarimų puslapis taip pat buvo nukopijuotas.',
+	'duplicator-success-talknotcopied' => 'Aptarimų puslapis negali būti nukopijuotas.',
+	'duplicator-failed' => 'Puslapis negali būti dubliuojamas.
+Įvyko nežinoma klaida.',
 );
 
 /** Macedonian (македонски)
