@@ -1530,10 +1530,11 @@ $messages['ps'] = array(
 );
 
 /** Portuguese (português)
- * @author 555
  * @author Hamilton Abreu
  * @author Lijealso
+ * @author Luckas
  * @author Malafaya
+ * @author 555
  */
 $messages['pt'] = array(
 	'duplicator' => 'Duplicar uma página',
@@ -1556,7 +1557,7 @@ Ocorreu um erro desconhecido.',
 	'duplicator-source-notexist' => '[[$1]] não existe. Forneça o título de uma página que exista, por favor.',
 	'duplicator-dest-invalid' => 'Forneça um título válido para o destino, por favor.',
 	'duplicator-dest-exists' => '[[$1]] já existe. Forneça um título de destino que ainda não exista, por favor.',
-	'duplicator-toomanyrevisions' => '[[$1]] tem demasiadas ($2) revisões e não pode ser copiada. O limite actual é $3.',
+	'duplicator-toomanyrevisions' => '[[$1]] tem demasiadas ($2) revisões e não pode ser copiada. O limite atual é $3.',
 	'right-duplicate' => 'Duplicar páginas',
 );
 
