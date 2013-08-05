@@ -1992,9 +1992,33 @@ Mevcut sınır $3 olarak belirlenmiştir.',
 
 /** Ukrainian (українська)
  * @author Prima klasy4na
+ * @author Ата
  */
 $messages['uk'] = array(
+	'duplicator' => 'Дублювати сторінку',
+	'duplicator-desc' => 'Створює незалежні [[Special:Duplicate|копії сторінок]] з повними історіями редагувань',
+	'duplicator-toolbox' => 'Дублювати цю сторінку',
+	'duplicator-header' => 'Ця сторінка дозволяє повністю дублювати сторінку зі створенням незалежних копій усіх історій.
+Це корисно при розділенні статей тощо.',
+	'duplicator-options' => 'Параметри',
 	'duplicator-source' => 'Джерело:',
+	'duplicator-dest' => 'Куди:',
+	'duplicator-dotalk' => 'Дублювати сторінку обговорення (за можливості)',
+	'duplicator-submit' => 'Дублювати',
+	'duplicator-summary' => 'Скопійовано з [[$1]]',
+	'duplicator-success' => "<big>'''[[$1]] було скопійовано до [[$2]].'''</big>",
+	'duplicator-success-revisions' => '$1 {{PLURAL:$1|версія|версії|версій}} скопійовано.',
+	'duplicator-success-talkcopied' => 'Сторінку обговорення також скопійовано.',
+	'duplicator-success-talknotcopied' => 'Сторінку обговорення не було скопійовано.',
+	'duplicator-failed' => 'Сторінку не можна дублювати.
+Сталася невідома помилка.',
+	'duplicator-source-invalid' => 'Будь ласка, вкажіть дійсну назву джерела.',
+	'duplicator-source-notexist' => '«[[$1]]» не існує. Будь ласка, вкажіть назву сторінки, що існує.',
+	'duplicator-dest-invalid' => 'Будь ласка, вкажіть дійсну назву сторінки-призначення.',
+	'duplicator-dest-exists' => '«[[$1]]» уже існує. Будь ласка, вкажіть назву сторінки-призначення, яка не існує.',
+	'duplicator-toomanyrevisions' => '«[[$1]]» має надто багато ($2) версій і не може бути скопійована.
+Поточний ліміт становить $3.',
+	'right-duplicate' => 'Дублювання сторінок',
 );
 
 /** Urdu (اردو)
