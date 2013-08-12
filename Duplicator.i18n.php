@@ -41,12 +41,68 @@ An unknown error occurred.',
  * @author Jon Harald Søby
  * @author McDutchie
  * @author Purodha
+ * @author Shirayuki
  */
 $messages['qqq'] = array(
+	'duplicator' => '{{doc-special|Duplicator|unlisted=1}}',
 	'duplicator-desc' => 'Extension description displayed on [[Special:Version]].',
-	'duplicator-options' => '{{Identical|Options}}',
-	'duplicator-source' => '{{Identical|Source}}',
+	'duplicator-toolbox' => 'Used as text for the link which is in the toolbox.',
+	'duplicator-header' => 'Used as header text in [[Special:Duplicator]].
+
+Followed by the form.',
+	'duplicator-options' => 'Used as fieldset label.
+
+Followed by the source and destination inputboxes, and checkboxes.
+{{Identical|Options}}',
+	'duplicator-source' => 'Used as label for the "Source page title" inputbox.
+{{Identical|Source}}',
+	'duplicator-dest' => 'Used as label for the "Destination page title" inputbox.',
+	'duplicator-dotalk' => 'Used as checkbox label.',
+	'duplicator-dosubpages' => 'Used as checkbox label.',
+	'duplicator-dohistory' => 'Used as checkbox label.',
+	'duplicator-submit' => 'Used as label for the Submit button.
+{{Identical|Duplicate}}',
 	'duplicator-summary' => 'Used as a revision summary',
+	'duplicator-success' => 'Used as success message.
+
+Followed by the message {{msg-mw|Duplicator-success-revisions}}.
+
+Parameters:
+* $1 - source page title
+* $2 - destination page title',
+	'duplicator-success-revisions' => 'Used as success message.
+
+Preceded by the message {{msg-mw|Duplicator-success}}.
+
+Parameters:
+* $1 - number of revisions',
+	'duplicator-success-talknotcopied' => 'Used as failure message when duplicating the talk page.',
+	'duplicator-failed' => 'Used as fatal error message.',
+	'duplicator-failed-toolong' => 'Used as failure message. Parameters:
+* $1 - source page title
+See also:
+* {{msg-mw|Duplicator-failed-dest-exists}}',
+	'duplicator-failed-dest-exists' => 'Used as failure message. Parameters:
+* $1 - source page title
+* $2 - destination page title
+See also:
+* {{msg-mw|Duplicator-failed-toolong}}',
+	'duplicator-source-invalid' => 'Used as error message.
+
+See also:
+* {{msg-mw|Duplicator-dest-invalid}}',
+	'duplicator-source-notexist' => 'Used as error message. Parameters:
+* $1 - source page title
+See also:
+* {{msg-mw|Duplicator-dest-exists}}',
+	'duplicator-dest-invalid' => 'Used as error message.
+
+See also:
+* {{msg-mw|Duplicator-source-invalid}}',
+	'duplicator-dest-exists' => 'Used as error message. Parameters:
+* $1 - destination page title
+See also:
+* {{msg-mw|Duplicator-source-notexist}}',
 	'right-duplicate' => '{{doc-right|duplicate}}
 "Duplicate" is a verb here, not an adjective.',
 );
@@ -392,12 +448,16 @@ $messages['de'] = array(
 	'duplicator-source' => 'Quelle:',
 	'duplicator-dest' => 'Ziel:',
 	'duplicator-dotalk' => 'Diskussionsseite mitkopieren (wenn möglich)',
+	'duplicator-dosubpages' => 'Unterseiten duplizieren (falls verfügbar)',
+	'duplicator-dohistory' => 'Vollständige Versionsgeschichte duplizieren',
 	'duplicator-submit' => 'Seite duplizieren',
-	'duplicator-summary' => '[[$1]] wurde dupliziert', # Fuzzy
+	'duplicator-summary' => 'Kopiert von [[$1]], Version [[$2]]',
 	'duplicator-success' => '[[$1]] wurde nach [[$2]] kopiert.',
 	'duplicator-success-revisions' => '{{PLURAL:$1|1 Version wurde|$1 Versionen wurden}} dupliziert.',
 	'duplicator-success-talknotcopied' => 'Die Diskussionsseite konnte nicht dupliziert werden.',
 	'duplicator-failed' => 'Die Seite konnte nicht dupliziert werden, da ein unbekannter Fehler auftrat.',
+	'duplicator-failed-toolong' => '[[$1]] wurde nicht dupliziert. Der Zieltitel ist zu lang.',
+	'duplicator-failed-dest-exists' => '[[$1]] wurde nicht dupliziert. Das Ziel „[[$2]]“ ist bereits vorhanden.',
 	'duplicator-source-invalid' => 'Bitte gib eine gültige Quell-Seite an.',
 	'duplicator-source-notexist' => 'Die Seite [[$1]] ist nicht vorhanden. Bitte gib eine vorhandene Seite an.',
 	'duplicator-dest-invalid' => 'Bitte gib eine gültige Ziel-Seite an.',
@@ -609,6 +669,7 @@ $messages['fi'] = array(
 
 /** French (français)
  * @author Crochet.david
+ * @author Gomoko
  * @author Grondin
  * @author IAlex
  */
@@ -621,12 +682,16 @@ $messages['fr'] = array(
 	'duplicator-source' => 'Source :',
 	'duplicator-dest' => 'Destination :',
 	'duplicator-dotalk' => 'Dupliquer la page de discussion (si elle existe)',
+	'duplicator-dosubpages' => 'Dupliquer les sous-pages (s’il y en a)',
+	'duplicator-dohistory' => 'Dupliquer l’historique de toute la page',
 	'duplicator-submit' => 'Dupliquer',
-	'duplicator-summary' => 'Copié depuis [[$1]]', # Fuzzy
+	'duplicator-summary' => 'Copié depuis [[$1]], révision [[$2]]',
 	'duplicator-success' => '[[$1]] a été copié vers [[$2]].',
 	'duplicator-success-revisions' => '$1 {{PLURAL:$1|révision a été copiée|révisions ont été copiées}}.',
 	'duplicator-success-talknotcopied' => 'La page de discussion n’a pas pu être copiée.',
 	'duplicator-failed' => 'La page n’a pas pu être dupliquée. Une erreur inconnue s’est produite.',
+	'duplicator-failed-toolong' => '[[$1]] n’a pas été dupliqué. Le titre de destination est trop long.',
+	'duplicator-failed-dest-exists' => '[[$1]] n’a pas été dupliqué. La destination [[$2]] existe déjà.',
 	'duplicator-source-invalid' => 'Veuillez donner un nom valide pour la page.',
 	'duplicator-source-notexist' => '[[$1]] n’existe pas. Veuillez donner le nom d’une page existante.',
 	'duplicator-dest-invalid' => 'Veuillez donner un nom valide pour la destination.',
@@ -944,21 +1009,26 @@ $messages['ja'] = array(
 	'duplicator' => 'ページの複製',
 	'duplicator-desc' => '全編集履歴を持つ[[Special:Duplicate|ページの複製]]を作成する',
 	'duplicator-toolbox' => 'このページを複製',
-	'duplicator-header' => 'ここではページを複製することができます。履歴を含む同じ内容の複製が新たに作成されます。記事の分割などに利用してください。',
+	'duplicator-header' => 'ここでは、ページの完全な複製を作成できます。この複製はすべての履歴を含みます。
+記事の分割などに役立ちます。',
 	'duplicator-options' => '設定',
 	'duplicator-source' => '複製元:',
 	'duplicator-dest' => '複製先:',
 	'duplicator-dotalk' => '可能なら{{int:talk}}ページも複製する',
+	'duplicator-dosubpages' => '下位ページを複製 (存在する場合)',
+	'duplicator-dohistory' => 'ページの履歴全体を複製',
 	'duplicator-submit' => '複製',
-	'duplicator-summary' => '[[$1]] を複製', # Fuzzy
-	'duplicator-success' => '[[$1]] を [[$2]] へ複製しました',
+	'duplicator-summary' => '[[$1]] の版 [[$2]] を複製',
+	'duplicator-success' => '[[$1]] を [[$2]] へ複製しました。',
 	'duplicator-success-revisions' => '$1 個の{{PLURAL:$1|版}}を複製しました。',
 	'duplicator-success-talknotcopied' => '{{int:talk}}ページは複製できませんでした。',
 	'duplicator-failed' => '不明なエラーです。このページの複製に失敗しました。',
+	'duplicator-failed-toolong' => '[[$1]] は複製されませんでした。複製先のページ名が長すぎます。',
+	'duplicator-failed-dest-exists' => '[[$1]] は複製されませんでした。複製先 [[$2]] が既に存在します。',
 	'duplicator-source-invalid' => '複製元に有効なタイトルを指定してください。',
-	'duplicator-source-notexist' => '[[$1]] は既に存在しています。複製元には存在するページを指定してください。',
+	'duplicator-source-notexist' => '[[$1]] は存在しません。複製元には存在するページを指定してください。',
 	'duplicator-dest-invalid' => '複製先に有効なタイトルを指定してください。',
-	'duplicator-dest-exists' => '[[$1]] は既に存在しています。複製先には存在しないページを指定してください。',
+	'duplicator-dest-exists' => '[[$1]] は既に存在します。複製先には存在しないページを指定してください。',
 	'right-duplicate' => 'ページを複製',
 );
 
@@ -1006,7 +1076,7 @@ $messages['km'] = array(
  */
 $messages['ko'] = array(
 	'duplicator' => '문서 복제',
-	'duplicator-desc' => '전체 편집 역사로 독립적인 [[Special:Duplicate|문서 복사본]]을 만듦',
+	'duplicator-desc' => '전체 편집 역사로 독립적인 [[Special:Duplicate|문서 복사본]]을 만듭니다',
 	'duplicator-toolbox' => '이 문서 복제',
 	'duplicator-header' => '이 문서는 모든 역사의 독립적인 복사본을 만들어 문서 전체를 복제할 수 있습니다.
 문서 나누기 등에 유용합니다.',
@@ -1014,13 +1084,17 @@ $messages['ko'] = array(
 	'duplicator-source' => '출처:',
 	'duplicator-dest' => '대상:',
 	'duplicator-dotalk' => '(가능한 경우) 토론 문서 복제',
+	'duplicator-dosubpages' => '(있으면) 하위 문서 복제',
+	'duplicator-dohistory' => '전체 문서 내역 복제',
 	'duplicator-submit' => '복제',
-	'duplicator-summary' => '[[$1]]에서 복사함', # Fuzzy
+	'duplicator-summary' => '[[$1]] 문서의 [[$2]] 판에서 복사함',
 	'duplicator-success' => '[[$1]] 문서를 [[$2]] 문서로 복사했습니다.',
 	'duplicator-success-revisions' => '$1 {{PLURAL:$1|판}}을 복사했습니다.',
 	'duplicator-success-talknotcopied' => '토론 문서를 복사할 수 없습니다.',
 	'duplicator-failed' => '문서를 복제할 수 없습니다.
 알 수 없는 오류가 발생했습니다.',
+	'duplicator-failed-toolong' => '[[$1]] 문서가 복제되지 않았습니다. 대상 제목이 너무 깁니다.',
+	'duplicator-failed-dest-exists' => '[[$1]] 문서가 복제되지 않았습니다. 대상 [[$2]] 문서가 이미 존재합니다.',
 	'duplicator-source-invalid' => '올바른 원본 제목을 제공하세요.',
 	'duplicator-source-notexist' => '[[$1]] 문서가 존재하지 않습니다. 존재하는 문서 제목을 제공하세요.',
 	'duplicator-dest-invalid' => '올바른 대상 제목을 제공하세요.',
@@ -1078,8 +1152,9 @@ $messages['lb'] = array(
 	'duplicator-source' => 'Quell:',
 	'duplicator-dest' => 'Zil:',
 	'duplicator-dotalk' => 'Een Doublon vun der Diskussiounssäit maachen (wann se existéiert)',
+	'duplicator-dosubpages' => 'Ënnersäiten duplizéieren (wann et der gëtt)',
 	'duplicator-submit' => 'Säit duplizéieren',
-	'duplicator-summary' => 'Vun [[$1]] kopéiert', # Fuzzy
+	'duplicator-summary' => 'Vun [[$1]] kopéiert, Versioun [[$2]]',
 	'duplicator-success' => '[[$1]] gouf op [[$2]] kopéiert.',
 	'duplicator-success-revisions' => '$1 {{PLURAL:$1|Versioun gouf|Versioune goufe}} kopéiert.',
 	'duplicator-success-talknotcopied' => "D'Diskussiounssäit konnt net kopéiert ginn.",
@@ -1116,13 +1191,17 @@ $messages['mk'] = array(
 	'duplicator-source' => 'Извор:',
 	'duplicator-dest' => 'Одредница:',
 	'duplicator-dotalk' => 'Дуплирај ја страницата за разговор (ако е можно)',
+	'duplicator-dosubpages' => 'Дуплирај потстраници (ако ги има)',
+	'duplicator-dohistory' => 'Дуплирај ја целата историја',
 	'duplicator-submit' => 'Дуплирај',
-	'duplicator-summary' => 'Копирано од [[$1]]', # Fuzzy
+	'duplicator-summary' => 'Копирано од [[$1]], ревизија [[$2]]',
 	'duplicator-success' => 'Страницата [[$1]] е ископирана во [[$2]].',
 	'duplicator-success-revisions' => '$1 {{PLURAL:$1|ревизија беше ископирана|ревизии беа ископирани}}.',
 	'duplicator-success-talknotcopied' => 'Страницата за разговор не можеше да се ископира.',
 	'duplicator-failed' => 'Страницата не можеше да се дуплира.
 Се појави непозната грешка.',
+	'duplicator-failed-toolong' => 'Не можев да ја дуплирам [[$1]]. Целниот наслов е предолг.',
+	'duplicator-failed-dest-exists' => 'Не можев да ја дуплирам [[$1]]. Целта [[$2]] веќе постои.',
 	'duplicator-source-invalid' => 'Наведете важечки изворен наслов.',
 	'duplicator-source-notexist' => '[[$1]] не постои. Наведете наслов на страница која постои.',
 	'duplicator-dest-invalid' => 'Наведете важечки целен наслов',
@@ -1512,14 +1591,17 @@ Quiste jè utile pa separazione de le pàggene, ecc.",
 	'duplicator-source' => 'Sorgende:',
 	'duplicator-dest' => 'Destinazione:',
 	'duplicator-dotalk' => "Dupliche 'a pàgene de le 'ngazzaminde (ce applicabbile)",
+	'duplicator-dosubpages' => 'Dupliche le sottopàggene (ce stonne)',
+	'duplicator-dohistory' => "Dupliche 'u cunde comblete d'a pàgene",
 	'duplicator-submit' => 'Dupliche',
-	'duplicator-summary' => 'Copiate da [[$1]]',
+	'duplicator-summary' => 'Copiate da [[$1]], revisione [[$2]]',
 	'duplicator-success' => "<big>'''[[$1]] ha state copiate sus a [[$2]].'''</big>",
 	'duplicator-success-revisions' => '$1 {{PLURAL:$1|revisione ha state|revisiune onne state}} copiate.',
-	'duplicator-success-talkcopied' => "'A pàgene de le 'ngazzaminde ha state pure copiate.",
 	'duplicator-success-talknotcopied' => "'A pàgene de le 'ngazzaminde non g'ha state copiate.",
 	'duplicator-failed' => "'A pàgene non ge pò essere duplicate.
 'N'errore scanusciute ha assute.",
+	'duplicator-failed-toolong' => "[[$1]] non g'ha state duplicate. 'U titole de destinazione jè troppe luènghe.",
+	'duplicator-failed-dest-exists' => "[[$1]] non g'ha state duplicate. 'A destinazione [[$2]] già esiste.",
 	'duplicator-source-invalid' => "Pe piacere dèje 'nu titole de origgene valide.",
 	'duplicator-source-notexist' => "[[$1]] non g'esiste. Pe piacere dà 'u titole de 'na pàgene ca esiste.",
 	'duplicator-dest-invalid' => "Pe piacere dà 'nu titole de destinazione valide.",
