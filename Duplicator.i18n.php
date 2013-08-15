@@ -416,8 +416,8 @@ To je užitečné např. při větvení projektů.',
 	'duplicator-dest' => 'Cíl:',
 	'duplicator-dotalk' => 'Duplikovat i diskusní stránku (pokud existuje)',
 	'duplicator-submit' => 'Duplikovat',
-	'duplicator-summary' => 'Zkopírováno z [[$1]]', # Fuzzy
-	'duplicator-success' => '[[$1]] bylo zkopírováno do [[ $2 ]].', # Fuzzy
+	'duplicator-summary' => 'Zkopírováno z [[$1]], revize [[$2]]',
+	'duplicator-success' => '[[$1]] bylo zkopírováno do [[$2]].',
 	'duplicator-success-revisions' => '$1 {{PLURAL:$1|revize byla zkopírována|revize byly zkopírovány|revizí bylo zkopírováno}}.',
 	'duplicator-success-talknotcopied' => 'Nebylo možné zkopírovat diskuzní stránku',
 	'duplicator-failed' => 'Tuto stránku nebylo možné zkopírovat.
@@ -1940,6 +1940,7 @@ Bilinmeyen bir hata oluştu.',
 );
 
 /** Ukrainian (українська)
+ * @author Andriykopanytsia
  * @author Prima klasy4na
  * @author Ата
  */
@@ -1953,13 +1954,17 @@ $messages['uk'] = array(
 	'duplicator-source' => 'Джерело:',
 	'duplicator-dest' => 'Куди:',
 	'duplicator-dotalk' => 'Дублювати сторінку обговорення (за можливості)',
+	'duplicator-dosubpages' => 'Дублювати підсторінки (якщо є)',
+	'duplicator-dohistory' => 'Дублювати всю сторінку історії',
 	'duplicator-submit' => 'Дублювати',
-	'duplicator-summary' => 'Скопійовано з [[$1]]', # Fuzzy
+	'duplicator-summary' => 'Скопійовано з [[$1]], перевірка [[$2]]',
 	'duplicator-success' => "<big>'''[[$1]] було скопійовано до [[$2]].'''</big>",
 	'duplicator-success-revisions' => '$1 {{PLURAL:$1|версія|версії|версій}} скопійовано.',
 	'duplicator-success-talknotcopied' => 'Сторінку обговорення не було скопійовано.',
 	'duplicator-failed' => 'Сторінку не можна дублювати.
 Сталася невідома помилка.',
+	'duplicator-failed-toolong' => '[[$1]] не дубльоване. Новий заголовок задовгий.',
+	'duplicator-failed-dest-exists' => '[[$1]] не дубльоване. Ціль [[$2]] вже існує.',
 	'duplicator-source-invalid' => 'Будь ласка, вкажіть дійсну назву джерела.',
 	'duplicator-source-notexist' => '«[[$1]]» не існує. Будь ласка, вкажіть назву сторінки, що існує.',
 	'duplicator-dest-invalid' => 'Будь ласка, вкажіть дійсну назву сторінки-призначення.',
