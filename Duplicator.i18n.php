@@ -403,6 +403,7 @@ $messages['ca'] = array(
 
 /** Czech (česky)
  * @author Jkjk
+ * @author Michaelbrabec
  * @author Mormegil
  */
 $messages['cs'] = array(
@@ -415,6 +416,7 @@ To je užitečné např. při větvení projektů.',
 	'duplicator-source' => 'Zdroj:',
 	'duplicator-dest' => 'Cíl:',
 	'duplicator-dotalk' => 'Duplikovat i diskusní stránku (pokud existuje)',
+	'duplicator-dohistory' => 'Duplikovat celou historii stránky',
 	'duplicator-submit' => 'Duplikovat',
 	'duplicator-summary' => 'Zkopírováno z [[$1]], revize [[$2]]',
 	'duplicator-success' => '[[$1]] bylo zkopírováno do [[$2]].',
@@ -976,6 +978,7 @@ Telah terjadi suatu kesalahan yang tak dikenal.',
 );
 
 /** Italian (italiano)
+ * @author Beta16
  * @author Broken Arrow
  * @author Darth Kule
  */
@@ -989,7 +992,7 @@ $messages['it'] = array(
 	'duplicator-dest' => 'Pagina di arrivo:',
 	'duplicator-dotalk' => 'Duplica anche la pagina di discussione, se esiste',
 	'duplicator-submit' => 'Duplica',
-	'duplicator-summary' => 'Pagina copiata da [[$1]]', # Fuzzy
+	'duplicator-summary' => 'Copiata da [[$1]], versione [[$2]]',
 	'duplicator-success' => 'La pagina [[$1]] è stata copiata in [[$2]].',
 	'duplicator-success-revisions' => '$1 {{PLURAL:$1|revisione copiata|revisioni copiate}}.',
 	'duplicator-success-talknotcopied' => 'Impossibile copiare la pagina di discussione.',
