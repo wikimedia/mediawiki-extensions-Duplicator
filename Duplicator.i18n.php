@@ -62,7 +62,9 @@ Followed by the source and destination inputboxes, and checkboxes.
 	'duplicator-dohistory' => 'Used as checkbox label.',
 	'duplicator-submit' => 'Used as label for the Submit button.
 {{Identical|Duplicate}}',
-	'duplicator-summary' => 'Used as a revision summary',
+	'duplicator-summary' => 'Used as a revision summary. Parameters:
+* $1 - source page title
+* $2 - revision ID',
 	'duplicator-success' => 'Used as success message.
 
 Followed by the message {{msg-mw|Duplicator-success-revisions}}.
