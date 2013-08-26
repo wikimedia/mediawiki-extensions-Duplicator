@@ -747,22 +747,27 @@ $messages['gl'] = array(
 	'duplicator' => 'Duplicar unha páxina',
 	'duplicator-desc' => 'Crear [[Special:Duplicate|copias independentes das páxinas]] cos historiais de edición completos',
 	'duplicator-toolbox' => 'Duplicar esta páxina',
-	'duplicator-header' => 'Esta páxina permite a duplicación completa dunha páxina e crea copias independentes
-de todos os historiais. Resulta útil cando se subdivide unha páxina, etc.',
+	'duplicator-header' => 'Esta páxina permite a duplicación completa dunha páxina e crea copias independentes de todos os historiais.
+Resulta útil cando se subdivide unha páxina, por exemplo.',
 	'duplicator-options' => 'Opcións',
-	'duplicator-source' => 'Fonte:',
+	'duplicator-source' => 'Orixe:',
 	'duplicator-dest' => 'Destino:',
 	'duplicator-dotalk' => 'Duplicar a páxina de conversa (se procede)',
+	'duplicator-dosubpages' => 'Duplicar as subpáxinas (se hai algunha)',
+	'duplicator-dohistory' => 'Duplicar o historial da páxina ao completo',
 	'duplicator-submit' => 'Duplicar',
-	'duplicator-summary' => 'Copiado desde [[$1]]', # Fuzzy
-	'duplicator-success' => 'Copiouse [[$1]] a [[$2]].',
-	'duplicator-success-revisions' => '{{PLURAL:$1|Copiouse|Copiáronse}} $1 revisións.',
+	'duplicator-summary' => 'Copiado desde "[[$1]]", revisión [[$2]]',
+	'duplicator-success' => '"[[$1]]" copiouse en "[[$2]]".',
+	'duplicator-success-revisions' => '{{PLURAL:$1|Copiouse|Copiáronse}} $1 {{PLURAL:$1|revisión|revisións}}.',
 	'duplicator-success-talknotcopied' => 'Non se puido copiar a páxina de conversa.',
-	'duplicator-failed' => 'Non se puido copiar a páxina. Produciuse un erro descoñecido.',
-	'duplicator-source-invalid' => 'Forneza un título de orixe válido.',
-	'duplicator-source-notexist' => 'Non existe [[$1]]. Forneza un título de páxina que exista.',
-	'duplicator-dest-invalid' => 'Forneza un título de destino válido.',
-	'duplicator-dest-exists' => '[[$1]] xa existe. Forneza un título de destino que non exista.',
+	'duplicator-failed' => 'Non se puido copiar a páxina.
+Produciuse un erro descoñecido.',
+	'duplicator-failed-toolong' => '"[[$1]]" non se duplicou. O título de destino é longo de máis.',
+	'duplicator-failed-dest-exists' => '"[[$1]]" non se duplicou. O destino "[[$2]]" xa existe.',
+	'duplicator-source-invalid' => 'Achegue un título de orixe válido.',
+	'duplicator-source-notexist' => '"[[$1]]" non existe. Achegue o título dunha páxina que exista.',
+	'duplicator-dest-invalid' => 'Achegue un título de destino válido.',
+	'duplicator-dest-exists' => '"[[$1]]" xa existe. Achegue un título de destino que non exista.',
 	'right-duplicate' => 'Duplicar páxinas',
 );
 
@@ -2082,6 +2087,7 @@ $messages['yue'] = array(
 /** Simplified Chinese (中文（简体）‎)
  * @author Gzdavidwong
  * @author Shinjiman
+ * @author TianyinLee
  * @author Vina
  * @author Xiaomingyan
  */
@@ -2094,12 +2100,16 @@ $messages['zh-hans'] = array(
 	'duplicator-source' => '来源：',
 	'duplicator-dest' => '目标:',
 	'duplicator-dotalk' => '复制讨论页 （如可用的话）',
+	'duplicator-dosubpages' => '重复的子页面 （如果存在）',
+	'duplicator-dohistory' => '复制完整页面历史',
 	'duplicator-submit' => '复制',
-	'duplicator-summary' => '由[[$1]]复制过来', # Fuzzy
+	'duplicator-summary' => '复制自[[$1]]的版本[[$2]]',
 	'duplicator-success' => '[[$1]]已经复制到[[$2]]。',
 	'duplicator-success-revisions' => '$1个修订已经复制。',
 	'duplicator-success-talknotcopied' => '讨论页不能够复制。',
 	'duplicator-failed' => '这一页唔能够复制落来。发生了未知的错误。',
+	'duplicator-failed-toolong' => '[[$1]]不是重复的，此目的地名称过长。',
+	'duplicator-failed-dest-exists' => '[[$1]]不是重复的，目的地[[$2]]已存在。',
 	'duplicator-source-invalid' => '请提供一个正确的来源标题。',
 	'duplicator-source-notexist' => '[[$1]]并不存在。请提供一个已经存在的页面标题。',
 	'duplicator-dest-invalid' => '请提供一个正确的目标标题。',
