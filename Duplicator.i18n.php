@@ -1784,6 +1784,7 @@ $messages['stq'] = array(
  * @author Lejonel
  * @author M.M.S.
  * @author Najami
+ * @author WikiPhoenix
  */
 $messages['sv'] = array(
 	'duplicator' => 'Duplicera en sida',
@@ -1795,7 +1796,7 @@ $messages['sv'] = array(
 	'duplicator-dest' => 'Målsida:',
 	'duplicator-dotalk' => 'Duplicera (om möjligt) även diskussionssidan',
 	'duplicator-submit' => 'Duplicera',
-	'duplicator-summary' => 'Kopierad från [[$1]]', # Fuzzy
+	'duplicator-summary' => 'Kopierad från [[$1]], sidversion [[$2]]',
 	'duplicator-success' => '[[$1]] kopierades till [[$2]].',
 	'duplicator-success-revisions' => '$1 {{PLURAL:$1|sidversion|sidversioner}} kopierades.',
 	'duplicator-success-talknotcopied' => 'Diskussionssidan kunde inte dupliceras.',
