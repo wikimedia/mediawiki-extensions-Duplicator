@@ -992,6 +992,7 @@ Telah terjadi suatu kesalahan yang tak dikenal.',
  * @author Beta16
  * @author Broken Arrow
  * @author Darth Kule
+ * @author Gianfranco
  */
 $messages['it'] = array(
 	'duplicator' => 'Duplica una pagina',
@@ -1002,12 +1003,16 @@ $messages['it'] = array(
 	'duplicator-source' => 'Pagina di partenza:',
 	'duplicator-dest' => 'Pagina di arrivo:',
 	'duplicator-dotalk' => 'Duplica anche la pagina di discussione, se esiste',
+	'duplicator-dosubpages' => 'Duplica le sottopagine (se ce ne sono)',
+	'duplicator-dohistory' => 'Duplica tutta la cronologia della pagina',
 	'duplicator-submit' => 'Duplica',
 	'duplicator-summary' => 'Copiata da [[$1]], versione [[$2]]',
 	'duplicator-success' => 'La pagina [[$1]] è stata copiata in [[$2]].',
 	'duplicator-success-revisions' => '$1 {{PLURAL:$1|revisione copiata|revisioni copiate}}.',
 	'duplicator-success-talknotcopied' => 'Impossibile copiare la pagina di discussione.',
 	'duplicator-failed' => 'Impossibile duplicare la pagina. Errore sconosciuto.',
+	'duplicator-failed-toolong' => 'Non è stato possibile duplicare [[$1]]. Il titolo di destinazione è troppo lungo.',
+	'duplicator-failed-dest-exists' => 'Non è stato possibile duplicare [[$1]]. La destinazione [[$2]] esiste già.',
 	'duplicator-source-invalid' => 'Indicare un titolo di partenza valido.',
 	'duplicator-source-notexist' => 'La pagina [[$1]] non esiste. Indicare il titolo di una pagina esistente.',
 	'duplicator-dest-invalid' => 'Indicare un titolo di arrivo valido.',
