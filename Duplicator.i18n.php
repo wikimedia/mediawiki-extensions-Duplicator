@@ -1556,6 +1556,7 @@ Ocorreu um erro desconhecido.',
 );
 
 /** Brazilian Portuguese (português do Brasil)
+ * @author Cainamarques
  * @author Eduardo.mps
  */
 $messages['pt-br'] = array(
@@ -1568,7 +1569,7 @@ $messages['pt-br'] = array(
 	'duplicator-dest' => 'Destino:',
 	'duplicator-dotalk' => 'Duplicar página de discussão (se aplicável)',
 	'duplicator-submit' => 'Duplicar',
-	'duplicator-summary' => 'Copiado de [[$1]]', # Fuzzy
+	'duplicator-summary' => 'Copiado de [[$1]], revisão [[$2]]',
 	'duplicator-success' => '[[$1]] foi copiada para [[$2]].',
 	'duplicator-success-revisions' => '$1 {{PLURAL:$1|revisão foi copiada|revisões foram copiadas}}.',
 	'duplicator-success-talknotcopied' => 'A página de discussão não pôde ser copiada.',
