@@ -1377,7 +1377,7 @@ kopieën ontstaan met een volledige geschiedenis. Dit is handig voor forks, enzo
 	'duplicator-dest' => 'Doel:',
 	'duplicator-dotalk' => 'Kopieer overlegpagina (als van toepassing)',
 	'duplicator-submit' => 'Kopiëren',
-	'duplicator-summary' => 'Gekopieerd van [[$1]]', # Fuzzy
+	'duplicator-summary' => 'Gekopieerd van [[$1]], versie [[$2]]',
 	'duplicator-success' => '[[$1]] is gekopieerd naar [[$2]].',
 	'duplicator-success-revisions' => '$1 {{PLURAL:$1|versie|versies}} gekopieerd.',
 	'duplicator-success-talknotcopied' => 'De overlegpagina kon niet gekopieerd worden.',
