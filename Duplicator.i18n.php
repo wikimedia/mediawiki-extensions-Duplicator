@@ -255,7 +255,7 @@ $messages['bcl'] = array(
 	'duplicator-options' => 'Mga pilian',
 	'duplicator-source' => 'Ginikanan:',
 	'duplicator-dest' => 'Destinasyon:',
-	'duplicator-summary' => 'Kinopya sa [[$1]]',
+	'duplicator-summary' => 'Kinopya sa [[$1]]', # Fuzzy
 );
 
 /** Belarusian (Taraškievica orthography) (беларуская (тарашкевіца)‎)
@@ -318,7 +318,7 @@ $messages['bn'] = array(
 	'duplicator-dest' => 'লক্ষ্য:',
 	'duplicator-dotalk' => 'প্রতিলিপিকৃত আলোচনা পাতা (যদি প্রযোজ্য হয়)',
 	'duplicator-submit' => 'প্রতিলিপি',
-	'duplicator-summary' => '[[$1]] থেকে অনুলিপিকৃত',
+	'duplicator-summary' => '[[$1]] থেকে অনুলিপিকৃত', # Fuzzy
 	'duplicator-success-talknotcopied' => 'এই আলাপ পাতাটি অনুলেপন করা যাবে না।',
 	'right-duplicate' => 'প্রতিলিপিকৃত পাতাসমূহ',
 );
@@ -493,7 +493,7 @@ $messages['diq'] = array(
 	'duplicator-source' => 'Çıme:',
 	'duplicator-dest' => 'Hedef:',
 	'duplicator-submit' => 'Kopya',
-	'duplicator-summary' => '[[$1]] ra kopya ke',
+	'duplicator-summary' => '[[$1]] ra kopya ke', # Fuzzy
 	'right-duplicate' => 'Pela keno kopya',
 );
 
@@ -534,7 +534,7 @@ $messages['el'] = array(
 	'duplicator-source' => 'Πηγή:',
 	'duplicator-dest' => 'Προορισμός:',
 	'duplicator-submit' => 'Διπλότυπο',
-	'duplicator-summary' => 'Αντιγράφηκε από το [[$1]]',
+	'duplicator-summary' => 'Αντιγράφηκε από το [[$1]]', # Fuzzy
 	'duplicator-dest-invalid' => 'Παρακαλώ παρέχετε έναν έγκυρο τίτλο προορισμού.',
 	'right-duplicate' => 'Διπλότυπες σελίδες',
 );
@@ -817,7 +817,7 @@ $messages['gv'] = array(
 	'duplicator-source' => 'Bun:',
 );
 
-/** Hakka (Hak-kâ-fa)
+/** Hakka (客家語/Hak-kâ-ngî)
  * @author Hakka
  */
 $messages['hak'] = array(
@@ -1062,7 +1062,7 @@ $messages['jv'] = array(
 	'duplicator-source' => 'Sumber:',
 	'duplicator-dest' => 'Tujuan:',
 	'duplicator-submit' => 'Duplikasi',
-	'duplicator-summary' => 'Ditulad saka [[$1]]',
+	'duplicator-summary' => 'Ditulad saka [[$1]]', # Fuzzy
 );
 
 /** Georgian (ქართული)
@@ -1159,7 +1159,7 @@ Ene unklohre Fähler es opjetrodde.',
 $messages['ku-latn'] = array(
 	'duplicator-options' => 'Vebijêrk',
 	'duplicator-source' => 'Çavkanî:',
-	'duplicator-summary' => 'Ji [[$1]] hate kopîkirin',
+	'duplicator-summary' => 'Ji [[$1]] hate kopîkirin', # Fuzzy
 );
 
 /** Luxembourgish (Lëtzebuergesch)
@@ -1194,7 +1194,6 @@ $messages['lb'] = array(
 $messages['lt'] = array(
 	'duplicator-options' => 'Parinktys',
 	'duplicator-source' => 'Šaltinis:',
-	'duplicator-success-talkcopied' => 'Aptarimų puslapis taip pat buvo nukopijuotas.',
 	'duplicator-success-talknotcopied' => 'Aptarimų puslapis negali būti nukopijuotas.',
 	'duplicator-failed' => 'Puslapis negali būti dubliuojamas.
 Įvyko nežinoma klaida.',
@@ -1360,7 +1359,7 @@ $messages['nb'] = array(
 $messages['nds'] = array(
 	'duplicator-options' => 'Opschonen',
 	'duplicator-source' => 'Born:',
-	'duplicator-summary' => 'Kopeert vun [[$1]]',
+	'duplicator-summary' => 'Kopeert vun [[$1]]', # Fuzzy
 );
 
 /** Dutch (Nederlands)
@@ -1597,7 +1596,7 @@ $messages['ro'] = array(
 	'duplicator-dest' => 'Destinație:',
 	'duplicator-dotalk' => 'Duplică pagina de discuții (dacă este cazul)',
 	'duplicator-submit' => 'Duplică',
-	'duplicator-summary' => 'Copiat de la [[$1]]',
+	'duplicator-summary' => 'Copiat de la [[$1]]', # Fuzzy
 	'duplicator-success-revisions' => '$1 {{PLURAL:$1|versiune a fost|versiuni au fost}} copiate.',
 	'duplicator-success-talknotcopied' => 'Pagina de discuții nu a putut fi copiată.',
 	'duplicator-failed' => 'Pagina nu a putut fi duplicată.
