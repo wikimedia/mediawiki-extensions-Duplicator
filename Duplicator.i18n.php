@@ -567,6 +567,7 @@ Estus utila por disigo de artikoloj, ktp.',
 );
 
 /** Spanish (español)
+ * @author Benfutbol10
  * @author Crazymadlover
  * @author Imre
  * @author Sanbec
@@ -581,12 +582,14 @@ $messages['es'] = array(
 	'duplicator-dest' => 'Destino:',
 	'duplicator-dotalk' => 'Duplicar página de discusión (si es aplicable)',
 	'duplicator-submit' => 'Duplicado',
-	'duplicator-summary' => 'Copiado de [[$1]]', # Fuzzy
+	'duplicator-summary' => 'Copiado de [[$1]], revisión [[$2]]',
 	'duplicator-success' => '[[$1]] fue copiado a [[$2]].',
 	'duplicator-success-revisions' => '$1 {{PLURAL:$1|revisión fue|revisiones fueron}} copiadas.',
 	'duplicator-success-talknotcopied' => 'La página de discusión no pudo ser copiada.',
 	'duplicator-failed' => 'La página no pudo ser duplicad.
 Ocurrió un error desconocido.',
+	'duplicator-failed-toolong' => '[[$1]] no fue duplicado. El título de destino es demasiado largo.',
+	'duplicator-failed-dest-exists' => '[[$1]] no fue duplicado. El destino [[$2]] ya existe.',
 	'duplicator-source-invalid' => 'Por favor provea un título de fuente válido.',
 	'duplicator-source-notexist' => '[[$1]] no existe. Por favor provea el título de una página que exista.',
 	'duplicator-dest-invalid' => 'Por favor provea un título de destino válido.',
