@@ -1366,6 +1366,7 @@ $messages['nds'] = array(
 );
 
 /** Dutch (Nederlands)
+ * @author Effeietsanders
  * @author Siebrand
  */
 $messages['nl'] = array(
@@ -1378,12 +1379,16 @@ kopieën ontstaan met een volledige geschiedenis. Dit is handig voor forks, enzo
 	'duplicator-source' => 'Bron:',
 	'duplicator-dest' => 'Doel:',
 	'duplicator-dotalk' => 'Kopieer overlegpagina (als van toepassing)',
+	'duplicator-dosubpages' => "Dupliceer subpagina's (indien aanwezig)",
+	'duplicator-dohistory' => 'Dupliceer de volledige paginageschiedenis',
 	'duplicator-submit' => 'Kopiëren',
 	'duplicator-summary' => 'Gekopieerd van [[$1]], versie [[$2]]',
 	'duplicator-success' => '[[$1]] is gekopieerd naar [[$2]].',
 	'duplicator-success-revisions' => '$1 {{PLURAL:$1|versie|versies}} gekopieerd.',
 	'duplicator-success-talknotcopied' => 'De overlegpagina kon niet gekopieerd worden.',
 	'duplicator-failed' => 'De pagina kon niet gekopieerd worden. Er is een onbekende fout opgetreden.',
+	'duplicator-failed-toolong' => '[[$1]] is niet gedupliceerd. De titel van de bestemmingspagina is te lang.',
+	'duplicator-failed-dest-exists' => '[[$1]] is niet gedupliceerd. De bestemming [[$2]] bestaat al.',
 	'duplicator-source-invalid' => 'Geef een geldige bronpagina op.',
 	'duplicator-source-notexist' => '[[$1]] bestaat niet.
 Geef een pagina op die bestaat.',
