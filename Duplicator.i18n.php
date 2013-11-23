@@ -569,6 +569,7 @@ Estus utila por disigo de artikoloj, ktp.',
 /** Spanish (español)
  * @author Benfutbol10
  * @author Crazymadlover
+ * @author Fitoschido
  * @author Imre
  * @author Sanbec
  */
@@ -578,9 +579,11 @@ $messages['es'] = array(
 	'duplicator-toolbox' => 'Duplicar esta página',
 	'duplicator-header' => 'Esta página permite el duplicado completo de una página, creando copias independientes de todos los historiales. Esto es útil para bifurcación de páginas, etc.',
 	'duplicator-options' => 'Opciones',
-	'duplicator-source' => 'Fuente:',
+	'duplicator-source' => 'Origen:',
 	'duplicator-dest' => 'Destino:',
 	'duplicator-dotalk' => 'Duplicar página de discusión (si es aplicable)',
+	'duplicator-dosubpages' => 'Subpáginas duplicadas (si las hay)',
+	'duplicator-dohistory' => 'Duplicar historial de página completo',
 	'duplicator-submit' => 'Duplicado',
 	'duplicator-summary' => 'Copiado de [[$1]], revisión [[$2]]',
 	'duplicator-success' => '[[$1]] fue copiado a [[$2]].',
@@ -590,10 +593,10 @@ $messages['es'] = array(
 Ocurrió un error desconocido.',
 	'duplicator-failed-toolong' => '[[$1]] no fue duplicado. El título de destino es demasiado largo.',
 	'duplicator-failed-dest-exists' => '[[$1]] no fue duplicado. El destino [[$2]] ya existe.',
-	'duplicator-source-invalid' => 'Por favor provea un título de fuente válido.',
-	'duplicator-source-notexist' => '[[$1]] no existe. Por favor provea el título de una página que exista.',
-	'duplicator-dest-invalid' => 'Por favor provea un título de destino válido.',
-	'duplicator-dest-exists' => '[[$1]] ya existe. Por favor provea un título de destino el cual no exista.',
+	'duplicator-source-invalid' => 'Proporciona un título de origen válido.',
+	'duplicator-source-notexist' => '[[$1]] no existe. Proporciona el título de una página que exista.',
+	'duplicator-dest-invalid' => 'Proporciona un título de destino válido.',
+	'duplicator-dest-exists' => '[[$1]] ya existe. Proporciona un título de destino que no exista.',
 	'right-duplicate' => 'Duplicar páginas',
 );
 
