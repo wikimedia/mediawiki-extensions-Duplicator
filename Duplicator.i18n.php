@@ -376,6 +376,8 @@ Desila se nepoznata greška.',
 );
 
 /** Catalan (català)
+ * @author Alvaro Vidal-Abarca
+ * @author Fitoschido
  * @author McDutchie
  * @author SMP
  * @author Solde
@@ -391,14 +393,14 @@ $messages['ca'] = array(
 	'duplicator-dest' => 'Destinació',
 	'duplicator-dotalk' => 'Duplica la pàgina de discussió (quan així es pugui)',
 	'duplicator-submit' => 'Duplica',
-	'duplicator-summary' => 'Copiat des de [[$1]]', # Fuzzy
+	'duplicator-summary' => 'Copiat des de [[$1]], revisió [[$2]]',
 	'duplicator-success' => "[[$1]] s'ha copiat a [[$2]].",
 	'duplicator-success-revisions' => "{{PLURAL:$1|S'ha copiat una revisió|S'han copiat $1 revisions}}.",
 	'duplicator-success-talknotcopied' => "La pàgina de discussió no s'ha pogut copiar.",
 	'duplicator-failed' => "La pàgina no s'ha pogut duplicar. S'ha produït un error desconegut.",
-	'duplicator-source-invalid' => 'Si us plau, proporcioneu un títol de pàgina original vàlid.',
+	'duplicator-source-invalid' => 'Proporcioneu un títol de pàgina original vàlid.',
 	'duplicator-source-notexist' => "[[$1]] no existeix. Proporcioneu un títol d'una pàgina que existeixi.",
-	'duplicator-dest-invalid' => 'Si us plau, proporcioneu un títol de destinació vàlid.',
+	'duplicator-dest-invalid' => 'Proporcioneu un títol de destinació vàlid.',
 	'duplicator-dest-exists' => '[[$1]] ja existeix. Proporcioneu un títol de destinació que no existeixi.',
 	'right-duplicate' => 'Duplicar pàgines',
 );
