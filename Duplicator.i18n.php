@@ -405,7 +405,7 @@ $messages['ca'] = array(
 	'right-duplicate' => 'Duplicar pàgines',
 );
 
-/** Czech (česky)
+/** Czech (čeština)
  * @author Jkjk
  * @author Michaelbrabec
  * @author Mormegil
@@ -487,6 +487,7 @@ $messages['de-formal'] = array(
 
 /** Zazaki (Zazaki)
  * @author Erdemaslancan
+ * @author Marmase
  * @author Mirzali
  */
 $messages['diq'] = array(
@@ -495,7 +496,7 @@ $messages['diq'] = array(
 	'duplicator-source' => 'Çıme:',
 	'duplicator-dest' => 'Hedef:',
 	'duplicator-submit' => 'Kopya',
-	'duplicator-summary' => '[[$1]] ra kopya ke', # Fuzzy
+	'duplicator-summary' => '[[$1]] ra [[$2]] kopya ke',
 	'right-duplicate' => 'Pela keno kopya',
 );
 
@@ -897,12 +898,16 @@ $messages['hsb'] = array(
 	'duplicator-source' => 'Žórło:',
 	'duplicator-dest' => 'Cil:',
 	'duplicator-dotalk' => 'Diskusijnu stronu sobu kopěrować (jeli móžno)',
+	'duplicator-dosubpages' => 'Podstrony duplicěrować (jeli tajke su)',
+	'duplicator-dohistory' => 'Dospołnu historiju strony duplicěrować',
 	'duplicator-submit' => 'Duplicěrować',
-	'duplicator-summary' => '[[$1]] kopěrowany.', # Fuzzy
+	'duplicator-summary' => 'Z [[$1]], wersije [[$2]] kopěrowany.',
 	'duplicator-success' => '[[$1]] bu do [[$2]] kopěrowany.',
 	'duplicator-success-revisions' => '$1 {{PLURAL:$1|wersija bu kopěrowana|wersijow bu kopěrowane|wersiji buštej kopěrowanej|wersije buchu kopěrowane}}.',
 	'duplicator-success-talknotcopied' => 'Diskusijna strona njeda so kopěrować.',
 	'duplicator-failed' => 'Strona njeda so duplicěrować. Njeznaty zmylk je wustupił.',
+	'duplicator-failed-toolong' => '[[$1]] njeje so duplicěrował. Cilowy titul je předołhi.',
+	'duplicator-failed-dest-exists' => '[[$1]] njeje so duplicěrował. Cil [[$2]] hižo eksistuje.',
 	'duplicator-source-invalid' => 'Prošu podaj płaćiwu žórłowu stronu.',
 	'duplicator-source-notexist' => 'Strona [[$1]] njeeksistuje. Prošu zapodaj eksistowacu stronu.',
 	'duplicator-dest-invalid' => 'Prošu podaj płaćiwu cilowu stronu.',
