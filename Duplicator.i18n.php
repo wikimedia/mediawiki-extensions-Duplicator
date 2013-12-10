@@ -1260,7 +1260,7 @@ $messages['ml'] = array(
 	'duplicator-summary' => '[[$1]]ൽ നിന്നു പകർത്തിയത്', # Fuzzy
 	'duplicator-success' => '[[$1]] എന്ന താൾ [[$2]]ലേക്കു പകർത്തി.',
 	'duplicator-success-revisions' => '$1 {{PLURAL:$1|പതിപ്പ്|പതിപ്പുകൾ}} പകർത്തി.',
-	'duplicator-success-talknotcopied' => 'സം‌വാദം താൾ പകർത്തുവാൻ കഴിഞ്ഞില്ല',
+	'duplicator-success-talknotcopied' => 'സം‌വാദത്താൾ പകർത്തുവാൻ കഴിഞ്ഞില്ല',
 	'duplicator-failed' => 'താളിന്റെ പകർപ്പെടുക്കാൻ സാധിച്ചില്ല. അജ്ഞാതമായ കാരണം മൂലം എന്തോ പിഴവ് സംഭവിച്ചു.',
 	'duplicator-source-invalid' => 'സാധുവായൊരു സ്രോതസ്സ് തലക്കെട്ട് കൊടുക്കുക.',
 	'duplicator-source-notexist' => '[[$1]] നിലവിലില്ല. ദയവായി നിലവിലുള്ള ഒരു താളിന്റെ ശീർഷകം ചേർക്കുക.',
@@ -1811,6 +1811,7 @@ $messages['stq'] = array(
  * @author Lejonel
  * @author M.M.S.
  * @author Najami
+ * @author Tobulos1
  * @author WikiPhoenix
  */
 $messages['sv'] = array(
@@ -1822,12 +1823,15 @@ $messages['sv'] = array(
 	'duplicator-source' => 'Källsida:',
 	'duplicator-dest' => 'Målsida:',
 	'duplicator-dotalk' => 'Duplicera (om möjligt) även diskussionssidan',
+	'duplicator-dohistory' => 'Duplicera hela sidans historia',
 	'duplicator-submit' => 'Duplicera',
 	'duplicator-summary' => 'Kopierad från [[$1]], sidversion [[$2]]',
 	'duplicator-success' => '[[$1]] kopierades till [[$2]].',
 	'duplicator-success-revisions' => '$1 {{PLURAL:$1|sidversion|sidversioner}} kopierades.',
 	'duplicator-success-talknotcopied' => 'Diskussionssidan kunde inte dupliceras.',
 	'duplicator-failed' => 'Sidan kunde inte dupliceras. Ett okänt fel inträffade.',
+	'duplicator-failed-toolong' => '[[$1]] var inte duplicerat. Destinationstiteln var för lång.',
+	'duplicator-failed-dest-exists' => '[[$1]] var inte duplicerat. Destinationstiteln [[$2]] finns redan.',
 	'duplicator-source-invalid' => 'Du har inte angivit någon giltig källsida.',
 	'duplicator-source-notexist' => '[[$1]] finns inte. Du måste ange en källsida som existerar.',
 	'duplicator-dest-invalid' => 'Du har inte angivit någon giltig målsida.',
