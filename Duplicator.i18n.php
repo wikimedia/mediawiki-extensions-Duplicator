@@ -1823,6 +1823,7 @@ $messages['sv'] = array(
 	'duplicator-source' => 'Källsida:',
 	'duplicator-dest' => 'Målsida:',
 	'duplicator-dotalk' => 'Duplicera (om möjligt) även diskussionssidan',
+	'duplicator-dosubpages' => 'Dubblera delsidor (om någon)',
 	'duplicator-dohistory' => 'Duplicera hela sidans historia',
 	'duplicator-submit' => 'Duplicera',
 	'duplicator-summary' => 'Kopierad från [[$1]], sidversion [[$2]]',
