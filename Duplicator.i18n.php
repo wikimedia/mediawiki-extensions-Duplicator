@@ -1176,13 +1176,14 @@ $messages['ku-latn'] = array(
 );
 
 /** Luxembourgish (Lëtzebuergesch)
+ * @author Les Meloures
  * @author Robby
  */
 $messages['lb'] = array(
 	'duplicator' => 'En Doublon vun enger Säit maachen',
 	'duplicator-desc' => 'Onofhängeg [[Special:Duplicate|Kopie vu Säite]] maachen, mat dem kompletten Historique vun den Ännerungen',
 	'duplicator-toolbox' => 'Een Doublon vun dëser Säit maachen',
-	'duplicator-header' => 'Dës Säit erlaabt et e komplett Duplikat vun enger Säit ze maachen, dobäi gëtt eng onofhängeg Kopie mat dem gesamten Historique ugeluecht. Dëst ass nëtzlech wann een eng Säit opdeele wëllt, asw.',
+	'duplicator-header' => 'Dës Säit erlaabt et e komplett Duplikat vun enger Säit ze maachen, dobäi gëtt eng onofhängeg Kopie mat dem ganzen Historique ugeluecht. Dat ass nëtzlech wann eng Säit opdeelt gëtt, asw.',
 	'duplicator-options' => 'Optiounen',
 	'duplicator-source' => 'Quell:',
 	'duplicator-dest' => 'Zil:',
