@@ -56,7 +56,8 @@ Followed by the source and destination inputboxes, and checkboxes.
 {{Identical|Options}}',
 	'duplicator-source' => 'Used as label for the "Source page title" inputbox.
 {{Identical|Source}}',
-	'duplicator-dest' => 'Used as label for the "Destination page title" inputbox.',
+	'duplicator-dest' => 'Used as label for the "Destination page title" inputbox.
+{{Identical|Destination}}',
 	'duplicator-dotalk' => 'Used as checkbox label.',
 	'duplicator-dosubpages' => 'Used as checkbox label.',
 	'duplicator-dohistory' => 'Used as checkbox label.',
