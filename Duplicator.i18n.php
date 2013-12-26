@@ -1475,6 +1475,7 @@ $messages['oc'] = array(
 );
 
 /** Polish (polski)
+ * @author Chrumps
  * @author Derbeth
  * @author Maikking
  * @author Sp5uhe
@@ -1489,7 +1490,7 @@ $messages['pl'] = array(
 	'duplicator-dest' => 'Cel:',
 	'duplicator-dotalk' => 'Zduplikuj stronę dyskusji (jeśli istnieje)',
 	'duplicator-submit' => 'Duplikuj',
-	'duplicator-summary' => 'Skopiowano z [[$1]]', # Fuzzy
+	'duplicator-summary' => 'Skopiowano z [[$1]], wersja [[$2]]',
 	'duplicator-success' => 'Artykuł [[$1]] został skopiowany do [[$2]].',
 	'duplicator-success-revisions' => '$1 {{PLURAL:$1|edycja została skopiowana|edycje zostały skopiowane|edycji zostało skopiowanych}}.',
 	'duplicator-success-talknotcopied' => 'Strona dyskusji nie mogła być skopiowana.',
