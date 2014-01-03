@@ -1695,7 +1695,7 @@ $messages['ru'] = array(
 	'duplicator-submit' => 'Клонировать',
 	'duplicator-summary' => 'Копия ревизии [[$2]] статьи [[$1]]',
 	'duplicator-success' => '[[$1]] клонирована в [[$2]].',
-	'duplicator-success-revisions' => '$1 {{PLURAL:$1|изменение было|изменения было|изменений было}} скопировано.',
+	'duplicator-success-revisions' => '$1 {{PLURAL:$1|изменение было|изменений было|изменения было}} скопировано.', # Fuzzy
 	'duplicator-success-talknotcopied' => 'Страница обсуждения не была скопирована.',
 	'duplicator-failed' => 'Страница не может быть клонирована. Неизвестная ошибка.',
 	'duplicator-failed-toolong' => '[[$1]] не клонирована. Новое название слишком длинное.',
@@ -1769,7 +1769,7 @@ $messages['sr-ec'] = array(
 	'duplicator-submit' => 'Дуплирај',
 	'duplicator-summary' => 'Ископирано од [[$1]]', # Fuzzy
 	'duplicator-success' => '[[$1]] је ископиран у [[$2]].',
-	'duplicator-success-revisions' => '$1 {{PLURAL:$1|ревизија је ископирана|равизија је ископирано}}.',
+	'duplicator-success-revisions' => '$1 {{PLURAL:$1|1=ревизија је ископирана|равизија је ископирано}}.', # Fuzzy
 	'duplicator-success-talknotcopied' => 'Страна за разговор није могла бити ископирана.',
 	'duplicator-failed' => 'Чланак није могао бити дуплиран.
 Дошло је до непозанте грешке.',
@@ -1796,7 +1796,7 @@ Ovo je korisno za forkovanje članaka i sl.',
 	'duplicator-submit' => 'Dupliraj',
 	'duplicator-summary' => 'Iskopirano od [[$1]]', # Fuzzy
 	'duplicator-success' => '[[$1]] je iskopiran u [[$2]].',
-	'duplicator-success-revisions' => '$1 {{PLURAL:$1|revizija je iskopirana|ravizija je iskopirano}}.',
+	'duplicator-success-revisions' => '$1 {{PLURAL:$1|1=revizija je iskopirana|ravizija je iskopirano}}.', # Fuzzy
 	'duplicator-success-talknotcopied' => 'Strana za razgovor nije mogla biti iskopirana.',
 	'duplicator-failed' => 'Članak nije mogao biti dupliran.
 Došlo je do nepozante greške.',
