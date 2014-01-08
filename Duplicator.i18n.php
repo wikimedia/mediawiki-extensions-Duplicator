@@ -308,6 +308,7 @@ $messages['bg'] = array(
 );
 
 /** Bengali (বাংলা)
+ * @author Aftab1995
  * @author Bellayet
  * @author Wikitanvir
  */
@@ -319,7 +320,7 @@ $messages['bn'] = array(
 	'duplicator-dest' => 'লক্ষ্য:',
 	'duplicator-dotalk' => 'প্রতিলিপিকৃত আলোচনা পাতা (যদি প্রযোজ্য হয়)',
 	'duplicator-submit' => 'প্রতিলিপি',
-	'duplicator-summary' => '[[$1]] থেকে অনুলিপিকৃত', # Fuzzy
+	'duplicator-summary' => '[[$2]] সংস্করণ, [[$1]] থেকে অনুলিপিকৃত',
 	'duplicator-success-talknotcopied' => 'এই আলাপ পাতাটি অনুলেপন করা যাবে না।',
 	'right-duplicate' => 'প্রতিলিপিকৃত পাতাসমূহ',
 );
