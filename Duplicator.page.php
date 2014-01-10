@@ -58,7 +58,7 @@ class SpecialDuplicator extends SpecialPage {
 	 */
 	public function execute( $title ) {
 		global $wgUser, $wgOut, $wgRequest, $wgLang, $wgDuplicatorRevisionLimit;
-		
+
 		$this->setHeaders();
 
 		# Check permissions
@@ -212,7 +212,7 @@ class SpecialDuplicator extends SpecialPage {
 		$form .= '<td>' . Xml::submitButton( wfMsg( 'duplicator-submit' ) ) . '</td>';
 		$form .= '</tr>';
 		$form .= '</table>';
-		$form .= Html::Hidden( 'token', $wgUser->editToken( 'duplicator' ) );
+		$form .= Html::Hidden( 'token', $wgUser->getEditToken( 'duplicator' ) );
 		$form .= '</fieldset></form>';
 		return $form;
 	}
