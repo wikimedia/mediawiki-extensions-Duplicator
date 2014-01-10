@@ -407,6 +407,13 @@ $messages['ca'] = array(
 	'right-duplicate' => 'Duplicar pàgines',
 );
 
+/** Chechen (нохчийн)
+ * @author Умар
+ */
+$messages['ce'] = array(
+	'duplicator-options' => 'Параметраш',
+);
+
 /** Czech (čeština)
  * @author Jkjk
  * @author Michaelbrabec
