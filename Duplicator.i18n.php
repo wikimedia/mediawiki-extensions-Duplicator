@@ -326,6 +326,7 @@ $messages['bn'] = array(
 );
 
 /** Breton (brezhoneg)
+ * @author Fohanno
  * @author Fulup
  */
 $messages['br'] = array(
@@ -338,7 +339,7 @@ $messages['br'] = array(
 	'duplicator-dest' => "Lec'h-kas :",
 	'duplicator-dotalk' => 'Eilañ ar bajenn gaozeal (mar galler)',
 	'duplicator-submit' => 'Eilañ',
-	'duplicator-summary' => 'Eilet eus [[$1]]', # Fuzzy
+	'duplicator-summary' => 'Eilet eus [[$1]], adwel [[$2]]',
 	'duplicator-success' => 'Eilet eo bet [[$1]] war [[$2]].',
 	'duplicator-success-revisions' => '$1 {{PLURAL:$1|kemm|kemm}} zo bet eilet.',
 	'duplicator-success-talknotcopied' => "N'eus ket bet gallet eilañ ar bajenn gaozeal.",
