@@ -1762,6 +1762,7 @@ $messages['sk'] = array(
 );
 
 /** Serbian (Cyrillic script) (српски (ћирилица)‎)
+ * @author Milicevic01
  * @author Rancher
  * @author Михајло Анђелковић
  */
@@ -1778,7 +1779,7 @@ $messages['sr-ec'] = array(
 	'duplicator-submit' => 'Дуплирај',
 	'duplicator-summary' => 'Ископирано од [[$1]]', # Fuzzy
 	'duplicator-success' => '[[$1]] је ископиран у [[$2]].',
-	'duplicator-success-revisions' => '$1 {{PLURAL:$1|1=ревизија је ископирана|равизија је ископирано}}.', # Fuzzy
+	'duplicator-success-revisions' => '$1 {{PLURAL:$1|ревизија је ископирана|ревизија је ископирано}}.',
 	'duplicator-success-talknotcopied' => 'Страна за разговор није могла бити ископирана.',
 	'duplicator-failed' => 'Чланак није могао бити дуплиран.
 Дошло је до непозанте грешке.',
@@ -1791,6 +1792,7 @@ $messages['sr-ec'] = array(
 
 /** Serbian (Latin script) (srpski (latinica)‎)
  * @author Michaello
+ * @author Milicevic01
  */
 $messages['sr-el'] = array(
 	'duplicator' => 'Duplira članak',
@@ -1805,7 +1807,7 @@ Ovo je korisno za forkovanje članaka i sl.',
 	'duplicator-submit' => 'Dupliraj',
 	'duplicator-summary' => 'Iskopirano od [[$1]]', # Fuzzy
 	'duplicator-success' => '[[$1]] je iskopiran u [[$2]].',
-	'duplicator-success-revisions' => '$1 {{PLURAL:$1|1=revizija je iskopirana|ravizija je iskopirano}}.', # Fuzzy
+	'duplicator-success-revisions' => '$1 {{PLURAL:$1|revizija je iskopirana|revizija je iskopirano}}.',
 	'duplicator-success-talknotcopied' => 'Strana za razgovor nije mogla biti iskopirana.',
 	'duplicator-failed' => 'Članak nije mogao biti dupliran.
 Došlo je do nepozante greške.',
