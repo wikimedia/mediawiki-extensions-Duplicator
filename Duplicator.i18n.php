@@ -353,10 +353,11 @@ $messages['br'] = array(
 
 /** Bosnian (bosanski)
  * @author CERminator
+ * @author KWiki
  */
 $messages['bs'] = array(
 	'duplicator' => 'Dupliciraj stranicu',
-	'duplicator-desc' => 'Pravi nezavisne [[Special:Duplicate|kopije stranica]] sa potpunim historijama uređivanja',
+	'duplicator-desc' => 'Pravi nezavisne [[Special:Duplicate|kopije stranica]] s potpunim historijama uređivanja',
 	'duplicator-toolbox' => 'Dupliciraj ovu stranicu',
 	'duplicator-header' => 'Ova stranica omogućava da se dovrši duplikacija stranice, stvarajući nezavisne kopije svih historija.
 Ovo je korisno za dijeljenje stranice itd.',
@@ -368,7 +369,7 @@ Ovo je korisno za dijeljenje stranice itd.',
 	'duplicator-summary' => 'Kopirano sa [[$1]]', # Fuzzy
 	'duplicator-success' => '[[$1]] je kopirano na [[$2]].',
 	'duplicator-success-revisions' => '$1 {{PLURAL:$1|revizija je kopirana|revizije su kopirane|revizija je kopirano}}.',
-	'duplicator-success-talknotcopied' => 'Stranica za razgovor se nije mogla kopirati.',
+	'duplicator-success-talknotcopied' => 'Stranica za razgovor nije se mogla kopirati.',
 	'duplicator-failed' => 'Stranica nije mogla biti duplicirana.
 Desila se nepoznata greška.',
 	'duplicator-source-invalid' => 'Molimo navedite valjan izvorni naslov.',
