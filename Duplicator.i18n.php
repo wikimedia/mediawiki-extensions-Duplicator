@@ -1577,6 +1577,7 @@ $messages['ps'] = array(
 
 /** Portuguese (português)
  * @author Hamilton Abreu
+ * @author Imperadeiro98
  * @author Lijealso
  * @author Luckas
  * @author Malafaya
@@ -1592,7 +1593,7 @@ $messages['pt'] = array(
 	'duplicator-dest' => 'Destino:',
 	'duplicator-dotalk' => 'Duplicar página de discussão (se aplicável)',
 	'duplicator-submit' => 'Duplicar',
-	'duplicator-summary' => 'Copiado de [[$1]]', # Fuzzy
+	'duplicator-summary' => 'Copiado de [[$1]], revisão [[$2]]',
 	'duplicator-success' => '[[$1]] foi copiada para [[$2]].',
 	'duplicator-success-revisions' => '$1 {{PLURAL:$1|revisão foi copiada|revisões foram copiadas}}.',
 	'duplicator-success-talknotcopied' => 'Não foi possível copiar a página de discussão.',
