@@ -870,6 +870,7 @@ $messages['hak'] = array(
  * @author Amire80
  * @author Rotemliss
  * @author YaronSh
+ * @author Yona b
  */
 $messages['he'] = array(
 	'duplicator' => 'שכפול דף',
@@ -881,13 +882,17 @@ $messages['he'] = array(
 	'duplicator-source' => 'מקור:',
 	'duplicator-dest' => 'יעד:',
 	'duplicator-dotalk' => 'שכפול של דף השיחה (אם קיים)',
+	'duplicator-dosubpages' => 'שכפל דפי משנה (אם קיים)',
+	'duplicator-dohistory' => 'שכפול היסטוריה מלאה של דף',
 	'duplicator-submit' => 'שכפול',
-	'duplicator-summary' => 'הועתק מ[[$1]]', # Fuzzy
+	'duplicator-summary' => 'הועתק מ־[[$1]], גרסה [[$2]]',
 	'duplicator-success' => '[[$1]] הועתק ל[[$2]].',
 	'duplicator-success-revisions' => '{{PLURAL:$1|הועתקה גרסה אחת|הועתקו $1 גרסאות}}.',
 	'duplicator-success-talknotcopied' => 'לא ניתן היה להעתיק את דף השיחה.',
 	'duplicator-failed' => 'לא ניתן היה לשכפל את הדף.
 אירעה שגיאה בלתי ידועה.',
+	'duplicator-failed-toolong' => '[[$1]] לא שוכפל. כותרת היעד ארוך מידי.',
+	'duplicator-failed-dest-exists' => '[[$1]] לא שוכפל. היעד [[$2]] כבר קיים.',
 	'duplicator-source-invalid' => 'אנא ספקו כותרת מקור תקינה.',
 	'duplicator-source-notexist' => '[[$1]] אינו קיים. אנא ספקו כותרת של דף קיים.',
 	'duplicator-dest-invalid' => 'אנא ספקו כותרת יעד תקינה.',
