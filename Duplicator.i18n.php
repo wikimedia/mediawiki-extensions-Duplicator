@@ -660,6 +660,7 @@ $messages['ext'] = array(
 /** Persian (فارسی)
  * @author Alireza
  * @author Armin1392
+ * @author Ebraminio
  */
 $messages['fa'] = array(
 	'duplicator' => 'تکثیر یک صفحه',
@@ -685,7 +686,7 @@ $messages['fa'] = array(
 	'duplicator-source-invalid' => 'لطفاً یک عنوان منبع معتبر ارائه دهید.',
 	'duplicator-source-notexist' => '[[$1]] وجود ندارد. لطفاً عنوان یک صفحهٔ موجود را ارائه دهید.',
 	'duplicator-dest-invalid' => 'لطفاً یک عنوان مقصد معتبر ارائه دهید.',
-	'duplicator-dest-exists' => '[[$1]] در حال حاضر وجود دارد. لطفاً عنوان مقصدی را ارائه دهید،که موجود نیست.',
+	'duplicator-dest-exists' => '[[$1]] در حال حاضر وجود دارد. لطفاً عنوان مقصدی را ارائه دهید، که موجود نیست.',
 	'right-duplicate' => 'صفحات تکراری',
 );
 
