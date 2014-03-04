@@ -1901,13 +1901,14 @@ $messages['ta'] = array(
 );
 
 /** Telugu (తెలుగు)
+ * @author Ravichandra
  * @author Veeven
  */
 $messages['te'] = array(
 	'duplicator-options' => 'ఎంపికలు',
 	'duplicator-source' => 'మూలం:',
 	'duplicator-dest' => 'గమ్యస్థానం:',
-	'duplicator-summary' => '[[$1]] నుండి కాపీ చేసారు', # Fuzzy
+	'duplicator-summary' => '[[$1]], [[$2]] కూర్పు నుండి కాపీ చేసారు',
 	'duplicator-success' => '[[$1]]ని [[$2]]కి కాపీ చేసాం.',
 	'duplicator-success-revisions' => '$1 {{PLURAL:$1|కూర్పు కాపీ అయ్యింది|కూర్పులు కాపీ అయ్యియి}}.',
 	'duplicator-success-talknotcopied' => 'చర్చా పేజీని కాపీ చేయ్యలేకపోయాం.',
