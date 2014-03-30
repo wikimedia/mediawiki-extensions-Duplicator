@@ -1271,9 +1271,9 @@ $messages['mk'] = array(
 	'duplicator-dosubpages' => 'Дуплирај потстраници (ако ги има)',
 	'duplicator-dohistory' => 'Дуплирај ја целата историја',
 	'duplicator-submit' => 'Дуплирај',
-	'duplicator-summary' => 'Копирано од [[$1]], ревизија [[$2]]',
+	'duplicator-summary' => 'Прекопирано од [[$1]], преработка [[$2]]',
 	'duplicator-success' => 'Страницата [[$1]] е ископирана во [[$2]].',
-	'duplicator-success-revisions' => '$1 {{PLURAL:$1|ревизија беше ископирана|ревизии беа ископирани}}.',
+	'duplicator-success-revisions' => '{{PLURAL:$1|Беше ископирана $1 преработка|Беа ископирани $1 преработки}}.',
 	'duplicator-success-talknotcopied' => 'Страницата за разговор не можеше да се ископира.',
 	'duplicator-failed' => 'Страницата не можеше да се дуплира.
 Се појави непозната грешка.',
