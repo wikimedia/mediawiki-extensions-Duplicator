@@ -27,13 +27,14 @@ if (!defined('MEDIAWIKI')) die();
 $wgExtensionCredits['specialpage'][] = array(
 	'path' => __FILE__,
 	'name' => 'Duplicator',
-	'version' => '1.3',
+	'version' => '1.4.0',
 	'author' => array('Rob Church', 'Vitaliy Filippov'),
 	'url' => 'https://www.mediawiki.org/wiki/Extension:Duplicator',
 	'descriptionmsg' => 'duplicator-desc',
 );
 
 $dir = dirname(__FILE__) . '/';
+$wgMessagesDirs['Duplicator'] = __DIR__ . '/i18n';
 $wgExtensionMessagesFiles['Duplicator'] = $dir . 'Duplicator.i18n.php';
 $wgExtensionMessagesFiles['DuplicatorAlias'] = $dir . 'Duplicator.alias.php';
 $wgAutoloadClasses['SpecialDuplicator'] = $dir . 'Duplicator.page.php';
@@ -61,7 +62,7 @@ function efDuplicatorNavigation( &$skin, &$nav_urls, &$oldid, &$revid ) {
 	global $wgUser;
 	$ns = $skin->getTitle()->getNamespace();
 	if( ( $ns === NS_MAIN || $ns === NS_TALK ) && $wgUser->isAllowed( 'duplicate' ) ) {
-		
+
 		$nav_urls['duplicator'] = array(
 			'text' => wfMsg( 'duplicator-toolbox' ),
 			'href' => $skin->makeSpecialUrl( 'Duplicator', "source=" . wfUrlEncode( "{$skin->thispage}" ) )
@@ -75,7 +76,7 @@ function efDuplicatorNavigation( &$skin, &$nav_urls, &$oldid, &$revid ) {
  */
 function efDuplicatorToolbox( &$monobook ) {
 	if ( isset( $monobook->data['nav_urls']['duplicator'] ) ) {
-		
+
 		if ( $monobook->data['nav_urls']['duplicator']['href'] == '' ) {
 			?><li id="t-isduplicator"><?php echo $monobook->msg( 'duplicator-toolbox' ); ?></li><?php
 		} else {
