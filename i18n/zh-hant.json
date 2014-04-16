@@ -1,28 +1,28 @@
 {
-    "@metadata": {
-        "authors": [
-            "Mark85296341",
-            "Shinjiman",
-            "Wrightbus"
-        ]
-    },
-    "duplicator": "複製一篇文章",
-    "duplicator-desc": "建立含所有編輯歷程記錄的獨立[[Special:Duplicate|頁面副本]]",
-    "duplicator-toolbox": "複製這篇文章",
-    "duplicator-header": "這一版可以完全複製一篇文章，建立一個完整的修訂歷史。這對於文章分叉等的動作是很有用的。",
-    "duplicator-options": "選項",
-    "duplicator-source": "來源：",
-    "duplicator-dest": "目的地：",
-    "duplicator-dotalk": "複製討論頁 （如可用的話）",
-    "duplicator-submit": "複製",
-    "duplicator-summary": "由[[$1]]複製過來",
-    "duplicator-success": "[[$1]]已經複製到[[$2]]。",
-    "duplicator-success-revisions": "$1個修訂已經複製。",
-    "duplicator-success-talknotcopied": "討論頁不能夠複製。",
-    "duplicator-failed": "這一頁不能夠複製過來。發生了未知的錯誤。",
-    "duplicator-source-invalid": "請提供一個正確的來源標題。",
-    "duplicator-source-notexist": "[[$1]]並不存在。請提供一個已經存在的頁面標題。",
-    "duplicator-dest-invalid": "請提供一個正確的目標標題。",
-    "duplicator-dest-exists": "[[$1]]已經存在。請提供一個未存在的目標標題。",
-    "right-duplicate": "複製文章"
+	"@metadata": {
+		"authors": [
+			"Mark85296341",
+			"Shinjiman",
+			"Wrightbus"
+		]
+	},
+	"duplicator": "複製一篇文章",
+	"duplicator-desc": "建立含所有編輯歷程記錄的獨立[[Special:Duplicate|頁面副本]]",
+	"duplicator-toolbox": "複製這篇文章",
+	"duplicator-header": "這一版可以完全複製一篇文章，建立一個完整的修訂歷史。這對於文章分叉等的動作是很有用的。",
+	"duplicator-options": "選項",
+	"duplicator-source": "來源：",
+	"duplicator-dest": "目的地：",
+	"duplicator-dotalk": "複製討論頁 （如可用的話）",
+	"duplicator-submit": "複製",
+	"duplicator-summary": "由[[$1]]複製過來",
+	"duplicator-success": "[[$1]]已經複製到[[$2]]。",
+	"duplicator-success-revisions": "$1個修訂已經複製。",
+	"duplicator-success-talknotcopied": "討論頁不能夠複製。",
+	"duplicator-failed": "這一頁不能夠複製過來。發生了未知的錯誤。",
+	"duplicator-source-invalid": "請提供一個正確的來源標題。",
+	"duplicator-source-notexist": "[[$1]]並不存在。請提供一個已經存在的頁面標題。",
+	"duplicator-dest-invalid": "請提供一個正確的目標標題。",
+	"duplicator-dest-exists": "[[$1]]已經存在。請提供一個未存在的目標標題。",
+	"right-duplicate": "複製文章"
 }

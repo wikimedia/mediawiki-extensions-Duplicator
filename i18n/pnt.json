@@ -1,9 +1,9 @@
 {
-    "@metadata": {
-        "authors": [
-            "Omnipaedista"
-        ]
-    },
-    "duplicator-submit": "Διπλότυπον",
-    "right-duplicate": "Διπλογραμμένας σελίδας"
+	"@metadata": {
+		"authors": [
+			"Omnipaedista"
+		]
+	},
+	"duplicator-submit": "Διπλότυπον",
+	"right-duplicate": "Διπλογραμμένας σελίδας"
 }
