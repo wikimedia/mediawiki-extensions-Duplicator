@@ -3,7 +3,8 @@
 		"authors": [
 			"Mark85296341",
 			"Shinjiman",
-			"Wrightbus"
+			"Wrightbus",
+			"Cwlin0416"
 		]
 	},
 	"duplicator": "複製一篇文章",
@@ -15,7 +16,7 @@
 	"duplicator-dest": "目的地：",
 	"duplicator-dotalk": "複製討論頁 （如可用的話）",
 	"duplicator-submit": "複製",
-	"duplicator-summary": "由[[$1]]複製過來",
+	"duplicator-summary": "複製從 [[$1]]，修訂 [[$2]]",
 	"duplicator-success": "[[$1]]已經複製到[[$2]]。",
 	"duplicator-success-revisions": "$1個修訂已經複製。",
 	"duplicator-success-talknotcopied": "討論頁不能夠複製。",
