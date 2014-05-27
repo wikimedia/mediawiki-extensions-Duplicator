@@ -4,7 +4,8 @@
 			"Beta16",
 			"Broken Arrow",
 			"Darth Kule",
-			"Gianfranco"
+			"Gianfranco",
+			"Nemo bis"
 		]
 	},
 	"duplicator": "Duplica una pagina",
@@ -20,7 +21,7 @@
 	"duplicator-submit": "Duplica",
 	"duplicator-summary": "Copiata da [[$1]], versione [[$2]]",
 	"duplicator-success": "La pagina [[$1]] è stata copiata in [[$2]].",
-	"duplicator-success-revisions": "$1 {{PLURAL:$1|revisione copiata|revisioni copiate}}.",
+	"duplicator-success-revisions": "$1 {{PLURAL:$1|versione copiata|versioni copiate}}.",
 	"duplicator-success-talknotcopied": "Impossibile copiare la pagina di discussione.",
 	"duplicator-failed": "Impossibile duplicare la pagina. Errore sconosciuto.",
 	"duplicator-failed-toolong": "Non è stato possibile duplicare [[$1]]. Il titolo di destinazione è troppo lungo.",
