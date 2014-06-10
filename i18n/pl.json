@@ -4,7 +4,8 @@
 			"Chrumps",
 			"Derbeth",
 			"Maikking",
-			"Sp5uhe"
+			"Sp5uhe",
+			"Alan ffm"
 		]
 	},
 	"duplicator": "Duplikowanie strony",
@@ -15,6 +16,8 @@
 	"duplicator-source": "Źródło:",
 	"duplicator-dest": "Cel:",
 	"duplicator-dotalk": "Zduplikuj stronę dyskusji (jeśli istnieje)",
+	"duplicator-dosubpages": "Duplikowanie podstron (jeśli istnieją)",
+	"duplicator-dohistory": "Duplikowanie strony z pełną historią",
 	"duplicator-submit": "Duplikuj",
 	"duplicator-summary": "Skopiowano z [[$1]], wersja [[$2]]",
 	"duplicator-success": "Artykuł [[$1]] został skopiowany do [[$2]].",
