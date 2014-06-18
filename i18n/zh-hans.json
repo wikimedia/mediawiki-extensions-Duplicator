@@ -5,7 +5,8 @@
 			"Shinjiman",
 			"TianyinLee",
 			"Vina",
-			"Xiaomingyan"
+			"Xiaomingyan",
+			"Mywood"
 		]
 	},
 	"duplicator": "复制一篇文章",
@@ -21,7 +22,7 @@
 	"duplicator-submit": "复制",
 	"duplicator-summary": "复制自[[$1]]的版本[[$2]]",
 	"duplicator-success": "[[$1]]已经复制到[[$2]]。",
-	"duplicator-success-revisions": "$1个修订已经复制。",
+	"duplicator-success-revisions": "$1个版本已经复制。",
 	"duplicator-success-talknotcopied": "讨论页不能够复制。",
 	"duplicator-failed": "这一页唔能够复制落来。发生了未知的错误。",
 	"duplicator-failed-toolong": "[[$1]]不是重复的，此目的地名称过长。",
