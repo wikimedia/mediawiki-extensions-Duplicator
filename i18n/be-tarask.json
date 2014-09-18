@@ -3,7 +3,8 @@
 		"authors": [
 			"EugeneZelenko",
 			"Jim-by",
-			"Zedlik"
+			"Zedlik",
+			"Red Winged Duck"
 		]
 	},
 	"duplicator": "Капіяваць старонку",
@@ -15,7 +16,7 @@
 	"duplicator-dest": "Мэтавая старонка:",
 	"duplicator-dotalk": "Капіяваць старонку абмеркаваньня (калі магчыма)",
 	"duplicator-submit": "Капіяваць",
-	"duplicator-summary": "Копія [[$1]]",
+	"duplicator-summary": "Копія вэрсіі [[$2]] артыкула [[$1]]",
 	"duplicator-success": "[[$1]] была скапіяваная ў [[$2]].",
 	"duplicator-success-revisions": "$1 {{PLURAL:$1|рэдагаваньне было скапіяванае|рэдагаваньні былі скапіяваныя|рэдагаваньняў былі скапіяваныя}}.",
 	"duplicator-success-talknotcopied": "Старонка абмеркаваньня не магла быць скапіяваная.",
