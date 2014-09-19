@@ -14,7 +14,7 @@
 	"duplicator-dest": "Destino:",
 	"duplicator-dotalk": "Duobligi diskutan paĝon (se estas aplikebla)",
 	"duplicator-submit": "Duobligi",
-	"duplicator-summary": "Kopiita de [[$1]]",
+	"duplicator-summary": "Kopiita de [[$1]], revizio [[$2]]",
 	"duplicator-success": "[[$1]] estas kopiita al [[$2]].",
 	"duplicator-success-revisions": "$1 {{PLURAL:$1|revizio|revizioj}} estas {{PLURAL:$1|kopiita|kopiitaj}}.",
 	"duplicator-success-talknotcopied": "La diskuta paĝo ne povis esti kopiita.",
