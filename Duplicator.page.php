@@ -112,8 +112,16 @@ class SpecialDuplicator extends SpecialPage {
 		# Attempt to perform the main duplicate op. first
 		$num = $this->duplicate( $this->sourceTitle, $this->destTitle, $this->history );
 		if( $num ) {
-			$success = '* ' . wfMsgNoTrans( 'duplicator-success', $this->sourceTitle->getPrefixedText(), $this->destTitle->getPrefixedText() );
-			$success .= ' ' . wfMsgNoTrans( 'duplicator-success-revisions', $wgLang->formatNum( $num ) ) . "\n";
+			$success = Html::openElement( 'ul' ) .
+				Html::element( 'li',
+					array(),
+					$this->msg( 'duplicator-success',
+						$this->sourceTitle->getPrefixedText(),
+						$this->destTitle->getPrefixedText()
+					)->plain() . ' ' .
+					$this->msg( 'duplicator-success-revisions' )->numParams( $num )->plain()
+				);
+
 			# If there are subpages and we've been asked to duplicate them, do so
 			if ( $this->subpages ) {
 				$success .= $this->duplicateSubpages( $this->sourceTitle, $this->destTitle, $this->history );
@@ -124,18 +132,26 @@ class SpecialDuplicator extends SpecialPage {
 				$dt = $this->destTitle->getTalkPage();
 				$num = $this->duplicate( $st, $dt, $this->history );
 				if ( $num ) {
-					$success .= '* ' . wfMsgNoTrans( 'duplicator-success', $st->getPrefixedText(), $dt->getPrefixedText() );
-					$success .= ' ' . wfMsgNoTrans( 'duplicator-success-revisions', $wgLang->formatNum( $num ) ) . "\n";
+					$success .= Html::element( 'li',
+						array(),
+						$this->msg( 'duplicator-success',
+							$st->getPrefixedText(),
+							$dt->getPrefixedText()
+						 	)->plain() . ' ' .
+						$this->msg( 'duplicator-success-revisions' )->numParams( $num )->plain()
+					);
+
 					if ( $this->subpages ) {
 						$success .= $this->duplicateSubpages( $st, $dt, $this->history );
 					}
 				} else {
-					$success .= '* ' . wfMsgNoTrans( 'duplicator-success-talknotcopied' ) . "\n";
+					$success .= Html::element( 'li', array(), $this->msg( 'duplicator-success-talknotcopied' )->plain() );
 				}
 			}
-			# Report success to the user
-			$parsed = $wgOut->parse( $success, /*linestart*/true, /*uilang*/true );
-			$wgOut->addHTML( $parsed );
+
+			$success .= Html::closeElement( 'ul' );
+			$wgOut->addHTML( $success );
+
 		} else {
 			# Something went wrong, abort the entire operation
 			$wgOut->addWikiMsg( 'duplicator-failed' );
@@ -189,27 +205,28 @@ class SpecialDuplicator extends SpecialPage {
 		$self = SpecialPage::getTitleFor( 'Duplicator' );
 		$source = is_object( $this->sourceTitle ) ? $this->sourceTitle->getPrefixedText() : $this->source;
 		$dest = is_object( $this->destTitle ) ? $this->destTitle->getPrefixedText() : $this->dest;
+		// FIXME: replace this to use Html or/and Xml class to generate HTML
 		$form  = '<form method="post" action="' . $self->getLocalUrl() . '">';
-		$form .= '<fieldset><legend>' . wfMsgHtml( 'duplicator-options' ) . '</legend>';
+		$form .= '<fieldset><legend>' . $this->msg( 'duplicator-options' )->escaped() . '</legend>';
 		$form .= '<table>';
 		$form .= '<tr>';
-		$form .= '<td><label for="source">' . wfMsgHtml( 'duplicator-source' ) . '</label></td>';
+		$form .= '<td><label for="source">' . $this->msg( 'duplicator-source' )->escaped() . '</label></td>';
 		$form .= '<td>' . Xml::input( 'source', 40, $source, array( 'id' => 'source' ) ) . '</td>';
 		$form .= '</tr><tr>';
-		$form .= '<td><label for="dest">' . wfMsgHtml( 'duplicator-dest' ) . '</label></td>';
+		$form .= '<td><label for="dest">' . $this->msg( 'duplicator-dest' )->escaped() . '</label></td>';
 		$form .= '<td>' . Xml::input( 'dest', 40, $dest, array( 'id' => 'dest' ) ) . '</td>';
 		$form .= '</tr><tr>';
 		$form .= '<td>&#160;</td>';
-		$form .= '<td>' . Xml::checkLabel( wfMsg( 'duplicator-dotalk' ), 'talk', 'talk', $this->talk ) . '</td>';
+		$form .= '<td>' . Xml::checkLabel( $this->msg( 'duplicator-dotalk' )->text(), 'talk', 'talk', $this->talk ) . '</td>';
 		$form .= '</tr><tr>';
 		$form .= '<td>&#160;</td>';
-		$form .= '<td>' . Xml::checkLabel( wfMsg( 'duplicator-dosubpages' ), 'subpages', 'subpages', $this->subpages ) . '</td>';
+		$form .= '<td>' . Xml::checkLabel( $this->msg( 'duplicator-dosubpages' )->text(), 'subpages', 'subpages', $this->subpages ) . '</td>';
 		$form .= '</tr><tr>';
 		$form .= '<td>&#160;</td>';
-		$form .= '<td>' . Xml::checkLabel( wfMsg( 'duplicator-dohistory' ), 'history', 'history', $this->history ) . '</td>';
+		$form .= '<td>' . Xml::checkLabel( $this->msg( 'duplicator-dohistory' )->text(), 'history', 'history', $this->history ) . '</td>';
 		$form .= '</tr><tr>';
 		$form .= '<td>&#160;</td>';
-		$form .= '<td>' . Xml::submitButton( wfMsg( 'duplicator-submit' ) ) . '</td>';
+		$form .= '<td>' . Xml::submitButton( $this->msg( 'duplicator-submit' )->escaped() ) . '</td>';
 		$form .= '</tr>';
 		$form .= '</table>';
 		$form .= Html::Hidden( 'token', $wgUser->getEditToken( 'duplicator' ) );
@@ -235,15 +252,29 @@ class SpecialDuplicator extends SpecialPage {
 			$destSub = Title::makeTitleSafe( $ns, $dest . substr( $sub->getText(), $len ) );
 			if ( $destSub ) {
 				if ( $destSub->exists() ) {
-					$success .= '* ' . wfMsgNoTrans( 'duplicator-failed-dest-exists', $sub->getPrefixedText(), $destSub->getPrefixedText() ) . "\n";
+					$success .= Html::element( 'li',
+						array(),
+						$this->msg( 'duplicator-failed-dest-exists',
+							$sub->getPrefixedText(),
+							$destSub->getPrefixedText()
+							)->plain()
+						);
 				} else {
 					$num = $this->duplicate( $sub, $destSub, $this->history );
-					$success .= '* ' . wfMsgNoTrans( 'duplicator-success', $sub->getPrefixedText(), $destSub->getPrefixedText() );
-					$success .= ' ' . wfMsgNoTrans( 'duplicator-success-revisions', $wgLang->formatNum( $num ) ) . "\n";
+					$success .= Html::element( 'li',
+						array(),
+						$this->msg( 'duplicator-success',
+							$sub->getPrefixedText(),
+							$destSub->getPrefixedText()
+							)->plain() . ' ' .
+						$this->msg( 'duplicator-success-revisions',
+							$wgLang->formatNum( $num )
+							)->plain()
+					);
 				}
 			} else {
 				# Bad title error can only occur here because of the destination title being too long
-				$success .= '* ' . wfMsgNoTrans( 'duplicator-failed-toolong', $sub->getPrefixedText() ) . "\n";
+				$success .= Html::element( 'li', array(), $this->msg( 'duplicator-failed-toolong', $sub->getPrefixedText() )->plain() );
 			}
 		}
 		return $success;
@@ -280,7 +311,7 @@ class SpecialDuplicator extends SpecialPage {
 		if( $res && ( $count = $dbw->numRows( $res ) ) > 0 ) {
 			while( $row = $dbw->fetchObject( $res ) ) {
 				if( !$comment ) {
-					$comment = wfMsgForContent( 'duplicator-summary', $source->getPrefixedText(), $row->rev_id );
+					$comment = $this->msg( 'duplicator-summary', $source->getPrefixedText(), $row->rev_id )->inContentLanguage()->text();
 				}
 				$values['rev_page'] = $aid;
 				$values['rev_text_id'] = $row->rev_text_id;

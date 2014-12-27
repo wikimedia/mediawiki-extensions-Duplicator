@@ -64,7 +64,7 @@ function efDuplicatorNavigation( &$skin, &$nav_urls, &$oldid, &$revid ) {
 	if( ( $ns === NS_MAIN || $ns === NS_TALK ) && $wgUser->isAllowed( 'duplicate' ) ) {
 
 		$nav_urls['duplicator'] = array(
-			'text' => wfMsg( 'duplicator-toolbox' ),
+			'text' => $skin->msg( 'duplicator-toolbox' ),
 			'href' => $skin->makeSpecialUrl( 'Duplicator', "source=" . wfUrlEncode( "{$skin->thispage}" ) )
 		);
 	}
