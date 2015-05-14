@@ -4,7 +4,8 @@
 			"Jon Harald Søby",
 			"McDutchie",
 			"Purodha",
-			"Shirayuki"
+			"Shirayuki",
+			"Nemo bis"
 		]
 	},
 	"duplicator": "{{doc-special|Duplicator|unlisted=1}}",
@@ -15,7 +16,7 @@
 	"duplicator-source": "Used as label for the \"Source page title\" inputbox.\n{{Identical|Source}}",
 	"duplicator-dest": "Used as label for the \"Destination page title\" inputbox.\n{{Identical|Destination}}",
 	"duplicator-dotalk": "Used as checkbox label.",
-	"duplicator-dosubpages": "Used as checkbox label.",
+	"duplicator-dosubpages": "Used as checkbox label. \"Duplicate\" is an imperative: checking the box asks for the subpages to be included in the action.",
 	"duplicator-dohistory": "Used as checkbox label.",
 	"duplicator-submit": "Used as label for the Submit button.\n{{Identical|Duplicate}}",
 	"duplicator-summary": "Used as a revision summary. Parameters:\n* $1 - source page title\n* $2 - revision ID",
