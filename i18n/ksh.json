@@ -9,7 +9,7 @@
 	"duplicator-toolbox": "Di Sigg heh verdubbelle",
 	"duplicator-header": "Hee di Extra Sigg määd ed möjjelesch, en Sigg ze verdubbelle,\nun dobei fun all ier Väsjohne bes jätz en eijen Kopie aanzelääje.\nDat es nötzlesch, wam_mer di zwei en ungerscheidlische Reeschtonge\nwigger beärbeide, allsu opdeile, well.",
 	"duplicator-options": "Ennschtällonge",
-	"duplicator-source": "Tittel fun de Quell-Sigg:",
+	"duplicator-source": "De Övverschreff fun de Quälle_Sigg:",
 	"duplicator-dest": "De Zihl-Sigg iere Övverschreff:",
 	"duplicator-dotalk": "Donn de Klaafsigg met koppeere, wann möjjelesch",
 	"duplicator-dosubpages": "Denn de Ongersigge met koppehre, wann_er doh sin.",
@@ -20,9 +20,9 @@
 	"duplicator-success-talknotcopied": "De Klaafsigg kunnt nit kopeet wäde.",
 	"duplicator-failed": "Hee di Sigg kunnte mer leider nit verdubbelle.\nEne unklohre Fähler es opjetrodde.",
 	"duplicator-failed-toolong": "Di Sigg „[[$1]]“ kunnte mer nit koppehre, weil de Övverschreff söns ze lang jewoode wöhr.",
-	"duplicator-source-invalid": "Beß esu joot, un jif ene jode Tittel för de Quell fum Kopeere aan.",
+	"duplicator-source-invalid": "Beß esu joot, un jif en johde Övverschreff för de Quäll fum Kopeere aan.",
 	"duplicator-source-notexist": "En Sigg „[[$1]]“ ham_mer nit. Jiff ene Tittel aan fun en Sigg, di och doh es.",
-	"duplicator-dest-invalid": "Beß esu joot, un jif ene jode Tittel för et Ziel fum Kopeere aan.",
+	"duplicator-dest-invalid": "Beß esu joht, un jif en jode Övverschreff för et Zihl fum Kopehre aan.",
 	"duplicator-dest-exists": "De Sigg „[[$1]]“ es ald doh. Jiff ene Tittel aan fun en Sigg, di et noch nit jitt.",
 	"right-duplicate": "Sigge verdubbelle"
 }
