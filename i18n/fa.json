@@ -21,7 +21,7 @@
 	"duplicator-success": "<big>'''[[$1]] کپی شده در [[$2]].'''</big>",
 	"duplicator-success-revisions": "$1 {{PLURAL:$1|revision was|revisions were}} کپی شده.",
 	"duplicator-success-talknotcopied": "صفحهٔ گفتگو نتوانست کپی شود.",
-	"duplicator-failed": "صفحه نتوانست تکثیر شود.\nیک خطای ناشناخته رخ داده‌است.",
+	"duplicator-failed": "صفحه نتوانست تکثیر شود.\nیک خطای ناشناخته رخ داده است.",
 	"duplicator-failed-toolong": "[[$1]] تکثیر نبود. عنوان مقصد خیلی طولانی است.",
 	"duplicator-failed-dest-exists": "[[$1]] تکثیر نبود. مقصد [[$2]] در حال حاضر وجود دارد.",
 	"duplicator-source-invalid": "لطفاً یک عنوان منبع معتبر ارائه دهید.",
