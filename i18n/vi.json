@@ -18,7 +18,7 @@
 	"duplicator-submit": "Nhân bản",
 	"duplicator-summary": "Được chép từ [[$1]], phiên bản [[$2]]",
 	"duplicator-success": "[[$1]] đã được chép sang [[$2]].",
-	"duplicator-success-revisions": "Đã chép $1 {{PLURAL:$1|phiên bản|phiên bản}}.",
+	"duplicator-success-revisions": "Đã chép $1 phiên bản.",
 	"duplicator-success-talknotcopied": "Không thể chép trang thảo luận.",
 	"duplicator-failed": "Không thể nhân bản trang.\nCó lỗi lạ xảy ra.",
 	"duplicator-failed-toolong": "[[$1]] không được nhân bản. Tiêu đề đích quá dài.",
