@@ -5,7 +5,8 @@
 			"Fievarsty",
 			"Fryed-peach",
 			"JtFuruhata",
-			"Shirayuki"
+			"Shirayuki",
+			"2nd-player"
 		]
 	},
 	"duplicator": "ページの複製",
@@ -26,7 +27,7 @@
 	"duplicator-failed": "不明なエラーです。このページの複製に失敗しました。",
 	"duplicator-failed-toolong": "[[$1]] は複製されませんでした。複製先のページ名が長すぎます。",
 	"duplicator-failed-dest-exists": "[[$1]] は複製されませんでした。複製先 [[$2]] が既に存在します。",
-	"duplicator-source-invalid": "複製元に有効なタイトルを指定してください。",
+	"duplicator-source-invalid": "複製元に有効なページ名を指定してください。",
 	"duplicator-source-notexist": "[[$1]] は存在しません。複製元には存在するページを指定してください。",
 	"duplicator-dest-invalid": "複製先に有効なタイトルを指定してください。",
 	"duplicator-dest-exists": "[[$1]] は既に存在します。複製先には存在しないページを指定してください。",
