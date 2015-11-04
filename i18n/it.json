@@ -26,9 +26,9 @@
 	"duplicator-failed": "Impossibile duplicare la pagina. Errore sconosciuto.",
 	"duplicator-failed-toolong": "Non è stato possibile duplicare [[$1]]. Il titolo di destinazione è troppo lungo.",
 	"duplicator-failed-dest-exists": "Non è stato possibile duplicare [[$1]]. La destinazione [[$2]] esiste già.",
-	"duplicator-source-invalid": "Indicare un titolo di partenza valido.",
+	"duplicator-source-invalid": "Indica un titolo di origine valido.",
 	"duplicator-source-notexist": "La pagina [[$1]] non esiste. Indicare il titolo di una pagina esistente.",
-	"duplicator-dest-invalid": "Indicare un titolo di arrivo valido.",
+	"duplicator-dest-invalid": "Indica un titolo di destinazione valido.",
 	"duplicator-dest-exists": "La pagina [[$1]] esiste già. Indicare un titolo di arrivo non ancora esistente.",
 	"right-duplicate": "Duplica pagine"
 }
