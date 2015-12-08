@@ -296,7 +296,7 @@ class SpecialDuplicator extends SpecialPage {
 			return 0; # Source doesn't exist, or destination does
 		}
 		$dbw = wfGetDB( DB_MASTER );
-		$dbw->begin();
+		$dbw->startAtomic( __METHOD__ );
 		$sid = $source->getArticleID();
 		# Create an article representing the destination page and save it
 		$destArticle = new Article( $dest );
@@ -340,7 +340,7 @@ class SpecialDuplicator extends SpecialPage {
 		$bot = $wgUser->isAllowed( 'bot' );
 		RecentChange::notifyNew( $nr->getTimestamp(), $dest, true, $wgUser, $comment, $bot );
 		$dest->invalidateCache();
-		$dbw->commit();
+		$dbw->endAtomic( __METHOD__ );
 		return $count;
 	}
 }
