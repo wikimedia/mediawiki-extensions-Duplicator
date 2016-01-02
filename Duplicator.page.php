@@ -57,14 +57,13 @@ class SpecialDuplicator extends SpecialPage {
 	 * @param $title Title passed to the page
 	 */
 	public function execute( $title ) {
-		global $wgUser, $wgOut, $wgRequest, $wgLang, $wgDuplicatorRevisionLimit;
+		global $wgUser, $wgOut, $wgRequest;
 
 		$this->setHeaders();
 
 		# Check permissions
 		if( !$wgUser->isAllowed( 'duplicate' ) ) {
-			$wgOut->permissionRequired( 'duplicate' );
-			return;
+			throw new PermissionsError( 'duplicate' );
 		}
 
 		# Check for database lock
