@@ -51,6 +51,10 @@ class SpecialDuplicator extends SpecialPage {
 		parent::__construct( 'Duplicator' );
 	}
 
+	public function doesWrites() {
+		return true;
+	}
+
 	/**
 	 * Main execution function
 	 *
