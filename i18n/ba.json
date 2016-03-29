@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Мухамадеева"
+			"Мухамадеева",
+			"Азат Хәлилов"
 		]
 	},
 	"duplicator": "Мәҡәләне клонлаштырыу",
@@ -14,10 +15,10 @@
 	"duplicator-dohistory": "Үҙгәртеүҙәр тарихын клонлаштыру",
 	"duplicator-submit": "Клонлаштырырға",
 	"duplicator-summary": "[[$1]] мәҡәләһенең [[$2]] ревизия күсермәһе",
-	"duplicator-success-revisions": "$1 {{PLURAL:$1| үҙгәртеүе күсерелгән булған|үҙгәртеүҙәр күсерелгән булған|",
+	"duplicator-success-revisions": "$1 {{PLURAL:$1| үҙгәртеүе күсерелгән булған|үҙгәртеүҙәр күсерелгән булған}}.",
 	"duplicator-success-talknotcopied": "Фекер алышыу бите күсерелмәгән булған",
 	"duplicator-failed": "Бит клонлаштырыла алмай. Билдәһеҙ хата",
-	"duplicator-failed-toolong": "[[$1] клонлаштырылмаған. Яңы исем бигерәк оҙон",
+	"duplicator-failed-toolong": "[[$1]]  клонлаштырылмаған. Яңы исем бигерәк оҙон",
 	"duplicator-failed-dest-exists": "[[$1]] клонлаштырылмаған.  [[$2]]Тәғәйенләнгән мәҡәлә бар",
 	"duplicator-source-invalid": "Мәҡәлә сығанаҡтың корректлы исемен индерегеҙ",
 	"duplicator-source-notexist": "«[[$1]]» бите юҡ.Булған биттең исемен индерегеҙ"
