@@ -3,7 +3,8 @@
 		"authors": [
 			"Mobe",
 			"Niklas Laxström",
-			"Str4nd"
+			"Str4nd",
+			"01miki10"
 		]
 	},
 	"duplicator": "Monista sivu",
@@ -14,12 +15,16 @@
 	"duplicator-source": "Lähdesivu:",
 	"duplicator-dest": "Kohdesivu:",
 	"duplicator-dotalk": "Monista myös keskustelusivu, jos mahdollista",
+	"duplicator-dosubpages": "Kopioi alasivut (jos niitä on)",
+	"duplicator-dohistory": "Kopioi täysi sivun historia",
 	"duplicator-submit": "Monista",
-	"duplicator-summary": "Täydellinen kopio sivusta [[$1]]",
+	"duplicator-summary": "Kopioitu sivusta [[$1]], versio [[$2]]",
 	"duplicator-success": "[[$1]] monistettiin sivulle [[$2]].",
 	"duplicator-success-revisions": "{{PLURAL:$1|yksi muutos|$1 muutosta}} kopioitiin.",
 	"duplicator-success-talknotcopied": "Keskustelusivua ei monistettu.",
 	"duplicator-failed": "Sivun monistaminen ei onnistunut.",
+	"duplicator-failed-toolong": "Sivua [[$1]] ei kopioitu. Kohteen nimi on liian pitkä.",
+	"duplicator-failed-dest-exists": "Sivua [[$1]] ei kopioitu. Kohde [[$2]] on jo olemassa.",
 	"duplicator-source-invalid": "Lähdesivun nimi ei kelpaa.",
 	"duplicator-source-notexist": "Sivua [[$1]] ei ole olemassa.",
 	"duplicator-dest-invalid": "Kohdesivun nimi ei kelpaa.",
