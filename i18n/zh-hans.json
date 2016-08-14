@@ -7,12 +7,13 @@
 			"Vina",
 			"Xiaomingyan",
 			"Mywood",
-			"Impersonator 1"
+			"Impersonator 1",
+			"Liuxinyu970226"
 		]
 	},
 	"duplicator": "复制一篇文章",
 	"duplicator-desc": "新建含所有编辑历史记录的独立[[Special:Duplicate|页面副本]]",
-	"duplicator-toolbox": "复制这篇文章",
+	"duplicator-toolbox": "复制此页面",
 	"duplicator-header": "这一版可以完全复制一篇文章，建立一个完整的版本历史。这对于文章分叉等的动作是很有用的。",
 	"duplicator-options": "选项",
 	"duplicator-source": "来源：",
