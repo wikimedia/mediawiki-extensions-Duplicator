@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Nghtwlkr"
+			"Nghtwlkr",
+			"Jon Harald Søby"
 		]
 	},
 	"duplicator": "Kopier en side",
@@ -12,12 +13,16 @@
 	"duplicator-source": "Kilde:",
 	"duplicator-dest": "Mål:",
 	"duplicator-dotalk": "Kopier diskusjonsside (om mulig)",
+	"duplicator-dosubpages": "Dupliser undersider (om noen)",
+	"duplicator-dohistory": "Dupliser hele sidehistorikken",
 	"duplicator-submit": "Kopier",
-	"duplicator-summary": "Kopiert fra [[$1]]",
+	"duplicator-summary": "Kopiert fra [[$1]], revisjon [[$2]]",
 	"duplicator-success": "[[$1]] ble kopiert til [[$2]].",
 	"duplicator-success-revisions": "$1 {{PLURAL:$1|revisjon|revisjoner}} ble kopiert.",
 	"duplicator-success-talknotcopied": "Diskusjonssiden kunne ikke kopieres.",
 	"duplicator-failed": "Siden kunne ikke kopieres. En ukjent feil forekom.",
+	"duplicator-failed-toolong": "[[$1]] ble ikke duplisert. Måltittelen er for lang.",
+	"duplicator-failed-dest-exists": "[[$1]] ble ikke duplisert. Målsiden [[$2]] finnes fra før.",
 	"duplicator-source-invalid": "Vennligst angi en gyldig kildetittel.",
 	"duplicator-source-notexist": "[[$1]] finnes ikike. Angi tittelen til en eksisterende side.",
 	"duplicator-dest-invalid": "Angi en gyldig måltittel.",
