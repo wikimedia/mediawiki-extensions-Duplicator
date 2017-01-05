@@ -5,11 +5,12 @@
 			"McDutchie",
 			"Purodha",
 			"Shirayuki",
-			"Nemo bis"
+			"Nemo bis",
+			"Umherirrender"
 		]
 	},
 	"duplicator": "{{doc-special|Duplicator|unlisted=1}}",
-	"duplicator-desc": "Extension description displayed on [[Special:Version]].",
+	"duplicator-desc": "{{desc|name=Duplicator|url=https://www.mediawiki.org/wiki/Extension:Duplicator}}",
 	"duplicator-toolbox": "Used as text for the link which is in the toolbox.",
 	"duplicator-header": "Used as header text in [[Special:Duplicator]].\n\nFollowed by the form.",
 	"duplicator-options": "Used as fieldset label.\n\nFollowed by the source and destination inputboxes, and checkboxes.\n{{Identical|Options}}",
