@@ -16,7 +16,7 @@
 	"duplicator-summary": "Copiat dempuèi [[$1]], revision [[$2]]",
 	"duplicator-success": "[[$1]] es estat copiat cap a [[$2]].",
 	"duplicator-success-revisions": "$1 {{PLURAL:$1|revision es estada copiada|revisions son estadas copiadas}}.",
-	"duplicator-success-talknotcopied": "La pagina de discussion es pas pogut èsser copiada.",
+	"duplicator-success-talknotcopied": "La pagina de discussion a pas pogut èsser copiada.",
 	"duplicator-failed": "La pagina es pas pogut èsser duplicada. Una error desconeguda s’es produita.",
 	"duplicator-source-invalid": "Donatz un nom valid per l’article.",
 	"duplicator-source-notexist": "[[$1]] existís pas. Donatz lo nom d’un article existent.",
