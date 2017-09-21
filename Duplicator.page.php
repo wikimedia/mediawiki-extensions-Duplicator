@@ -116,13 +116,13 @@ class SpecialDuplicator extends SpecialPage {
 		$num = $this->duplicate( $this->sourceTitle, $this->destTitle, $this->history );
 		if( $num ) {
 			$success = Html::openElement( 'ul' ) .
-				Html::element( 'li',
+				Html::rawElement( 'li',
 					array(),
 					$this->msg( 'duplicator-success',
 						$this->sourceTitle->getPrefixedText(),
 						$this->destTitle->getPrefixedText()
-					)->plain() . ' ' .
-					$this->msg( 'duplicator-success-revisions' )->numParams( $num )->plain()
+					)->parse() . ' ' .
+					$this->msg( 'duplicator-success-revisions' )->numParams( $num )->text()
 				);
 
 			# If there are subpages and we've been asked to duplicate them, do so
@@ -135,20 +135,20 @@ class SpecialDuplicator extends SpecialPage {
 				$dt = $this->destTitle->getTalkPage();
 				$num = $this->duplicate( $st, $dt, $this->history );
 				if ( $num ) {
-					$success .= Html::element( 'li',
+					$success .= Html::rawElement( 'li',
 						array(),
 						$this->msg( 'duplicator-success',
 							$st->getPrefixedText(),
 							$dt->getPrefixedText()
-						 	)->plain() . ' ' .
-						$this->msg( 'duplicator-success-revisions' )->numParams( $num )->plain()
+						 	)->parse() . ' ' .
+						$this->msg( 'duplicator-success-revisions' )->numParams( $num )->text()
 					);
 
 					if ( $this->subpages ) {
 						$success .= $this->duplicateSubpages( $st, $dt, $this->history );
 					}
 				} else {
-					$success .= Html::element( 'li', array(), $this->msg( 'duplicator-success-talknotcopied' )->plain() );
+					$success .= Html::rawElement( 'li', array(), $this->msg( 'duplicator-success-talknotcopied' )->text() );
 				}
 			}
 
@@ -255,29 +255,29 @@ class SpecialDuplicator extends SpecialPage {
 			$destSub = Title::makeTitleSafe( $ns, $dest . substr( $sub->getText(), $len ) );
 			if ( $destSub ) {
 				if ( $destSub->exists() ) {
-					$success .= Html::element( 'li',
+					$success .= Html::rawElement( 'li',
 						array(),
 						$this->msg( 'duplicator-failed-dest-exists',
 							$sub->getPrefixedText(),
 							$destSub->getPrefixedText()
-							)->plain()
+							)->parse()
 						);
 				} else {
 					$num = $this->duplicate( $sub, $destSub, $this->history );
-					$success .= Html::element( 'li',
+					$success .= Html::rawElement( 'li',
 						array(),
 						$this->msg( 'duplicator-success',
 							$sub->getPrefixedText(),
 							$destSub->getPrefixedText()
-							)->plain() . ' ' .
+							)->parse() . ' ' .
 						$this->msg( 'duplicator-success-revisions',
 							$wgLang->formatNum( $num )
-							)->plain()
+							)->text()
 					);
 				}
 			} else {
 				# Bad title error can only occur here because of the destination title being too long
-				$success .= Html::element( 'li', array(), $this->msg( 'duplicator-failed-toolong', $sub->getPrefixedText() )->plain() );
+				$success .= Html::rawElement( 'li', array(), $this->msg( 'duplicator-failed-toolong', $sub->getPrefixedText() )->text() );
 			}
 		}
 		return $success;
