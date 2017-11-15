@@ -1,12 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Meursault2004"
+			"Meursault2004",
+			"NoiX180"
 		]
 	},
 	"duplicator-options": "Opsi",
 	"duplicator-source": "Sumber:",
 	"duplicator-dest": "Tujuan:",
-	"duplicator-submit": "Duplikasi",
+	"duplicator-submit": "Dhuplikasi",
 	"duplicator-summary": "Ditulad saka [[$1]]"
 }
