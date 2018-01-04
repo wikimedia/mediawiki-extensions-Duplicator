@@ -31,7 +31,7 @@ $wgExtensionCredits['specialpage'][] = array(
 	'author' => array('Rob Church', 'Vitaliy Filippov'),
 	'url' => 'https://www.mediawiki.org/wiki/Extension:Duplicator',
 	'descriptionmsg' => 'duplicator-desc',
-	'license-name' => 'GPL-2.0+',
+	'license-name' => 'GPL-2.0-or-later',
 );
 
 $dir = dirname(__FILE__) . '/';
