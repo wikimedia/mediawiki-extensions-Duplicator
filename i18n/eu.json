@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"An13sa",
-			"Kobazulo"
+			"Kobazulo",
+			"Mikel Ibaiba"
 		]
 	},
 	"duplicator": "Orrialde bat bikoiztu",
@@ -12,7 +13,7 @@
 	"duplicator-dest": "Helburua:",
 	"duplicator-dotalk": "Eztabaida orrialdea bikoiztu (egokia bada)",
 	"duplicator-submit": "Bikoiztu",
-	"duplicator-summary": "[[$1]] orrialdetik kopiatua",
+	"duplicator-summary": "[[$1]]-tik kopiatua, [[$2]] berrikusketa",
 	"duplicator-success": "[[$1]] [[$2]] orrialdean kopiatu da.",
 	"duplicator-success-revisions": "{{PLURAL:$1|Berrikuspen bat kopiatu da|$1 berrikuspen kopiatu dira}}.",
 	"duplicator-success-talknotcopied": "Eztabaida orrialdea ezin izan da kopiatu.",
