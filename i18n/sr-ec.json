@@ -4,7 +4,8 @@
 			"Milicevic01",
 			"Rancher",
 			"Михајло Анђелковић",
-			"Сербијана"
+			"Сербијана",
+			"Acamicamacaraca"
 		]
 	},
 	"duplicator": "Дуплира чланак",
@@ -18,7 +19,7 @@
 	"duplicator-submit": "Дуплирај",
 	"duplicator-summary": "Копирано са [[$1]], измена [[$2]]",
 	"duplicator-success": "[[$1]] је ископиран у [[$2]].",
-	"duplicator-success-revisions": "$1 {{PLURAL:$1|ревизија је ископирана|ревизија је ископирано}}.",
+	"duplicator-success-revisions": "$1 {{PLURAL:$1|измена је ископирана|измена је ископирано}}.",
 	"duplicator-success-talknotcopied": "Страна за разговор није могла бити ископирана.",
 	"duplicator-failed": "Чланак није могао бити дуплиран.\nДошло је до непозанте грешке.",
 	"duplicator-source-invalid": "Молимо Вас да наведете исправан наслов изворног чланка.",
