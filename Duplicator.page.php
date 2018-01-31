@@ -72,8 +72,7 @@ class SpecialDuplicator extends SpecialPage {
 
 		# Check for database lock
 		if( wfReadOnly() ) {
-			$wgOut->readOnlyPage();
-			return;
+			throw new ReadOnlyError;
 		}
 
 		$this->setOptions( $wgRequest, $title );
