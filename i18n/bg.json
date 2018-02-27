@@ -2,14 +2,15 @@
 	"@metadata": {
 		"authors": [
 			"DCLXVI",
-			"Spiritia"
+			"Spiritia",
+			"StanProg"
 		]
 	},
 	"duplicator-desc": "Създава независими [[Special:Duplicate|копия на страниците]] с пълните им редакционни истории",
 	"duplicator-options": "Настройки",
 	"duplicator-source": "Източник:",
 	"duplicator-dest": "Цел:",
-	"duplicator-summary": "Копирано от [[$1]]",
+	"duplicator-summary": "Копирано от [[$1]], версия [[$2]]",
 	"duplicator-success": "Страницата [[$1]] беше копирана като [[$2]].",
 	"duplicator-success-revisions": "$1 {{PLURAL:$1|редакция беше копирана|редакции бяха копирани}}.",
 	"duplicator-success-talknotcopied": "Дискусионната страница не можа да бъде копирана.",
