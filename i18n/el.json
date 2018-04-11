@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Consta",
-			"Omnipaedista"
+			"Omnipaedista",
+			"Nikosgranturismogt"
 		]
 	},
 	"duplicator": "Παραγωγή διπλότυπου σελίδας",
@@ -11,7 +12,8 @@
 	"duplicator-source": "Πηγή:",
 	"duplicator-dest": "Προορισμός:",
 	"duplicator-submit": "Διπλότυπο",
-	"duplicator-summary": "Αντιγράφηκε από το [[$1]]",
+	"duplicator-summary": "Αντιγράφηκε από το [[$1]], αναθεώρηση [[$2]]",
+	"duplicator-success": "Το [[$1]] αντιγράφηκε στο [[$2]].",
 	"duplicator-dest-invalid": "Παρακαλώ παρέχετε έναν έγκυρο τίτλο προορισμού.",
 	"right-duplicate": "Διπλότυπες σελίδες"
 }
