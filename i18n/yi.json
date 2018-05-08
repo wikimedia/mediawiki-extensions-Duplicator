@@ -6,5 +6,6 @@
 		]
 	},
 	"duplicator-options": "ברירות",
-	"duplicator-source": "מקור:"
+	"duplicator-source": "מקור:",
+	"duplicator-dest": "ציל:"
 }
