@@ -338,7 +338,7 @@ class SpecialDuplicator extends SpecialPage {
 		}
 		$destArticle->updateRevisionOn( $dbw, $nr );
 		$destArticle->doEditUpdates( $nr, $wgUser, array( 'created' => true ) );
-		Article::onArticleCreate( $dest );
+		WikiPage::onArticleCreate( $dest );
 		$bot = $wgUser->isAllowed( 'bot' );
 		RecentChange::notifyNew( $nr->getTimestamp(), $dest, true, $wgUser, $comment, $bot );
 		$dest->invalidateCache();
