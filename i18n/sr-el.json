@@ -16,7 +16,7 @@
 	"duplicator-submit": "Dupliraj",
 	"duplicator-summary": "Iskopirano od [[$1]]",
 	"duplicator-success": "[[$1]] je iskopiran u [[$2]].",
-	"duplicator-success-revisions": "$1 {{PLURAL:$1|revizija je iskopirana|revizija je iskopirano}}.",
+	"duplicator-success-revisions": "$1 {{PLURAL:$1|izmena je iskopirana|izmena je iskopirano}}.",
 	"duplicator-success-talknotcopied": "Strana za razgovor nije mogla biti iskopirana.",
 	"duplicator-failed": "Članak nije mogao biti dupliran.\nDošlo je do nepozante greške.",
 	"duplicator-source-invalid": "Molimo Vas da navedete ispravan naslov izvornog članka.",
