@@ -5,7 +5,8 @@
 			"Derbeth",
 			"Maikking",
 			"Sp5uhe",
-			"Alan ffm"
+			"Alan ffm",
+			"Railfail536"
 		]
 	},
 	"duplicator": "Duplikowanie strony",
@@ -24,6 +25,8 @@
 	"duplicator-success-revisions": "$1 {{PLURAL:$1|edycja została skopiowana|edycje zostały skopiowane|edycji zostało skopiowanych}}.",
 	"duplicator-success-talknotcopied": "Strona dyskusji nie mogła być skopiowana.",
 	"duplicator-failed": "Strona nie może zostać zduplikowana. Wystąpił nieznany błąd.",
+	"duplicator-failed-toolong": "Strona „[[$1]]” nie została zduplikowana. Tytuł docelowy jest zbyt długi.",
+	"duplicator-failed-dest-exists": "Strona „[[$1]]” nie została zduplikowana. Docelowa strona „[[$2]]” już istnieje.",
 	"duplicator-source-invalid": "Podaj poprawny tytuł źródła.",
 	"duplicator-source-notexist": "Artykuł [[$1]] nie istnieje. Podaj tytuł strony, która istnieje.",
 	"duplicator-dest-invalid": "Podaj poprawny tytuł celu.",
