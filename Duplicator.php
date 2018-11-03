@@ -40,8 +40,9 @@ $wgExtensionMessagesFiles['DuplicatorAlias'] = $dir . 'Duplicator.alias.php';
 $wgAutoloadClasses['SpecialDuplicator'] = $dir . 'Duplicator.page.php';
 $wgSpecialPages['Duplicator'] = 'SpecialDuplicator';
 
-$wgHooks['SkinTemplateBuildNavUrlsNav_urlsAfterPermalink'][] = 'efDuplicatorNavigation';
-$wgHooks['SkinTemplateToolboxEnd'][] = 'efDuplicatorToolbox';
+$wgHooks['BaseTemplateToolbox'][] = 'onBaseTemplateToolbox';
+
+$wgDuplicatorToolboxLinkNamespaces = [NS_MAIN, NS_TALK];
 
 /**
  * User permissions
@@ -58,34 +59,39 @@ $wgDuplicatorRevisionLimit = 250;
  * Build the link to be shown in the toolbox if appropriate
  * @param $skin Skin
  */
-function efDuplicatorNavigation( &$skin, &$nav_urls, &$oldid, &$revid ) {
-	global $wgUser;
-	$ns = $skin->getTitle()->getNamespace();
-	if( ( $ns === NS_MAIN || $ns === NS_TALK ) && $wgUser->isAllowed( 'duplicate' ) ) {
+function efMakeDuplicateCurrentPageLink( $skin ) {
+	global $wgUser, $wgDuplicatorToolboxLinkNamespaces;
 
-		$nav_urls['duplicator'] = array(
+	$ns = $skin->getTitle()->getNamespace();
+	if( in_array( $ns, $wgDuplicatorToolboxLinkNamespaces ) && $wgUser->isAllowed( 'duplicate' ) ) {
+		return [
 			'text' => $skin->msg( 'duplicator-toolbox' ),
-			'href' => $skin->makeSpecialUrl( 'Duplicator', "source=" . wfUrlEncode( "{$skin->thispage}" ) )
-		);
+			'href' => $skin->makeSpecialUrl( 'Duplicator', "source=" . wfUrlEncode( "{$skin->thispage}", "subpages=1" ) ),
+		];
 	}
-	return true;
+	return null;
 }
 
 /**
- * Output the toolbox link if available
+ * BaseTemplateToolbox hook handler.
+ *
+ * Simply append the dupe-page link at tht end.
+ * is to toolbox menu.
+ *
+ * @param BaseTemplate $baseTemplate
+ * @param array &$toolbox
+ * @return bool Always true
  */
-function efDuplicatorToolbox( &$monobook ) {
-	if ( isset( $monobook->data['nav_urls']['duplicator'] ) ) {
-
-		if ( $monobook->data['nav_urls']['duplicator']['href'] == '' ) {
-			?><li id="t-isduplicator"><?php echo $monobook->msg( 'duplicator-toolbox' ); ?></li><?php
-		} else {
-			?><li id="t-duplicator"><?php
-				?><a href="<?php echo htmlspecialchars( $monobook->data['nav_urls']['duplicator']['href'] ) ?>"><?php
-					echo $monobook->msg( 'duplicator-toolbox' );
-				?></a><?php
-			?></li><?php
-		}
+function onBaseTemplateToolbox( BaseTemplate $baseTemplate, array &$toolbox ) {
+	global $wgDuplicatorSkipToolboxLink;
+	if ( !$wgDuplicatorSkipToolboxLink ) {
+        $skin = $baseTemplate->getSkin();
+        $link = efMakeDuplicateCurrentPageLink( $skin );
+        if ( $link ) {
+            $toolbox['uploads'] = $link;
+        }
 	}
-	return true;
+
+    return true;
 }
+
