@@ -13,7 +13,7 @@
 	"duplicator-summary": "Копирано от [[$1]], версия [[$2]]",
 	"duplicator-success": "Страницата [[$1]] беше копирана като [[$2]].",
 	"duplicator-success-revisions": "$1 {{PLURAL:$1|редакция беше копирана|редакции бяха копирани}}.",
-	"duplicator-success-talknotcopied": "Дискусионната страница не можа да бъде копирана.",
+	"duplicator-success-talknotcopied": "Беседата не можа да бъде копирана.",
 	"duplicator-source-invalid": "Необходимо е да се посочи валидно изходно заглавие.",
 	"duplicator-source-notexist": "Не съществува страница [[$1]]. Необходимо е да се посочи заглавие, което съществува.",
 	"duplicator-dest-invalid": "Необходимо е валидно целево заглавие.",
