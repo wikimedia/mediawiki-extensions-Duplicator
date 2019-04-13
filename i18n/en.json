@@ -26,5 +26,6 @@
 	"duplicator-source-notexist": "[[$1]] does not exist. Please provide the title of a page that exists.",
 	"duplicator-dest-invalid": "Please provide a valid destination title.",
 	"duplicator-dest-exists": "[[$1]] already exists. Please provide a destination title which does not exist.",
+	"action-duplicate": "duplicate pages",
 	"right-duplicate": "Duplicate pages"
 }

@@ -31,5 +31,6 @@
 	"duplicator-source-notexist": "Used as error message. Parameters:\n* $1 - source page title\nSee also:\n* {{msg-mw|Duplicator-dest-exists}}",
 	"duplicator-dest-invalid": "Used as error message.\n\nSee also:\n* {{msg-mw|Duplicator-source-invalid}}",
 	"duplicator-dest-exists": "Used as error message. Parameters:\n* $1 - destination page title\nSee also:\n* {{msg-mw|Duplicator-source-notexist}}",
+	"action-duplicate": "{{doc-action|duplicate}}\n\"Duplicate\" is a verb here, not an adjective.",
 	"right-duplicate": "{{doc-right|duplicate}}\n\"Duplicate\" is a verb here, not an adjective."
 }
