@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Cainamarques",
-			"Eduardo.mps"
+			"Eduardo.mps",
+			"Eduardo Addad de Oliveira"
 		]
 	},
 	"duplicator": "Duplicar uma página",
@@ -27,5 +28,6 @@
 	"duplicator-source-notexist": "[[$1]] não existe. Por favor, forneça o título de uma página que exista.",
 	"duplicator-dest-invalid": "Por favor, forneça um título de destino válido.",
 	"duplicator-dest-exists": "[[$1]] já existe. Por favor, forneça um título de destino que ainda não exista.",
+	"action-duplicate": "duplicar páginas",
 	"right-duplicate": "Duplicar páginas"
 }

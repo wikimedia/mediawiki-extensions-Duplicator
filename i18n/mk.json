@@ -26,5 +26,6 @@
 	"duplicator-source-notexist": "[[$1]] не постои. Наведете наслов на страница која постои.",
 	"duplicator-dest-invalid": "Наведете важечки целен наслов",
 	"duplicator-dest-exists": "[[$1]] веќе постои. Наведете целен наслов кој не постои.",
+	"action-duplicate": "дуплирање на страници",
 	"right-duplicate": "Дуплирање страници"
 }
