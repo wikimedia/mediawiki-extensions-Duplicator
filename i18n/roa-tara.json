@@ -26,5 +26,6 @@
 	"duplicator-source-notexist": "[[$1]] non g'esiste. Pe piacere dà 'u titole de 'na pàgene ca esiste.",
 	"duplicator-dest-invalid": "Pe piacere dà 'nu titole de destinazione valide.",
 	"duplicator-dest-exists": "[[$1]] ggià esiste. Pe piacere dà 'nu titole de destinazione ca non g'esiste.",
+	"action-duplicate": "dupleche le pàggene",
 	"right-duplicate": "Dupliche le pàggene"
 }

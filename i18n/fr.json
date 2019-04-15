@@ -4,7 +4,8 @@
 			"Crochet.david",
 			"Gomoko",
 			"Grondin",
-			"IAlex"
+			"IAlex",
+			"Pols12"
 		]
 	},
 	"duplicator": "Dupliquer une page",
@@ -29,5 +30,6 @@
 	"duplicator-source-notexist": "[[$1]] n’existe pas. Veuillez donner le nom d’une page existante.",
 	"duplicator-dest-invalid": "Veuillez donner un nom valide pour la destination.",
 	"duplicator-dest-exists": "[[$1]] existe déjà. Veuillez donner le nom d’une page qui n’existe pas encore.",
+	"action-duplicate": "dupliquer des pages",
 	"right-duplicate": "dupliquer des pages"
 }
