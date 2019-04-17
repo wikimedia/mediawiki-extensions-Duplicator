@@ -31,5 +31,6 @@
 	"duplicator-source-notexist": "Die Seite [[$1]] ist nicht vorhanden. Bitte gib eine vorhandene Seite an.",
 	"duplicator-dest-invalid": "Bitte gib eine gültige Ziel-Seite an.",
 	"duplicator-dest-exists": "Die Seite [[$1]] ist bereits vorhanden. Bitte gib eine Zielseite an, die nicht vorhanden ist.",
+	"action-duplicate": "Seiten zu duplizieren",
 	"right-duplicate": "Seiten duplizieren"
 }
