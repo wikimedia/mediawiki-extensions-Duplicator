@@ -13,7 +13,7 @@
 	"duplicator-dest": "الوجهة:",
 	"duplicator-dotalk": "استنسخ صفحة النقاش (إن أمكن)",
 	"duplicator-submit": "استنساخ",
-	"duplicator-summary": "منسوخ من [[$1]]",
+	"duplicator-summary": "منسوخ من [[$1]]، المراجعه [[$2]]",
 	"duplicator-success": "[[$1]] تم نسخها إلى [[$2]].",
 	"duplicator-success-revisions": "$1 {{PLURAL:$1|مراجعة|مراجعة}} تم نسخها.",
 	"duplicator-success-talknotcopied": "لم يمكن نسخ صفحة النقاش.",
