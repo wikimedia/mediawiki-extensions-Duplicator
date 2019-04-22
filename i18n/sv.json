@@ -31,5 +31,6 @@
 	"duplicator-source-notexist": "[[$1]] finns inte. Du måste ange en källsida som existerar.",
 	"duplicator-dest-invalid": "Du har inte angivit någon giltig målsida.",
 	"duplicator-dest-exists": "[[$1]] finns redan. Du måste ange en målsida som inte finns.",
+	"action-duplicate": "duplicera sidor",
 	"right-duplicate": "Kopiera sidorna"
 }
