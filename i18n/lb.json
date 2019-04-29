@@ -27,5 +27,6 @@
 	"duplicator-source-notexist": "[[$1]] gëtt et net. Gitt w.e.g. den Titel vun enger Säit un déi et gëtt.",
 	"duplicator-dest-invalid": "Gitt w.e.g. eng valabel Zilsäit unn.",
 	"duplicator-dest-exists": "[[$1]] gëtt et schonn. Gitt w.e.g. eng Zilsäit unn déi et nach net gëtt.",
+	"action-duplicate": "Säite verduebelen",
 	"right-duplicate": "Säite verduebelen"
 }
