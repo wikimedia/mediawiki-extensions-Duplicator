@@ -26,5 +26,6 @@
 	"duplicator-source-notexist": "[[$1]] nun esiste. Proporcione un títulu de páxina qu'esista.",
 	"duplicator-dest-invalid": "Proporcione un títulu de destín válidu.",
 	"duplicator-dest-exists": "[[$1]] yá esiste. Proporcione un títulu de destín que nun esista.",
+	"action-duplicate": "duplicar páxines",
 	"right-duplicate": "Duplicar páxines"
 }
