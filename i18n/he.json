@@ -4,7 +4,8 @@
 			"Amire80",
 			"Rotemliss",
 			"YaronSh",
-			"Yona b"
+			"Yona b",
+			"Steeve815"
 		]
 	},
 	"duplicator": "שכפול דף",
@@ -29,5 +30,6 @@
 	"duplicator-source-notexist": "[[$1]] אינו קיים. אנא ספקו כותרת של דף קיים.",
 	"duplicator-dest-invalid": "אנא ספקו כותרת יעד תקינה.",
 	"duplicator-dest-exists": "[[$1]] כבר קיים. אנא ספקו כותרת יעד תקינה שאינה קיימת.",
+	"action-duplicate": "שכפול דפים",
 	"right-duplicate": "שכפול דפים"
 }
