@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Effeietsanders",
-			"Siebrand"
+			"Siebrand",
+			"Mainframe98"
 		]
 	},
 	"duplicator": "Kopieer een pagina",
@@ -27,5 +28,6 @@
 	"duplicator-source-notexist": "[[$1]] bestaat niet.\nGeef een pagina op die bestaat.",
 	"duplicator-dest-invalid": "Geef een geldige doelpagina op.",
 	"duplicator-dest-exists": "[[$1]] bestaat al.\nGeeft een doelpagina op die niet bestaat.",
+	"action-duplicate": "pagina's te dupliceren",
 	"right-duplicate": "Pagina's kopiëren"
 }
