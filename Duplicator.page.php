@@ -323,6 +323,7 @@ class SpecialDuplicator extends SpecialPage {
 				$values['rev_timestamp'] = $row->rev_timestamp;
 				$values['rev_minor_edit'] = $row->rev_minor_edit;
 				$values['rev_deleted'] = $row->rev_deleted;
+				$values['rev_content_model'] = $row->rev_content_model;
 				$dbw->insert( 'revision', $values, __METHOD__ );
 			}
 			$dbw->freeResult( $res );
