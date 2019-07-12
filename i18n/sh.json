@@ -26,5 +26,6 @@
 	"duplicator-source-notexist": "[[$1]] ne postoji. Molimo navedite naslov stranice koji postoji.",
 	"duplicator-dest-invalid": "Molimo navedite valjan odredišni naslov",
 	"duplicator-dest-exists": "[[$1]] već postoji. Molimo navedite odredišni naslov koji još ne postoji.",
+	"action-duplicate": "dupliciranje stranica",
 	"right-duplicate": "Dupliciranje stranica"
 }
