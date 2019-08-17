@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"아라"
+			"아라",
+			"Kwj2772"
 		]
 	},
 	"duplicator": "문서 복제",
@@ -26,5 +27,6 @@
 	"duplicator-source-notexist": "[[$1]] 문서가 존재하지 않습니다. 존재하는 문서 제목을 제공하세요.",
 	"duplicator-dest-invalid": "올바른 대상 제목을 제공하세요.",
 	"duplicator-dest-exists": "[[$1]] 문서가 이미 존재합니다. 존재하지 않는 대상 문서를 제공하세요.",
+	"action-duplicate": "문서를 복제할",
 	"right-duplicate": "문서 복제"
 }
