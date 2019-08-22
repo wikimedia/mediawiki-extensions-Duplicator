@@ -27,5 +27,6 @@
 	"duplicator-source-notexist": "[[$1]] finnes ikike. Angi tittelen til en eksisterende side.",
 	"duplicator-dest-invalid": "Angi en gyldig måltittel.",
 	"duplicator-dest-exists": "[[$1]] finnes allerede. Angi en måltittel som ikke eksisterer.",
+	"action-duplicate": "kopiere sider",
 	"right-duplicate": "Kopier sidene"
 }
