@@ -23,7 +23,7 @@
 	"duplicator-success": "[[$1]] הועתק ל[[$2]].",
 	"duplicator-success-revisions": "{{PLURAL:$1|הועתקה גרסה אחת|הועתקו $1 גרסאות}}.",
 	"duplicator-success-talknotcopied": "לא ניתן היה להעתיק את דף השיחה.",
-	"duplicator-failed": "לא ניתן היה לשכפל את הדף.\nאירעה שגיאה בלתי ידועה.",
+	"duplicator-failed": "לא ניתן היה לשכפל את הדף.\nאירעה שגיאה בלתי־ידועה.",
 	"duplicator-failed-toolong": "[[$1]] לא שוכפל. כותרת היעד ארוך מדי.",
 	"duplicator-failed-dest-exists": "[[$1]] לא שוכפל. היעד [[$2]] כבר קיים.",
 	"duplicator-source-invalid": "אנא ספקו כותרת מקור תקינה.",
