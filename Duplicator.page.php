@@ -61,12 +61,13 @@ class SpecialDuplicator extends SpecialPage {
 	 * @param $title Title passed to the page
 	 */
 	public function execute( $title ) {
-		global $wgUser, $wgOut, $wgRequest;
-
 		$this->setHeaders();
+		$user = $this->getUser();
+		$out = $this->getOutput();
+		$request = $this->getRequest();
 
 		# Check permissions
-		if( !$wgUser->isAllowed( 'duplicate' ) ) {
+		if( !$user->isAllowed( 'duplicate' ) ) {
 			throw new PermissionsError( 'duplicate' );
 		}
 
@@ -75,39 +76,39 @@ class SpecialDuplicator extends SpecialPage {
 			throw new ReadOnlyError;
 		}
 
-		$this->setOptions( $wgRequest, $title );
-		$wgOut->addWikiMsg( 'duplicator-header' );
-		$wgOut->addHTML( $this->buildForm() );
+		$this->setOptions( $request, $title );
+		$out->addWikiMsg( 'duplicator-header' );
+		$out->addHTML( $this->buildForm() );
 
 		# If the token doesn't match or the form wasn't POSTed, stop
-		if( !$wgRequest->wasPosted() || !$wgUser->matchEditToken( $wgRequest->getVal( 'token' ), 'duplicator' ) )
+		if( !$request->wasPosted() || !$user->matchEditToken( $request->getVal( 'token' ), 'duplicator' ) )
 			return;
 
 		# Check we've got a valid source title
 		if( !is_object( $this->sourceTitle ) ) {
 			# Invalid source title
-			$wgOut->addWikiMsg( 'duplicator-source-invalid' );
+			$out->addWikiMsg( 'duplicator-source-invalid' );
 			return;
 		}
 
 		# Check the source exists
 		if( !$this->sourceTitle->exists() ) {
 			# Source doesn't exist
-			$wgOut->addWikiMsg( 'duplicator-source-notexist', $this->source );
+			$out->addWikiMsg( 'duplicator-source-notexist', $this->source );
 			return;
 		}
 
 		# Check we've got a valid destination title
 		if( !is_object( $this->destTitle ) ) {
 			# Invalid destination title
-			$wgOut->addWikiMsg( 'duplicator-dest-invalid' );
+			$out->addWikiMsg( 'duplicator-dest-invalid' );
 			return;
 		}
 
 		# Check the destination *does not* exist
 		if( $this->destTitle->exists() ) {
 			# Destination exists
-			$wgOut->addWikiMsg( 'duplicator-dest-exists', $this->destTitle->getPrefixedText() );
+			$out->addWikiMsg( 'duplicator-dest-exists', $this->destTitle->getPrefixedText() );
 			return;
 		}
 
@@ -152,11 +153,11 @@ class SpecialDuplicator extends SpecialPage {
 			}
 
 			$success .= Html::closeElement( 'ul' );
-			$wgOut->addHTML( $success );
+			$out->addHTML( $success );
 
 		} else {
 			# Something went wrong, abort the entire operation
-			$wgOut->addWikiMsg( 'duplicator-failed' );
+			$out->addWikiMsg( 'duplicator-failed' );
 		}
 
 	}
@@ -203,7 +204,6 @@ class SpecialDuplicator extends SpecialPage {
 	 * @return string
 	 */
 	protected function buildForm() {
-		global $wgUser;
 		$self = SpecialPage::getTitleFor( 'Duplicator' );
 		$source = is_object( $this->sourceTitle ) ? $this->sourceTitle->getPrefixedText() : $this->source;
 		$dest = is_object( $this->destTitle ) ? $this->destTitle->getPrefixedText() : $this->dest;
@@ -231,7 +231,7 @@ class SpecialDuplicator extends SpecialPage {
 		$form .= '<td>' . Xml::submitButton( $this->msg( 'duplicator-submit' )->escaped() ) . '</td>';
 		$form .= '</tr>';
 		$form .= '</table>';
-		$form .= Html::Hidden( 'token', $wgUser->getEditToken( 'duplicator' ) );
+		$form .= Html::Hidden( 'token', $this->getUser()->getEditToken( 'duplicator' ) );
 		$form .= '</fieldset></form>';
 		return $form;
 	}
@@ -292,11 +292,11 @@ class SpecialDuplicator extends SpecialPage {
 	 * @return bool
 	 */
 	protected function duplicate( $source, $dest, $includeHistory ) {
-		global $wgUser, $wgBot;
-		global $wgDuplicatorRevisionLimit;
+		global $wgBot, $wgDuplicatorRevisionLimit;
 		if( !$source->exists() || $dest->exists() ) {
 			return 0; # Source doesn't exist, or destination does
 		}
+		$user = $this->getUser();
 		$dbw = wfGetDB( DB_MASTER );
 		$dbw->startAtomic( __METHOD__ );
 		$sid = $source->getArticleID();
@@ -337,10 +337,10 @@ class SpecialDuplicator extends SpecialPage {
 			$nid = $nr->insertOn( $dbw );
 		}
 		$destArticle->updateRevisionOn( $dbw, $nr );
-		$destArticle->doEditUpdates( $nr, $wgUser, array( 'created' => true ) );
+		$destArticle->doEditUpdates( $nr, $user, array( 'created' => true ) );
 		WikiPage::onArticleCreate( $dest );
-		$bot = $wgUser->isAllowed( 'bot' );
-		RecentChange::notifyNew( $nr->getTimestamp(), $dest, true, $wgUser, $comment, $bot );
+		$bot = $user->isAllowed( 'bot' );
+		RecentChange::notifyNew( $nr->getTimestamp(), $dest, true, $user, $comment, $bot );
 		$dest->invalidateCache();
 		$dbw->endAtomic( __METHOD__ );
 		return $count;
