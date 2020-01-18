@@ -333,7 +333,7 @@ class SpecialDuplicator extends SpecialPage {
 		if ( $includeHistory ) {
 			# Create a null revision with an explanation; do cache clearances, etc.
 			$destArticle->updateRevisionOn( $dbw, $nr );
-			$nr = Revision::newNullRevision( $dbw, $aid, $comment, true );
+			$nr = Revision::newNullRevision( $dbw, $aid, $comment, true, $user );
 			$nid = $nr->insertOn( $dbw );
 		}
 		$destArticle->updateRevisionOn( $dbw, $nr );
