@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Les Meloures",
-			"Robby"
+			"Robby",
+			"Soued031"
 		]
 	},
 	"duplicator": "En Doublon vun enger Säit maachen",
@@ -23,10 +24,10 @@
 	"duplicator-failed": "Wéint engem onbekannte Feeler konnt keen Doublon vun der Säit gemaach ginn.",
 	"duplicator-failed-toolong": "[[$1]] gouf net duplizéiert. Den Ziltitel ass ze laang.",
 	"duplicator-failed-dest-exists": "[[$1]] gouf net duplizéiert. D'Zil [[$2]] gëtt et schonn.",
-	"duplicator-source-invalid": "Gitt w.e.g. e gëltege Quell-Titel un.",
-	"duplicator-source-notexist": "[[$1]] gëtt et net. Gitt w.e.g. den Titel vun enger Säit un déi et gëtt.",
-	"duplicator-dest-invalid": "Gitt w.e.g. eng valabel Zilsäit unn.",
-	"duplicator-dest-exists": "[[$1]] gëtt et schonn. Gitt w.e.g. eng Zilsäit unn déi et nach net gëtt.",
+	"duplicator-source-invalid": "Gitt wgl. e gëltege Quell-Titel un.",
+	"duplicator-source-notexist": "[[$1]] gëtt et net. Gitt wgl. den Titel vun enger Säit un déi et gëtt.",
+	"duplicator-dest-invalid": "Gitt wgl. eng valabel Zilsäit unn.",
+	"duplicator-dest-exists": "[[$1]] gëtt et schonn. Gitt wgl. eng Zilsäit unn déi et nach net gëtt.",
 	"action-duplicate": "Säite verduebelen",
 	"right-duplicate": "Säite verduebelen"
 }
