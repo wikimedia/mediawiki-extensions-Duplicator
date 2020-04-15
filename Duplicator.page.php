@@ -72,9 +72,7 @@ class SpecialDuplicator extends SpecialPage {
 		}
 
 		# Check for database lock
-		if( wfReadOnly() ) {
-			throw new ReadOnlyError;
-		}
+		$this->checkReadOnly();
 
 		$this->setOptions( $request, $title );
 		$out->addWikiMsg( 'duplicator-header' );
