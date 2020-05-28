@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Bennylin",
+			"Diki Ananta",
 			"Irwangatot",
 			"Ivan Lanin",
 			"Rex"
@@ -16,7 +17,7 @@
 	"duplicator-dest": "Tujuan:",
 	"duplicator-dotalk": "Salin halaman pembicaraan (jika tersedia)",
 	"duplicator-submit": "Salin",
-	"duplicator-summary": "Disalin dari [[$1]]",
+	"duplicator-summary": "Disalin dari [[$1]], revisi [[$2]]",
 	"duplicator-success": "[[$1]] telah disalin ke [[$2]].",
 	"duplicator-success-revisions": "$1 {{PLURAL:$1|revisi|revisi}} telah disalin.",
 	"duplicator-success-talknotcopied": "Halaman pembicaraan tidak dapat disalin.",
