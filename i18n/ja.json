@@ -31,5 +31,6 @@
 	"duplicator-source-notexist": "[[$1]] は存在しません。複製元には存在するページを指定してください。",
 	"duplicator-dest-invalid": "複製先に有効なタイトルを指定してください。",
 	"duplicator-dest-exists": "[[$1]] は既に存在します。複製先には存在しないページを指定してください。",
+	"action-duplicate": "ページの複製",
 	"right-duplicate": "ページを複製"
 }
