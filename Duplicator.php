@@ -40,7 +40,7 @@ $wgExtensionMessagesFiles['DuplicatorAlias'] = $dir . 'Duplicator.alias.php';
 $wgAutoloadClasses['SpecialDuplicator'] = $dir . 'Duplicator.page.php';
 $wgSpecialPages['Duplicator'] = 'SpecialDuplicator';
 
-$wgHooks['SkinTemplateBuildNavUrlsNav_urlsAfterPermalink'][] = 'efDuplicatorNavigation';
+$wgHooks['SidebarBeforeOutput'][] = 'efDuplicatorNavigation';
 $wgHooks['SkinTemplateToolboxEnd'][] = 'efDuplicatorToolbox';
 
 /**
@@ -56,19 +56,31 @@ $wgDuplicatorRevisionLimit = 250;
 
 /**
  * Build the link to be shown in the toolbox if appropriate
- * @param SkinTemplate $skin
+ * @param Skin $skin
+ * @param array &$sidebar
  */
-function efDuplicatorNavigation( &$skin, &$nav_urls, &$oldid, &$revid ) {
-	$ns = $skin->getTitle()->getNamespace();
-	if( ( $ns === NS_MAIN || $ns === NS_TALK ) &&
-		$skin->getUser()->isAllowed( 'duplicate' ) ) {
-
-		$nav_urls['duplicator'] = array(
-			'text' => $skin->msg( 'duplicator-toolbox' ),
-			'href' => $skin->makeSpecialUrl( 'Duplicator', "source=" . wfUrlEncode( "{$skin->thispage}" ) )
-		);
+function efDuplicatorNavigation( Skin $skin, array &$sidebar ) {
+	if ( !$skin->getTitle()->inNamespaces( [ NS_MAIN, NS_TALK ] ) ) {
+		return;
 	}
-	return true;
+
+	$permissionManager = \MediaWiki\MediaWikiServices::getInstance()->getPermissionManager();
+	if ( !$permissionManager->userHasRight( $skin->getUser(), 'duplicate' ) ) {
+		return;
+	}
+
+	$toolbox = &$sidebar['TOOLBOX'];
+	$insert = [
+		'duplicator' => [
+			'text' => $skin->msg( 'duplicator-toolbox' )->text(),
+			'href' => $skin->makeSpecialUrl( 'Duplicator', 'source=' . wfUrlEncode( $skin->thispage ) ),
+		]
+	];
+	if ( isset( $toolbox['permalink'] ) ) {
+		$toolbox = wfArrayInsertAfter( $toolbox, $insert, 'permalink' );
+	} else {
+		$toolbox += $insert;
+	}
 }
 
 /**
