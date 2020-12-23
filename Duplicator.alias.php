@@ -13,14 +13,18 @@ $specialPageAliases['en'] = [
 	'Duplicator' => [ 'Duplicator', 'Duplicate' ],
 ];
 
-/** Arabic (العربية)
+/**
+ * Arabic (العربية)
+ *
  * @author Meno25
  */
 $specialPageAliases['ar'] = [
 	'Duplicator' => [ 'مستنسخ', 'استنساخ' ],
 ];
 
-/** Egyptian Spoken Arabic (مصرى)
+/**
+ * Egyptian Spoken Arabic (مصرى)
+ *
  * @author Meno25
  */
 $specialPageAliases['arz'] = [
@@ -37,4 +41,22 @@ $specialPageAliases['fi'] = [
 
 $specialPageAliases['nl'] = [
 	'Duplicator' => [ 'Kopieren', 'Kopiëren' ],
+];
+
+/**
+ * Serbian Cyrillic (српски (ћирилица))
+ *
+ * @author Kizule (Zoran Dori)
+ */
+$specialPageAliases['sr-ec'] = [
+	'Duplicator' => [ 'Дупликатор', 'Дуплирај' ],
+];
+
+/**
+ * Serbian Latin (srpski (latinica))
+ *
+ * @author Kizule (Zoran Dori)
+ */
+$specialPageAliases['sr-el'] = [
+	'Duplicator' => [ 'Duplikator', 'Dupliraj' ],
 ];
