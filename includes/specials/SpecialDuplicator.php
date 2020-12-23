@@ -58,7 +58,7 @@ class SpecialDuplicator extends SpecialPage {
 	/**
 	 * Main execution function
 	 *
-	 * @param $title Title passed to the page
+	 * @param Title $title Title passed to the page
 	 */
 	public function execute( $title ) {
 		$this->setHeaders();
@@ -67,7 +67,7 @@ class SpecialDuplicator extends SpecialPage {
 		$request = $this->getRequest();
 
 		# Check permissions
-		if( !$user->isAllowed( 'duplicate' ) ) {
+		if ( !$user->isAllowed( 'duplicate' ) ) {
 			throw new PermissionsError( 'duplicate' );
 		}
 
@@ -79,32 +79,33 @@ class SpecialDuplicator extends SpecialPage {
 		$out->addHTML( $this->buildForm() );
 
 		# If the token doesn't match or the form wasn't POSTed, stop
-		if( !$request->wasPosted() || !$user->matchEditToken( $request->getVal( 'token' ), 'duplicator' ) )
+		if ( !$request->wasPosted() || !$user->matchEditToken( $request->getVal( 'token' ), 'duplicator' ) ) {
 			return;
+		}
 
 		# Check we've got a valid source title
-		if( !is_object( $this->sourceTitle ) ) {
+		if ( !is_object( $this->sourceTitle ) ) {
 			# Invalid source title
 			$out->addWikiMsg( 'duplicator-source-invalid' );
 			return;
 		}
 
 		# Check the source exists
-		if( !$this->sourceTitle->exists() ) {
+		if ( !$this->sourceTitle->exists() ) {
 			# Source doesn't exist
 			$out->addWikiMsg( 'duplicator-source-notexist', $this->source );
 			return;
 		}
 
 		# Check we've got a valid destination title
-		if( !is_object( $this->destTitle ) ) {
+		if ( !is_object( $this->destTitle ) ) {
 			# Invalid destination title
 			$out->addWikiMsg( 'duplicator-dest-invalid' );
 			return;
 		}
 
 		# Check the destination *does not* exist
-		if( $this->destTitle->exists() ) {
+		if ( $this->destTitle->exists() ) {
 			# Destination exists
 			$out->addWikiMsg( 'duplicator-dest-exists', $this->destTitle->getPrefixedText() );
 			return;
@@ -112,10 +113,10 @@ class SpecialDuplicator extends SpecialPage {
 
 		# Attempt to perform the main duplicate op. first
 		$num = $this->duplicate( $this->sourceTitle, $this->destTitle, $this->history );
-		if( $num ) {
+		if ( $num ) {
 			$success = Html::openElement( 'ul' ) .
 				Html::rawElement( 'li',
-					array(),
+					[],
 					$this->msg( 'duplicator-success',
 						$this->sourceTitle->getPrefixedText(),
 						$this->destTitle->getPrefixedText()
@@ -128,17 +129,17 @@ class SpecialDuplicator extends SpecialPage {
 				$success .= $this->duplicateSubpages( $this->sourceTitle, $this->destTitle, $this->history );
 			}
 			# If there is a talk page and we've been asked to duplicate it, do so
-			if( $this->talk && $this->dealWithTalk() ) {
+			if ( $this->talk && $this->dealWithTalk() ) {
 				$st = $this->sourceTitle->getTalkPage();
 				$dt = $this->destTitle->getTalkPage();
 				$num = $this->duplicate( $st, $dt, $this->history );
 				if ( $num ) {
 					$success .= Html::rawElement( 'li',
-						array(),
+						[],
 						$this->msg( 'duplicator-success',
 							$st->getPrefixedText(),
 							$dt->getPrefixedText()
-						 	)->parse() . ' ' .
+							)->parse() . ' ' .
 						$this->msg( 'duplicator-success-revisions' )->numParams( $num )->text()
 					);
 
@@ -146,7 +147,11 @@ class SpecialDuplicator extends SpecialPage {
 						$success .= $this->duplicateSubpages( $st, $dt, $this->history );
 					}
 				} else {
-					$success .= Html::rawElement( 'li', array(), $this->msg( 'duplicator-success-talknotcopied' )->text() );
+					$success .= Html::rawElement(
+						'li',
+						[],
+						$this->msg( 'duplicator-success-talknotcopied' )->text()
+					);
 				}
 			}
 
@@ -157,14 +162,13 @@ class SpecialDuplicator extends SpecialPage {
 			# Something went wrong, abort the entire operation
 			$out->addWikiMsg( 'duplicator-failed' );
 		}
-
 	}
 
 	/**
 	 * Determine various options and attempt initialisation of objects
 	 *
-	 * @param $request WebRequest we're running off
-	 * @param $title Title passed to the page
+	 * @param WebRequest &$request Web request we're running off
+	 * @param Title $title Title passed to the page
 	 */
 	protected function setOptions( &$request, $title ) {
 		$source = $request->getText( 'source' );
@@ -184,9 +188,10 @@ class SpecialDuplicator extends SpecialPage {
 	 * @return bool
 	 */
 	protected function dealWithTalk() {
-		if( is_object( $this->sourceTitle ) ) {
-			if( $this->sourceTitle->isTalkPage() )
+		if ( is_object( $this->sourceTitle ) ) {
+			if ( $this->sourceTitle->isTalkPage() ) {
 				return false;
+			}
 			$talk = $this->sourceTitle->getTalkPage();
 			return $talk->exists();
 		} else {
@@ -211,10 +216,10 @@ class SpecialDuplicator extends SpecialPage {
 		$form .= '<table>';
 		$form .= '<tr>';
 		$form .= '<td><label for="source">' . $this->msg( 'duplicator-source' )->escaped() . '</label></td>';
-		$form .= '<td>' . Xml::input( 'source', 40, $source, array( 'id' => 'source' ) ) . '</td>';
+		$form .= '<td>' . Xml::input( 'source', 40, $source, [ 'id' => 'source' ] ) . '</td>';
 		$form .= '</tr><tr>';
 		$form .= '<td><label for="dest">' . $this->msg( 'duplicator-dest' )->escaped() . '</label></td>';
-		$form .= '<td>' . Xml::input( 'dest', 40, $dest, array( 'id' => 'dest' ) ) . '</td>';
+		$form .= '<td>' . Xml::input( 'dest', 40, $dest, [ 'id' => 'dest' ] ) . '</td>';
 		$form .= '</tr><tr>';
 		$form .= '<td>&#160;</td>';
 		$form .= '<td>' . Xml::checkLabel( $this->msg( 'duplicator-dotalk' )->text(), 'talk', 'talk', $this->talk ) . '</td>';
@@ -237,12 +242,13 @@ class SpecialDuplicator extends SpecialPage {
 	/**
 	 * Duplicate subpages of $source to $dest
 	 *
-	 * @param $source Title to duplicate subpages for
-	 * @param $dest Title to save subpages to
+	 * @param Title $source Title to duplicate subpages for
+	 * @param Title $dest Title to save subpages to
+	 * @param bool $includeHistory
 	 * @return bool
 	 */
 	protected function duplicateSubpages( $source, $dest, $includeHistory ) {
-		global $wgLang;
+		$lang = $this->getContext()->getLanguage();
 		$subpages = $source->getSubpages();
 		$len = strlen( $source->getText() );
 		$ns = $dest->getNamespace();
@@ -253,7 +259,7 @@ class SpecialDuplicator extends SpecialPage {
 			if ( $destSub ) {
 				if ( $destSub->exists() ) {
 					$success .= Html::rawElement( 'li',
-						array(),
+						[],
 						$this->msg( 'duplicator-failed-dest-exists',
 							$sub->getPrefixedText(),
 							$destSub->getPrefixedText()
@@ -262,19 +268,23 @@ class SpecialDuplicator extends SpecialPage {
 				} else {
 					$num = $this->duplicate( $sub, $destSub, $this->history );
 					$success .= Html::rawElement( 'li',
-						array(),
+						[],
 						$this->msg( 'duplicator-success',
 							$sub->getPrefixedText(),
 							$destSub->getPrefixedText()
 							)->parse() . ' ' .
 						$this->msg( 'duplicator-success-revisions',
-							$wgLang->formatNum( $num )
+							$lang->formatNum( $num )
 							)->text()
 					);
 				}
 			} else {
 				# Bad title error can only occur here because of the destination title being too long
-				$success .= Html::rawElement( 'li', array(), $this->msg( 'duplicator-failed-toolong', $sub->getPrefixedText() )->text() );
+				$success .= Html::rawElement(
+					'li',
+					[],
+					$this->msg( 'duplicator-failed-toolong', $sub->getPrefixedText() )->text()
+				);
 			}
 		}
 		return $success;
@@ -284,16 +294,17 @@ class SpecialDuplicator extends SpecialPage {
 	 * Duplicate one page to another, including full histories
 	 * Does some basic error-catching, but not as much as the code above [should]
 	 *
-	 * @param $source Title to duplicate
-	 * @param $dest Title to save to
-	 * @param $includeHistory Whether to copy full article history
+	 * @param Title $source Title to duplicate
+	 * @param Title $dest Title to save to
+	 * @param bool $includeHistory Whether to copy full article history
 	 * @return bool
 	 */
 	protected function duplicate( $source, $dest, $includeHistory ) {
-		global $wgBot, $wgDuplicatorRevisionLimit;
-		if( !$source->exists() || $dest->exists() ) {
-			return 0; # Source doesn't exist, or destination does
+		if ( !$source->exists() || $dest->exists() ) {
+			# Source doesn't exist, or destination does
+			return 0;
 		}
+		$config = $this->getConfig();
 		$user = $this->getUser();
 		$dbw = wfGetDB( DB_MASTER );
 		$dbw->startAtomic( __METHOD__ );
@@ -303,15 +314,19 @@ class SpecialDuplicator extends SpecialPage {
 		$aid = $destArticle->insertOn( $dbw );
 		# Perform the revision duplication
 		# An INSERT...SELECT here seems to fuck things up
-		$res = $dbw->select( 'revision', '*', array( 'rev_page' => $sid ), __METHOD__,
-			array( 'ORDER BY' => 'rev_timestamp DESC',
-				'LIMIT' => $includeHistory ? $wgDuplicatorRevisionLimit : 1 )
+		$res = $dbw->select( 'revision', '*', [ 'rev_page' => $sid ], __METHOD__,
+			[ 'ORDER BY' => 'rev_timestamp DESC',
+				'LIMIT' => $includeHistory ? $config->get( 'DuplicatorRevisionLimit' ) : 1 ]
 		);
 		$comment = '';
-		if( $res && ( $count = $dbw->numRows( $res ) ) > 0 ) {
-			while( $row = $dbw->fetchObject( $res ) ) {
-				if( !$comment ) {
-					$comment = $this->msg( 'duplicator-summary', $source->getPrefixedText(), $row->rev_id )->inContentLanguage()->text();
+		if ( $res && ( $count = $dbw->numRows( $res ) ) > 0 ) {
+			while ( $row = $dbw->fetchObject( $res ) ) {
+				if ( !$comment ) {
+					$comment = $this->msg(
+						'duplicator-summary',
+						$source->getPrefixedText(),
+						$row->rev_id
+						)->inContentLanguage()->text();
 				}
 				$values['rev_page'] = $aid;
 				$values['rev_text_id'] = $row->rev_text_id;
@@ -326,7 +341,7 @@ class SpecialDuplicator extends SpecialPage {
 			$dbw->freeResult( $res );
 		}
 		# Update page record
-		$latest = $dbw->selectField( 'revision', 'MAX(rev_id)', array( 'rev_page' => $aid ), __METHOD__ );
+		$latest = $dbw->selectField( 'revision', 'MAX(rev_id)', [ 'rev_page' => $aid ], __METHOD__ );
 		$nr = Revision::newFromId( $latest );
 		if ( $includeHistory ) {
 			# Create a null revision with an explanation; do cache clearances, etc.
@@ -335,7 +350,7 @@ class SpecialDuplicator extends SpecialPage {
 			$nid = $nr->insertOn( $dbw );
 		}
 		$destArticle->updateRevisionOn( $dbw, $nr );
-		$destArticle->doEditUpdates( $nr, $user, array( 'created' => true ) );
+		$destArticle->doEditUpdates( $nr, $user, [ 'created' => true ] );
 		WikiPage::onArticleCreate( $dest );
 		$bot = $user->isAllowed( 'bot' );
 		RecentChange::notifyNew( $nr->getTimestamp(), $dest, true, $user, $comment, $bot );

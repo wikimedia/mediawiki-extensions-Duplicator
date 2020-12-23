@@ -6,35 +6,35 @@
  * @ingroup Extensions
  */
 
-$specialPageAliases = array();
+$specialPageAliases = [];
 
 /** English */
-$specialPageAliases['en'] = array(
-	'Duplicator' => array( 'Duplicator', 'Duplicate' ),
-);
+$specialPageAliases['en'] = [
+	'Duplicator' => [ 'Duplicator', 'Duplicate' ],
+];
 
 /** Arabic (العربية)
  * @author Meno25
  */
-$specialPageAliases['ar'] = array(
-	'Duplicator' => array( 'مستنسخ', 'استنساخ' ),
-);
+$specialPageAliases['ar'] = [
+	'Duplicator' => [ 'مستنسخ', 'استنساخ' ],
+];
 
 /** Egyptian Spoken Arabic (مصرى)
  * @author Meno25
  */
-$specialPageAliases['arz'] = array(
-	'Duplicator' => array( 'مستنسخ', 'استنساخ' ),
-);
+$specialPageAliases['arz'] = [
+	'Duplicator' => [ 'مستنسخ', 'استنساخ' ],
+];
 
-$specialPageAliases['de'] = array(
-	'Duplicator' => array( 'Seiten_duplizieren', 'Duplizieren' ),
-);
+$specialPageAliases['de'] = [
+	'Duplicator' => [ 'Seiten_duplizieren', 'Duplizieren' ],
+];
 
-$specialPageAliases['fi'] = array(
-	'Duplicator' => array( 'Monista' ),
-);
+$specialPageAliases['fi'] = [
+	'Duplicator' => [ 'Monista' ],
+];
 
-$specialPageAliases['nl'] = array(
-	'Duplicator' => array( 'Kopieren', 'Kopiëren' ),
-);
+$specialPageAliases['nl'] = [
+	'Duplicator' => [ 'Kopieren', 'Kopiëren' ],
+];
