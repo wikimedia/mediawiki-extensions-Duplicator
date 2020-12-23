@@ -32,8 +32,8 @@
 		"DuplicatorAlias": "Duplicator.alias.php"
 	},
 	"AutoloadClasses": {
-		"DuplicatorHooks": "DuplicatorHooks.php",
-		"SpecialDuplicator": "Duplicator.page.php"
+		"DuplicatorHooks": "includes/DuplicatorHooks.php",
+		"SpecialDuplicator": "includes/specials/SpecialDuplicator.php"
 	},
 	"Hooks": {
 		"SidebarBeforeOutput": "DuplicatorHooks::efDuplicatorNavigation",
