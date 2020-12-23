@@ -33,19 +33,28 @@ class DuplicatorHooks {
 
 	/**
 	 * Output the toolbox link if available
+	 * @param BaseTemplate &$monobook
 	 */
 	public static function efDuplicatorToolbox( &$monobook ) {
 		if ( isset( $monobook->data['nav_urls']['duplicator'] ) ) {
 			if ( $monobook->data['nav_urls']['duplicator']['href'] == '' ) {
-				?><li id="t-isduplicator"><?php echo $monobook->msg( 'duplicator-toolbox' ); ?></li><?php
+				$html = Html::element(
+					'li',
+					[ 'id' => 't-isduplicator' ],
+					$monobook->getMsg( 'duplicator-toolbox' )->text()
+				);
 			} else {
-				?><li id="t-duplicator"><?php
-					?><a href="<?php echo htmlspecialchars( $monobook->data['nav_urls']['duplicator']['href'] ) ?>"><?php
-						echo $monobook->msg( 'duplicator-toolbox' );
-					?></a><?php
-				?></li><?php
+				$html = Html::rawElement(
+					'li',
+					[ 'id' => 't-duplicator' ],
+					Html::element(
+						'a',
+						[ 'href' => $monobook->data['nav_urls']['duplicator']['href'] ],
+						$monobook->getMsg( 'duplicator-toolbox' )->text()
+					)
+				);
 			}
+			echo $html;
 		}
-		return true;
 	}
 }
