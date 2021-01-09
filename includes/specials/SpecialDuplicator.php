@@ -319,8 +319,8 @@ class SpecialDuplicator extends SpecialPage {
 				'LIMIT' => $includeHistory ? $config->get( 'DuplicatorRevisionLimit' ) : 1 ]
 		);
 		$comment = '';
-		if ( $res && ( $count = $dbw->numRows( $res ) ) > 0 ) {
-			while ( $row = $dbw->fetchObject( $res ) ) {
+		if ( $res ) {
+			foreach ( $res as $row ) {
 				if ( !$comment ) {
 					$comment = $this->msg(
 						'duplicator-summary',
@@ -338,7 +338,6 @@ class SpecialDuplicator extends SpecialPage {
 				$values['rev_deleted'] = $row->rev_deleted;
 				$dbw->insert( 'revision', $values, __METHOD__ );
 			}
-			$dbw->freeResult( $res );
 		}
 		# Update page record
 		$latest = $dbw->selectField( 'revision', 'MAX(rev_id)', [ 'rev_page' => $aid ], __METHOD__ );
