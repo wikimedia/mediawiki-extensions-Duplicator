@@ -26,5 +26,6 @@
 	"duplicator-source-notexist": "[[$1]] non existe. Per favor entra le titulo de un pagina existente.",
 	"duplicator-dest-invalid": "Per favor entra un titulo de destination valide.",
 	"duplicator-dest-exists": "[[$1]] existe ja. Per favor entra un titulo de destination non ancora existente.",
+	"action-duplicate": "duplicar paginas",
 	"right-duplicate": "Duplicar paginas"
 }
